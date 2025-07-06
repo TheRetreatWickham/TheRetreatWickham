@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Contact | Rituals of Wellness & Beauty</title>
+    <title>Makeup | Rituals of Wellness & Beauty</title>
 
     <!--  Google fonts  -->
     <link
@@ -20,6 +20,7 @@
     <link rel="icon" href="/assets/favicon.ico" />
 </head>
 <body>
+    <!-- ===== Side Navigation ===== -->
     <aside class="side-nav" aria-label="Primary navigation">
         <button id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
@@ -83,54 +84,50 @@
             </ul>
         </nav>
     </aside>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <a href="/" class="logo">The Retreat Whickham</a>
-        <button id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
-        <nav id="nav-menu" class="nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/services.html">Treatments</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- ===== Main ===== -->
-    <main class="container">
-        <h1>Get in touch</h1>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+        <div class="hero__overlay">
+            <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img">
+            <h1>Make-Up Services</h1>
+        </div>
+    </section>
 
-        <address class="contact-details">
-            <p><strong>The Retreat Whickham</strong><br>
-                Knowles Cottage, The Knowles, Whickham<br>
-                Newcastle upon Tyne NE16 4SN</p>
+    <!-- ===== Main Content ===== -->
+    <main class="container" id="makeup">
+        <article class="service-vertical">
+            <hr class="service-separator">
 
-            <p><abbr title="Telephone">Tel</abbr> 0191 488 1534<br>
-                <abbr title="Email">Email</abbr> <a
-                    href="mailto:info@theretreatwhickham.com">info@theretreatwhickham.com</a>
+            <h2>Make-Up at The Retreat Whickham</h2>
+            <p class="service-vertical__desc">
+                We are pleased to introduce our make-up services. Using 100% plant &amp; mineral colour from Delilah
+                &amp; Aveda, our expert artists will craft a bespoke look—whether you’re learning new techniques or
+                simply want to sit back and be pampered.
             </p>
 
-            <p><strong>Opening hours</strong><br>
-                Mon, Wed, Thu 08 – 19<br>
-                Tue 09 – 18 · Fri 08 – 17 · Sat 08 – 16</p>
-        </address>
+            <figure class="promo-card">
+                <img src="/assets/images/delilah-logo.jpg" alt="Delilah logo">
+                <figcaption class="sr-only">Delilah make-up</figcaption>
+            </figure>
 
-        <form id="contact-form" novalidate>
-            <label>Full Name <input name="name" required /></label>
-            <label>Email <input type="email" name="email" required /></label>
-            <label>Message <textarea name="message" rows="5" required></textarea></label>
-            <button type="submit" class="btn btn--primary">Send</button>
-            <p id="form-status" role="status"></p>
-        </form>
+            <h3>Makeup Lesson (1 Hour 15 Minutes) — £50</h3>
+            <p class="service-vertical__desc">
+                Brushes in hand but not sure where to start? Our step-by-step lesson will guide you through application,
+                colour theory and blending to create your perfect look.
+            </p>
 
-        <iframe title="Google Map – The Retreat Whickham" loading="lazy"
-            src="https://maps.google.com/maps?q=NE16%204SN&output=embed"
-            style="border:0;width:100%;height:300px;"></iframe>
+            <h3>Makeup Application (45 Minutes) — £40</h3>
+            <p class="service-vertical__desc">
+                Sit back and relax while our artist applies a professional make-up look, tailored to your style—whether
+                it’s natural daywear or a flawless evening finish.
+            </p>
+        </article>
     </main>
 
     <!-- ===== Footer ===== -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <small>© The Retreat Whickham 2025 · All rights reserved</small>
+    </footer>
 
     <script type="module" src="/scripts/main.js"></script>
 </body>

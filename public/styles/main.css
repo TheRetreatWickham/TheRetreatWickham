@@ -185,15 +185,15 @@ h3 {
 
 .service-vertical__img,
 .beauty-img {
-  width: 100%;               /* fill the container’s width */
-  max-width: 540px;          /* or whatever uniform width you prefer */
-  height: 300px;             /* fixed height for all cards */
-  object-fit: cover;         /* crop/scale to fill box */
-  object-position: center;   /* crop from the center of the image */
-  display: block;
-  margin: 0 auto 1rem;       /* centre in the card + spacing */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    width: 100%;
+    max-width: 540px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
 }
 
 .service-vertical h2 {
@@ -264,62 +264,86 @@ h3 {
 }
 
 .home-news {
-  margin: 4rem 0;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+    margin: 4rem 0;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
 }
+
 .home-news h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 /* two-column grid for posters/notices */
 .news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
 }
 
 /* card styling */
 .promo-card,
 .notice-card {
-  background: #fafafa;
-  padding: 1.25rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    background: #fafafa;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
 }
 
 .promo-card img,
 .notice-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-  margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }
 
 .promo-card figcaption,
 .notice-card figcaption {
-  font-size: 1rem;
-  line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .news-img {
-  width: 100%;
-  max-width: 260px;         /* same as your grid’s min column width */
-  height: 160px;            /* fixed height */
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  margin: 1rem auto 0;      /* spacing above + centre horizontally */
-  border-radius: 4px;
+    width: 100%;
+    max-width: 260px;
+    /* same as your grid’s min column width */
+    height: 160px;
+    /* fixed height */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 1rem auto 0;
+    /* spacing above + centre horizontally */
+    border-radius: 4px;
 }
 
 /* mobile: single-column stack */
 @media(max-width:768px) {
-  .home-news {
-    padding-left: var(--nav-width);
+    .home-news {
+        padding-left: var(--nav-width);
+        padding-right: var(--gutter);
+    }
+}
+
+main.container.laser-page {
+    max-width: 1000px;
+    /* or your desired width */
+    margin: 0 auto;
+    /* centre in viewport */
+    padding-left: calc(var(--nav-width) + var(--gutter));
     padding-right: var(--gutter);
-  }
+}
+
+.pricing-list {
+  list-style: none;    /* remove bullets */
+  margin: 0;           /* remove default margins */
+  padding: 0;          /* remove default indent */
+}
+
+/* optional: add a little breathing room between items */
+.pricing-list li {
+  margin-bottom: 0.5rem;
 }
