@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext",          // ← change this
+    "moduleResolution": "NodeNext",
+    "rootDir": "src/scripts",
+    "outDir": "public/scripts",
+    "strict": true
+  }
+}

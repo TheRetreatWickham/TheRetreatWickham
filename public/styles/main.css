@@ -1,0 +1,325 @@
+/* ----------  COLOURS, FONTS & GUTTER  -------------------------------- */
+:root {
+    --gutter: 2rem;
+    /* space from nav to content */
+    --nav-width: 240px;
+    --nav-bg: #0f3c5f;
+    --nav-item: #ffffff;
+    --nav-active: #7c4dff;
+    --nav-hover: rgba(255, 255, 255, 0.12);
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Poppins', sans-serif;
+}
+
+.container,
+.hero__overlay {
+    margin-left: calc(var(--nav-width) + var(--gutter));
+    margin-right: var(--gutter);
+}
+
+/* ----------  GLOBAL RESET  ------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.65;
+    color: #1c1f22;
+}
+
+/* headings */
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    letter-spacing: .02em;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: .75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* ----------  FIXED SIDE-NAV  ------------------------------------------ */
+.side-nav {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: var(--nav-width);
+    background: var(--nav-bg);
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+    z-index: 1000;
+}
+
+.side-nav #burger {
+    display: none;
+}
+
+.side-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: .5rem 0;
+}
+
+.side-nav li+li {
+    margin-top: .25rem;
+}
+
+.side-nav a {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .65rem 1rem;
+    color: var(--nav-item);
+    font-weight: 600;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: background .2s, border-color .2s;
+}
+
+.side-nav a:hover {
+    background: var(--nav-hover);
+}
+
+.side-nav a.is-active {
+    background: var(--nav-active);
+    border-color: var(--nav-active);
+}
+
+/* ----------  HERO BANNER  --------------------------------------------- */
+.hero {
+    background: url('/assets/images/hero.jpg') center/cover no-repeat;
+    min-height: 500px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, .6);
+    pointer-events: none;
+}
+
+.hero__overlay {
+    position: relative;
+    max-width: 680px;
+    padding: 2.5rem 1rem;
+
+    /* ← Add these two lines: */
+    padding-right: var(--gutter);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 320px;
+    height: auto;
+}
+
+/* ----------  TYPOGRAPHY & BUTTONS  ------------------------------------ */
+.container>p {
+    max-width: 70ch;
+    margin-inline: auto;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: .6rem 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background .2s;
+}
+
+.btn--primary {
+    background: var(--nav-active);
+    color: #fff;
+    border: none;
+}
+
+.btn--primary:hover {
+    background: #6439d2;
+}
+
+/* ----------  VERTICAL SERVICE CARD LAYOUT  ----------------------------- */
+.service-vertical {
+    max-width: 65ch;
+    margin: 3rem auto;
+    padding: 0 var(--gutter);
+    text-align: center;
+}
+
+.service-separator {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem;
+    width: 40%;
+}
+
+.service-vertical__img,
+.beauty-img {
+  width: 100%;               /* fill the container’s width */
+  max-width: 540px;          /* or whatever uniform width you prefer */
+  height: 300px;             /* fixed height for all cards */
+  object-fit: cover;         /* crop/scale to fill box */
+  object-position: center;   /* crop from the center of the image */
+  display: block;
+  margin: 0 auto 1rem;       /* centre in the card + spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+.service-vertical h2 {
+    margin: 0 0 1rem;
+}
+
+.service-vertical__desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.service-vertical__btn {
+    display: inline-block;
+    padding: .75rem 1.5rem;
+}
+
+/* ----------  FOOTER  --------------------------------------------------- */
+.footer {
+    margin-left: calc(var(--nav-width) + var(--gutter));
+    text-align: center;
+    font-size: .875rem;
+    color: #6f7a80;
+    padding: 2rem 0;
+}
+
+/* ----------  RESPONSIVE TWEAKS  ---------------------------------------- */
+@media (max-width:768px) {
+    :root {
+        --nav-width: 60px;
+    }
+
+    .side-nav {
+        width: var(--nav-width);
+    }
+
+    .side-nav #burger {
+        display: block;
+        background: none;
+        border: 0;
+        font-size: 1.5rem;
+        color: #fff;
+        margin: .4rem 0 .75rem .4rem;
+    }
+
+    .side-nav ul {
+        transform: translateX(-100%);
+        transition: transform .3s;
+    }
+
+    .side-nav.nav--open ul {
+        transform: translateX(0);
+    }
+
+    .side-nav:not(.nav--open) a span {
+        display: none;
+    }
+
+    .hero,
+    .container>p,
+    .footer {
+        margin-left: var(--nav-width);
+    }
+
+    .service-vertical {
+        padding: 0 1rem;
+    }
+}
+
+.home-news {
+  margin: 4rem 0;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+.home-news h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* two-column grid for posters/notices */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 2rem;
+}
+
+/* card styling */
+.promo-card,
+.notice-card {
+  background: #fafafa;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.promo-card img,
+.notice-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.promo-card figcaption,
+.notice-card figcaption {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.news-img {
+  width: 100%;
+  max-width: 260px;         /* same as your grid’s min column width */
+  height: 160px;            /* fixed height */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 1rem auto 0;      /* spacing above + centre horizontally */
+  border-radius: 4px;
+}
+
+/* mobile: single-column stack */
+@media(max-width:768px) {
+  .home-news {
+    padding-left: var(--nav-width);
+    padding-right: var(--gutter);
+  }
+}
