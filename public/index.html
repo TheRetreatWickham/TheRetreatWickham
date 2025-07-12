@@ -2,210 +2,177 @@
 <html lang="en-GB">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>The Retreat Whickham | Rituals of Wellness & Beauty</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The Retreat Whickham | Relax · Renew · Revive</title>
 
-    <!--  Google fonts  -->
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
 
-    <!--  Icon font (Font Awesome 6)  -->
+    <!-- Font Awesome (icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!--  Site stylesheet  -->
-    <link rel="stylesheet" href="/styles/main.css" />
+    <!-- Site stylesheet -->
+    <link rel="stylesheet" href="/styles/main.css">
 
-    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="icon" href="/assets/favicon.ico">
 </head>
 
 <body>
-    <!-- ========== FIXED SIDE-NAV ===================================== -->
-    <aside class="side-nav" aria-label="Primary navigation">
-        <button id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="/"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
-                <li>
-                    <a href="/laserAdvancedSkinCare.html#laser">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        <span>Laser & Advanced Skin Clinic</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/bodyStim.html#bodystim">
-                        <i class="fa-solid fa-bolt"></i>
-                        <span>BodyStim</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/facials.html#facials">
-                        <i class="fa-solid fa-spa"></i>
-                        <span>Facial</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/wellness.html#wellness">
-                        <i class="fa-solid fa-leaf"></i>
-                        <span>Wellness</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/beauty.html#beauty">
-                        <i class="fa-solid fa-star"></i>
-                        <span>Beauty</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/maniPedi.html#maniPedi">
-                        <i class="fa-solid fa-hand-sparkles"></i>
-                        <span>Mani & Pedi</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/makeup.html#makeup">
-                        <i class="fa-solid fa-palette"></i>
-                        <span>Make-up</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/contact.html">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Contact</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#tour">
-                        <i class="fa-solid fa-video"></i>
-                        <span>Take a Tour</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-    <!-- ========== HERO ================================================= -->
-    <section class="hero">
-        <div class="hero__overlay">
-            <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img">
+    <!-- ───── Sticky top header ───────────────────────────────────── -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- main nav -->
+            <nav class="main-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="has-sub">
+                        <a href="#treatments">Treatments</a>
 
-            <h1>Rituals of wellness and beauty</h1>
+                        <!-- Sub-menu -->
+                        <ul class="submenu">
+                            <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
+                            <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
+                            <li><a href="/facials.html#facials">Facials</a></li>
+                            <li><a href="/wellness.html#wellness">Wellness</a></li>
+                            <li><a href="/beauty.html#beauty">Beauty</a></li>
+                            <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
+                            <li><a href="/makeup.html#makeup">Make-up</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/gift-cards.html">Gift Cards</a></li>
+                    <li><a href="/tour.html">Take a Tour</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/book.html">Book online</a></li>
+                </ul>
+            </nav>
 
-            <a href="https://www.aveda.co.uk/artists/artist.tmpl?vanity=1&artistID=449622018&SalonID=33985"
-                class="btn btn--primary shop-aveda" target="_blank" rel="noopener">
-                Shop&nbsp;Aveda&nbsp;Online
+            <!-- centred logo -->
+            <a class="logo" href="/">
+                <img src="/assets/images/logo.PNG" alt="The Retreat Whickham">
             </a>
+
+        </div>
+    </header>
+
+    <!-- ───── Hero banner ─────────────────────────────────────────── -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to The Retreat,<br>Whickham</h1>
+            <p class="strapline">Rituals of wellness and beauty</p>
+
+            <div class="hero-buttons">
+                <a href="/book" class="btn btn--primary">Book Your Escape</a>
+                <a href="/tour.html" class="btn btn--outline">Take the Virtual Tour</a>
+            </div>
         </div>
     </section>
 
-    <!-- ========== MAIN CONTENT ======================================== -->
-    <main class="container">
-        <!-- Intro -->
-        <p>
-            The Retreat Whickham was founded in May 2016 with a mission to provide the highest-quality
-            beauty experiences, natural products and holistic treatments in the heart of Whickham village.
-        </p>
-        <p>
-            We launched The Retreat Laser &amp; Advanced Skin Clinic in 2022, offering permanent hair
-            removal, IPL and EndyMed 3DEEP radio-frequency therapy for younger, clearer-looking skin.
-        </p>
+    <main>
 
-        <!-- Featured treatment rows -->
-        <section class="home-services">
-            <!-- Facials card -->
-            <article class="service-vertical">
-                <hr class="service-separator">
-
-                <h2>Facials</h2>
-
-                <img src="/assets/images/facials.PNG" alt="Relaxing facial treatment" class="service-vertical__img">
-
-                <p class="service-vertical__desc">
-                    Aveda facials restore balance to the five elements using pure aromas,
-                    plant-based products and nurturing high-touch techniques. Medik8® peels,
-                    Dermalux LED phototherapy and bespoke rituals tackle pigmentation,
-                    dullness and ageing.
-                </p>
-
-                <a href="/services.html#facials" class="btn btn--primary service-vertical__btn">
-                    View Facials
-                </a>
-            </article>
-
-            <!-- Massage card -->
-            <article class="service-vertical">
-                <hr class="service-separator">
-
-                <h2>Massage</h2>
-
-                <img src="/assets/images/massage.PNG" alt="Holistic body massage" class="service-vertical__img">
-
-                <p class="service-vertical__desc">
-                    Harmonise mind and body with holistic massage: Reflexology, Chakra &
-                    Marma balancing, Sports & Remedial sessions — all customised with pure
-                    essential oils to melt away stress and tension.
-                </p>
-
-                <a href="/services.html#massage" class="btn btn--primary service-vertical__btn">
-                    View Massage
-                </a>
-            </article>
+        <!-- ───── Services icon grid ──────────────────────────────── -->
+        <section id="treatments" class="icon-grid-wrapper">
+            <ul class="icon-grid">
+                <li><a href="/laserAdvancedSkinCare.html#laser"><i
+                            class="fa-solid fa-wand-magic-sparkles"></i><span>Laser&nbsp;Clinic</span></a></li>
+                <li><a href="/bodyStim.html#bodystim"><i class="fa-solid fa-bolt"></i><span>Body Tightening</span></a>
+                </li>
+                <li><a href="/facials.html#facials"><i class="fa-solid fa-spa"></i><span>Facials</span></a></li>
+                <li><a href="/wellness.html#wellness"><i class="fa-solid fa-leaf"></i><span>Wellness</span></a></li>
+                <li><a href="/beauty.html#beauty"><i class="fa-solid fa-star"></i><span>Beauty</span></a></li>
+                <li><a href="/maniPedi.html#maniPedi"><i
+                            class="fa-solid fa-hand-sparkles"></i><span>Mani&nbsp;&amp;&nbsp;Pedi</span></a></li>
+            </ul>
         </section>
 
-        <!-- Beauty Treatments -->
-        <section class="home-services">
-            <article class="service-vertical">
-                <hr class="service-separator">
+        <!-- ───── About strip ─────────────────────────────────────── -->
+        <section class="about-strip">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>The Retreat Whickham, was founded in May 2016, with the mission to provide the highest quality beauty
+                    experiences, natural products and holistic treatments in the beautiful setting of Whickham village.
 
-                <h2>Beauty Treatments</h2>
-
-                <img src="/assets/images/beauty.PNG" alt="Beauty treatment" class="service-vertical__img">
-
-                <p class="service-vertical__desc">
-                    Leave The Retreat feeling truly gorgeous with wax-free brow and lash
-                    enhancements, luxury mani-pedi experiences and advanced tanning techniques
-                    — all delivered by our skilled, experienced therapists.
+                    Since 2022, The Retreat Laser & Advanced Skin Clinic has used innovative technology to deliver
+                    lasting results, from permanent hair removal with the Alpha IPL system to firmer, clearer skin with
+                    Endymed 3DEEP radiofrequency treatments.
                 </p>
-
-                <a href="/beauty.html#beauty" class="btn btn--primary service-vertical__btn">
-                    View Beauty
-                </a>
-            </article>
-        </section>
-        <section class="home-news">
-            <h2>News &amp; Promotions</h2>
-
-            <div class="news-grid">
-                <!-- Promo poster -->
-                <figure class="promo-card">
-                    <figcaption>
-                        <strong>June Promotions:</strong><br>
-                        £10 back massage with every facial booked on a Wednesday in June.<br>
-                        Summer Lift &amp; Glo ritual (dry body scrub + body massage + advanced Lift &amp; Glo facial)
-                        £145.
-                    </figcaption>
-                    <img src="/assets/images/JunePromotion.PNG" alt="June promotions at The Retreat" class="news-img">
-                </figure>
-
-                <!-- Price-change notice -->
-                <figure class="notice-card">
-                    <figcaption>
-                        <strong>New Prices:</strong><br>
-                        From 1st September 2024 our prices have increased…<br>
-                        50% cancellation fee applies if you cancel within 48 hours.
-                    </figcaption>
-                    <img src="/assets/images/NewPrices.PNG" alt="New price notice" class="news-img">
-                </figure>
+            </div>
+            <div class="about-images">
+                <img src="/assets/images/interior-1.avif" alt="Spa reception">
+                <img src="/assets/images/interior-2.avif" alt="Treatment room">
             </div>
         </section>
+
+        <!-- ───── Popular this month ──────────────────────────────── -->
+        <section class="popular" id="featured-services">
+            <h2>Our Signature Rituals</h2>
+
+            <div class="card-grid">
+
+                <!-- Facials -->
+                <article class="card">
+                    <img src="/assets/images/facials.PNG" alt="Relaxing facial treatment">
+
+                    <div class="card-body">
+                        <h3>Facials</h3>
+                        <p class="desc">
+                            Aveda balance facials, Medik8® peels,
+                            bespoke Dermalux LED and more for pigmentation,
+                            dullness & ageing.
+                        </p>
+                        <a href="/services.html#facials" class="btn btn--primary btn-sm">
+                            View&nbsp;Facials
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Massage -->
+                <article class="card">
+                    <img src="/assets/images/massage.PNG" alt="Holistic body massage">
+
+                    <div class="card-body">
+                        <h3>Massage</h3>
+                        <p class="desc">
+                            Reflexology, Chakra &amp; Marma balancing,
+                            sports &amp; remedial sessions – customised with
+                            pure essential oils to melt away tension.
+                        </p>
+                        <a href="/services.html#massage" class="btn btn--primary btn-sm">
+                            View&nbsp;Massage
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Beauty -->
+                <article class="card">
+                    <img src="/assets/images/beauty.PNG" alt="Beauty treatments">
+
+                    <div class="card-body">
+                        <h3>Beauty Treatments</h3>
+                        <p class="desc">
+                            Wax-free brow &amp; lash enhancements, luxury
+                            mani-pedis and advanced tanning techniques
+                            delivered by expert therapists.
+                        </p>
+                        <a href="/beauty.html#beauty" class="btn btn--primary btn-sm">
+                            View&nbsp;Beauty
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <small>© The Retreat Whickham 2025 · All rights reserved</small>
+    <!-- ───── Footer ─────────────────────────────────────────────── -->
+    <footer class="site-footer">
+        <small>&copy; The Retreat Whickham 2025 · All rights reserved</small>
     </footer>
 
-    <script type="module" src="/scripts/main.js"></script>
 </body>
 
 </html>

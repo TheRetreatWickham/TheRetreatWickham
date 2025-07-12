@@ -1,0 +1,355 @@
+/*════════════  LASER PAGE  ════════════*/
+
+/* --- Hero banner --------------------------------------------------- */
+.hero--laser {
+    background:url('/assets/images/hero.avif') center/cover no-repeat;
+    min-height: 60vh;
+}
+
+.hero--laser .hero__overlay {
+    padding: 7rem 1rem 5rem;
+}
+
+.hero-cta {
+    margin-top: 2rem;
+}
+
+/* --- Two-image panel ----------------------------------------------- */
+.treatment-img.duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* side-by-side on desktop */
+    gap: 1rem;
+}
+
+@media(max-width:639px) {
+
+    /* stack on mobile */
+    .treatment-img.duo {
+        grid-template-columns: 1fr;
+    }
+}
+
+.treatment-img.duo img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    /* equal height tiles; change to 3/2 if you prefer taller */
+    object-fit: contain;
+    /* show whole photo – no cropping */
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+
+/* --- Grid row layout ----------------------------------------------- */
+.treatment-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(800px, 75%);
+    /* image up to 58 % width */
+    gap: 3rem;
+    align-items: start;
+    max-width: var(--max);
+    margin: 0 auto 5rem;
+    padding: 0 var(--gutter);
+    margin-bottom: 4rem;
+}
+
+@media(max-width:840px) {
+    .treatment-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.treatment-grid.single {
+    grid-template-columns: minmax(450px, 38%) 1fr;
+    /* tweak 35-40 as you like */
+}
+
+.treatment-grid.single .treatment-img {
+    max-width: 460px;
+    /* tweak to taste */
+}
+
+/* --- Copy column ---------------------------------------------------- */
+.treatment-info {
+    padding-inline: 0 1rem;
+}
+
+.treatment-info h2 {
+    margin-top: 0;
+}
+
+.treatment-info p {
+    font-size: 1.06rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+}
+
+/* --- Buttons row ---------------------------------------------------- */
+.btn-row {
+    display: flex;
+    flex-wrap: nowrap !important;
+    /* never wrap */
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.btn-row .btn {
+    margin-top: 0 !important;
+    /* cancel old top-margin */
+    white-space: nowrap;
+    /* keep label in one piece */
+}
+
+/* outline button must be blue on white background */
+.treatment-info .btn--outline {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    background: transparent;
+}
+
+.treatment-info .btn--outline:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+/* --- Price list modal ---------------------------------------------- */
+.price-modal {
+    max-width: 740px;
+    width: 90%;
+    padding: 2.5rem 2rem 2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .35);
+    font-size: 1rem;
+}
+
+.price-modal::backdrop {
+    background: rgba(0, 0, 0, .55);
+}
+
+.price-modal h3 {
+    margin-top: 0;
+}
+
+.price-modal .close {
+    position: absolute;
+    top: .5rem;
+    right: .75rem;
+    border: none;
+    background: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text);
+    line-height: 1;
+}
+
+.pricing-grid {
+    list-style: none;
+    margin: 1.25rem 0 1.75rem;
+    padding: 0;
+    columns: 2 200px;
+    column-gap: 2rem;
+}
+
+.pricing-grid li {
+    break-inside: avoid;
+    margin-bottom: .35rem;
+}
+
+.centred {
+    text-align: center;
+}
+
+.price-lg {
+    font-weight: 700;
+    color: var(--blue);
+    margin: 1rem 0 .5rem;
+}
+
+.price-lg .save {
+    font-weight: 400;
+    color: var(--text);
+}
+
+.btn-row.centre {
+    justify-content: flex-start;
+}
+
+/* desktop */
+@media(max-width:520px) {
+    .btn-row.centre {
+        justify-content: center;
+    }
+
+    /* phone */
+}
+
+.price-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: nowrap !important;
+    /* wrap & centre on very narrow phones */
+}
+
+.price-row .btn {
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* no push-down */
+
+/*  B ▸ centre the lone IPL photo */
+.treatment-img.centre {
+    place-self: center;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    /* vertically centre badge + button */
+    justify-content: center;
+    /* centred under the photo pair     */
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+    /* breathing room above & below     */
+}
+
+.price-tag {
+    border: none;
+    /* no outline */
+    background: var(--light-blue);
+    /* soft tinted pill */
+    color: var(--text);
+    font-weight: 600;
+    border-radius: 999px;
+    /* pill shape distinguishes it */
+    padding: .4rem 1.2rem;
+}
+
+.price-tag .save {
+    color: var(--blue);
+    /* highlight the offer only   */
+    font-weight: 700;
+}
+
+#ipl .price-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+}
+
+.price-row .btn {
+    white-space: nowrap;
+}
+
+/* no push-down */
+.price-lg {
+    font-weight: 700;
+    color: var(--blue);
+    margin: 0;
+}
+
+.price-lg .save {
+    font-weight: 400;
+    color: var(--text);
+}
+
+.mini-hdg {
+    font-size: .85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    margin: 1rem 0 .25rem;
+}
+
+/* neat bullet list that lines up with body copy */
+.bullet-list {
+    margin: .25rem 0 1rem;
+    padding-left: 1rem;
+    line-height: 1.55;
+}
+
+.treatment-img.tall {
+    /* parent div decides how wide; tweak 520-560 as you like */
+    max-width: 560px;
+    width: 100%;
+    /* so the img can stretch        */
+}
+
+/* img must fill its parent */
+
+.treatment-img.tall img {
+    width: 100%;
+    /* fill the 560-px box           */
+    height: auto;
+    /* keep aspect ratio             */
+    object-fit: contain;
+    /* see whole photo, no crop      */
+}
+
+.note {
+    font-size: .92rem;
+    color: #444;
+    margin: .75rem 0 1rem;
+}
+
+@media(max-width:680px){
+   .treatment-img img{ width:100%; height:auto; }
+}
+
+.loopVid{
+  width:100%;                /* scales with parent */
+  max-width:480px;           /* tweak to taste     */
+  aspect-ratio:1/1;          /* keep it square     */
+  object-fit:cover;          /* fill, no bars      */
+  border-radius:6px;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+/* respects reduced-motion */
+@media (prefers-reduced-motion:reduce){
+  .loopVid{ display:none; }          /* hide video            */
+}
+
+.treatment-grid.reverse{
+  direction: rtl;
+}
+.treatment-grid.reverse > *{ direction:ltr; }
+
+/* reusable square / tall wrappers */
+.treatment-media{ max-width:460px; }
+.treatment-media.tall{ max-width:560px; }
+
+#threeDeep .treatment-media {
+  justify-self: center;
+  align-self:   center;
+}
+
+
+.treatment-media img,
+.treatment-media video{
+  width:100%;
+  aspect-ratio:1/1;          /* square by default   */
+  object-fit:cover;
+  border-radius:6px;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+@media(max-width:840px){
+  .treatment-grid.reverse{ direction:ltr; }   /* stack naturally */
+}
+
+@media (min-width: 841px){          /* desktop only */
+   #eyelift .treatment-media,
+   #fsr     .treatment-media,
+   #bleph   .treatment-media{
+        max-width:360px;           /* dial this up/down to taste   */
+   }
+}
+
+#photorej .price-row .price-tag {
+  white-space: nowrap;
+}
+

@@ -4,249 +4,308 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Retreat Laser & Advanced Skin Clinic | Rituals of Wellness & Beauty</title>
+  <title>Laser & Advanced Skin Clinic | The Retreat Whickham</title>
 
-  <!--  Google fonts  -->
+  <!-- Google fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
     rel="stylesheet">
 
-  <!--  Icon font (Font Awesome 6)  -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!--  Site stylesheet  -->
-  <link rel="stylesheet" href="/styles/main.css" />
+  <!-- Shared site stylesheet -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/laser.css">
 
-  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" href="/assets/favicon.ico">
 </head>
 
-  <!-- ===== Side Navigation ===== -->
-  <body>
-    <!-- ========== FIXED SIDE-NAV ===================================== -->
-    <aside class="side-nav" aria-label="Primary navigation">
-      <button id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<body>
 
-      <nav id="nav-menu">
+  <!-- ===== Header (same as home) ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- main nav -->
+      <nav class="main-nav" aria-label="Primary">
         <ul>
-          <li><a href="/"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
-          <li>
-            <a href="/laserAdvancedSkinCare.html#laser">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <span>Laser & Advanced Skin Clinic</span>
-            </a>
+          <li><a href="/index.html">Home</a></li>
+          <li class="has-sub">
+            <a href="#treatments">Treatments</a>
+
+            <!-- Sub-menu -->
+            <ul class="submenu">
+              <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
+              <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
+              <li><a href="/facials.html#facials">Facials</a></li>
+              <li><a href="/wellness.html#wellness">Wellness</a></li>
+              <li><a href="/beauty.html#beauty">Beauty</a></li>
+              <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
+              <li><a href="/makeup.html#makeup">Make-up</a></li>
+            </ul>
           </li>
-          <li>
-            <a href="/bodyStim.html#bodystim">
-              <i class="fa-solid fa-bolt"></i>
-              <span>BodyStim</span>
-            </a>
-          </li>
-          <li>
-            <a href="/facials.html#facials">
-              <i class="fa-solid fa-spa"></i>
-              <span>Facial</span>
-            </a>
-          </li>
-          <li>
-            <a href="/wellness.html#wellness">
-              <i class="fa-solid fa-leaf"></i>
-              <span>Wellness</span>
-            </a>
-          </li>
-          <li>
-            <a href="/beauty.html#beauty">
-              <i class="fa-solid fa-star"></i>
-              <span>Beauty</span>
-            </a>
-          </li>
-          <li>
-            <a href="/maniPedi.html#maniPedi">
-              <i class="fa-solid fa-hand-sparkles"></i>
-              <span>Mani & Pedi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/makeup.html#makeup">
-              <i class="fa-solid fa-palette"></i>
-              <span>Make-up</span>
-            </a>
-          </li>
-          <li>
-            <a href="/contact.html">
-              <i class="fa-solid fa-envelope"></i>
-              <span>Contact</span>
-            </a>
-          </li>
-          <li>
-            <a href="#tour">
-              <i class="fa-solid fa-video"></i>
-              <span>Take a Tour</span>
-            </a>
-          </li>
+          <li><a href="/gift-cards.html">Gift Cards</a></li>
+          <li><a href="/tour.html">Take a Tour</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/book.html">Book online</a></li>
         </ul>
       </nav>
-    </aside>
 
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="hero__overlay">
-        <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img">
-        <h1>The Retreat Laser &amp; Advanced Skin Clinic</h1>
+      <!-- centred logo -->
+      <a class="logo" href="/">
+        <img src="/assets/images/logo.PNG" alt="The Retreat Whickham">
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  
+  <section class="hero hero--laser">
+        <div class="hero-content">
+            <h1>Laser &amp; Advanced Skin Clinic</h1>
+      <p class="strapline">Cutting-edge technology · Visible results · Minimal downtime</p>
+
+            <div class="hero-buttons">
+      <a href="/book.html" class="btn btn--primary hero-cta">Book&nbsp;Now</a>
+            </div>
+        </div>
+    </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="intro container">
+    <p class="intro">
+      From permanent hair reduction to skin resurfacing and collagen remodelling, our
+      medical-grade laser systems deliver proven results with the comfort you expect from
+      The Retreat. All treatments are performed by fully trained therapists using CE-marked
+      equipment in a CQC-registered clinic.
+    </p>
+  </section>
+
+  <main class="treatments">
+
+    <!-- Laser Hair Removal -->
+    <section id="laser" class="treatment-grid">
+
+      <!-- info column -->
+      <div class="treatment-info">
+        <h2>Laser Hair Removal</h2>
+        <p>
+          Our Alpha system offers Laser Diode 808nm – this is considered the Gold standard in hair removal.
+          Safe and effective treatments for all skin types, includes a “Fast & Painless” mode which provides unrivalled
+          safety, effectiveness and comfort.
+
+
+        </p>
+
+        <!-- button opens modal -->
+        <div class="btn-row">
+          <button class="btn btn--outline btn-sm" data-open-prices>
+            View complete price list
+          </button>
+
+          <a href="/book.html#laser" class="btn btn--primary btn-sm">Book Laser Hair Removal</a>
+        </div>
+      </div>
+      <!-- 2-image banner (cross-fades on desktop) -->
+      <div class="treatment-img duo">
+        <img src="/assets/images/alpha-laser-1.avif" alt="Laser handset close-up">
+        <img src="/assets/images/alpha-laser-2.avif" alt="Laser treatment before & after">
       </div>
     </section>
 
-    <!-- ===== Main Content ===== -->
-    <main class="container laser-page">
-      <!-- Laser Hair Removal ------------------------------------- -->
-      <section id="laser">
-        <article class="service-card">
-          <div class="service-body">
-            <h2>Laser Hair Removal</h2>
-            <p>
-              Our Alpha system offers Laser Diode 808 nm – the gold standard in hair removal.
-              Safe and effective for all skin types, with a “Fast & Painless” mode providing
-              unrivalled comfort and results.
-            </p>
-            <h3>Pricing</h3>
-            <ul class="pricing-list">
-              <li>Upper lip: £40</li>
-              <li>Chin/sides of face: £60</li>
-              <li>Lip &amp; chin / jawline &amp; chin: £60</li>
-              <li>Full face: £100</li>
-              <li>Full face &amp; front of neck: £125</li>
-              <li>Fingers/toes: £40</li>
-              <li>Nipples/navel line: £50</li>
-              <li>Hands/feet: £50</li>
-              <li>Underarms: £70</li>
-              <li>Bikini/buttocks: £70</li>
-              <li>Brazilian/Hollywood: £85/£95</li>
-              <li>Half arm/abdomen/lower back: £85</li>
-              <li>Full arm/lower &amp; upper leg: £95</li>
-              <li>Full leg: £170</li>
-              <li>Upper leg &amp; bikini: £150</li>
-              <li>Half leg &amp; Brazilian: £170</li>
-              <li>Full leg &amp; Brazilian: £230</li>
-              <li>Brazilian, half lef &amp; underarm: £230</li>
-              <li>Chest/half back: £110</li>
-              <li>Full back/chest &amp; stomach: £160</li>
-              <li>20% discount on courses of 6-8 treatments</li>
-            </ul>
-          </div>
-          <img src="/assets/images/alpha-by-formatk.jpg" alt="ALPHA by Formatk laser handpiece" class="service-img">
-        </article>
-      </section>
+    <!-- hidden modal dialog (place **immediately after** the block above) -->
+    <dialog class="price-modal" id="priceModal">
+      <button class="close" aria-label="Close">&times;</button>
+      <h3>Laser Hair Removal · Full Price List</h3>
 
-      <!-- IPL Skin Laser Treatments ------------------------------- -->
-      <section id="ipl">
-        <article class="service-card">
-          <div class="service-body">
-            <h2>IPL Skin Laser Treatments</h2>
-            <p>
-              Our professional-grade IPL solution uses advanced 3D technology for precision
-              photorejuvenation. Treat pigmentation, rosacea, acne, and even hair removal for
-              finer hairs.
-            </p>
-            <p><strong>20% discount</strong> on courses of 6–8 treatments.</p>
-            <h3>Pricing</h3>
-            <p>£45 per area treated</p>
-          </div>
-          <img src="/assets/images/ipl-skin-laser.jpg" alt="FORMATK IPL skin treatment results" class="service-img">
-        </article>
-      </section>
+      <ul class="pricing-grid">
+        <li>Upper lip — £40</li>
+        <li>Chin / sides of face — £60</li>
+        <li>Lip &amp; chin / jawline &amp; chin — £60</li>
+        <li>Full face — £100</li>
+        <li>Full face &amp; front of neck — £125</li>
+        <li>Fingers / toes — £40</li>
+        <li>Nipples / navel — £50</li>
+        <li>Hands / feet — £50</li>
+        <li>Underarms — £70</li>
+        <li>Bikini / buttocks — £70</li>
+        <li>Brazilian / Hollywood — £85 / £95</li>
+        <li>Half arm / abdomen / lower back — £85</li>
+        <li>Full arm / lower/upper leg — £95</li>
+        <li>Full leg — £170</li>
+        <li>Upper leg + bikini — £150</li>
+        <li>Half leg + Brazilian — £170</li>
+        <li>Full leg + Brazilian — £230</li>
+        <li>Brazilian + half leg + underarm — £230</li>
+        <li>Chest / half back — £110</li>
+        <li>Full back / chest + stomach — £160</li>
+      </ul>
 
-      <!-- Tight & Bright Photorejuvenation ------------------------ -->
-      <section id="photorej">
-        <article class="service-card">
-          <div class="service-body">
-            <h2>Tight &amp; Bright Photorejuvenation</h2>
-            <p>
-              Cutting-edge laser technology to rejuvenate skin laxity, sun damage and pigmentation.
-              Stimulates collagen for firmer, radiant skin.
-            </p>
-            <h3>Treatment Areas &amp; Pricing</h3>
-            <ul>
-              <li>Face only: £95 per treatment</li>
-              <li>Course of 3: £250</li>
-            </ul>
-          </div>
-          <img src="/assets/images/tight-bright.jpg" alt="Tight & Bright device and results" class="service-img">
-        </article>
-      </section>
+      <p class="small centred">Save 20 % on a course of 6–8 sessions.</p>
+    </dialog>
+    <!-- IPL Skin Rejuvenation -->
+    <section id="ipl" class="treatment-grid single">
+      <div class="treatment-img centre">
+        <img src="/assets/images/ipl-skin-treatment.avif" alt="IPL skin treatment results">
+      </div>
+      <div class="treatment-info">
+        <h2>IPL Skin Rejuvenation</h2>
+        <p>
+          We also offer professional grade IPL solution featuring the most advanced 3D IPL technology that offers
+          precision in every pulse. IPL addresses issues such as pigmentation, pigmented lesions, skin rejuvenation,
+          acne, Rosacea, and also hair removal (IPL hair removal is designed for more vellus hair or skin type 6).
+        </p>
+        <div class="price-row">
+          <span class="price-tag">£45 per area</span>
+          <a href="/book.html#ipl" class="btn btn--primary btn-sm">Book IPL Session</a>
+        </div>
+      </div>
 
-      <!-- EndyMed 3DEEP Overview ----------------------------------- -->
-      <section id="3deep">
-        <article class="service-card">
-          <div class="service-body">
-            <h2>What is EndyMed 3DEEP?</h2>
-            <p>
-              A state-of-the-art radio-frequency device providing non-surgical skin tightening,
-              collagen stimulation and an overall healthy glow — no downtime!
-            </p>
-            <h3>Tighten Treatment</h3>
-            <p>
-              Targets cheeks, neck, jowls &amp; eye area. RF energy remodels collagen fibres
-              for firmer, lifted skin.
-            </p>
-            <ul>
-              <li>£85 per treatment</li>
-              <li>Course of 6: £460 (save £60)</li>
-            </ul>
-            <h3>EyeLift Treatment</h3>
-            <p>
-              Non-surgical eye lift to smooth fine lines, tighten hooded lids and reduce crow’s feet.
-            </p>
-            <ul>
-              <li>£200 per treatment</li>
-              <li>Course of 3: £540 (save £60)</li>
-            </ul>
-          </div>
-          <img src="/assets/images/3deep-overview.jpg" alt="EndyMed 3DEEP treatment in action" class="service-img">
-        </article>
-      </section>
+    </section>
 
-      <!-- FSR (Fractional Skin Resurfacing) ------------------------ -->
-      <section id="fsr">
-        <article class="service-card">
-          <div class="service-body">
-            <h2>FSR (Fractional Skin Resurfacing)</h2>
-            <p>
-              Micro-fractional heating &amp; resurfacing improves lines, wrinkles, texture,
-              scarring and stretch marks by stimulating collagen.
-            </p>
-            <ul>
-              <li>£230 per treatment</li>
-              <li>Course of 3 (monthly): £650</li>
-            </ul>
-          </div>
-          <img src="/assets/images/fsr.jpg" alt="EndyMed FSR before & after" class="service-img">
-        </article>
-      </section>
+    <section id="photorej" class="treatment-grid single">
 
-      <!-- EndyMed ENDYBleph ---------------------------------------- -->
-      <section id="bleph">
-        <article class="service-card">
-          <div class="service-body">
-            <h2>EndyMed ENDYBleph</h2>
-            <p>
-              Specialist FSR treatment for the delicate eye area, tightening eyelid hooding,
-              smoothing crow’s feet and enhancing periorbital luminosity.
-            </p>
-            <ul>
-              <li>£200 per treatment</li>
-              <li>Course of 3: £540 (save £60)</li>
-            </ul>
-          </div>
-          <img src="/assets/images/endybleph.jpg" alt="ENDYBleph before & after" class="service-img">
-        </article>
-      </section>
-    </main>
+      <div class="treatment-info">
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-      <small>© The Retreat Whickham 2025 · All rights reserved</small>
-    </footer>
+        <h2>Tight&nbsp;&amp;&nbsp;Bright Photorejuvenation</h2>
 
-    <script type="module" src="/scripts/main.js"></script>
-  </body>
+        <p>
+          Cutting-edge fractional laser and IPL combine to tighten laxity, brighten
+          sun-damage and pigmentation and stimulate fresh collagen for a
+          luminous, even complexion.
+        </p>
+
+        <h3 class="mini-hdg">Treatment areas</h3>
+        <ul class="bullet-list">
+          <li>Face</li>
+          <li>Neck</li>
+          <li>Décolleté</li>
+          <li>Hands</li>
+        </ul>
+
+        <p class="note">
+          For optimal results we recommend&nbsp;3–4 treatments, spaced&nbsp;4–6
+          weeks apart&nbsp;for progressive collagen rebuilding.
+        </p>
+
+        <div class="price-row">
+          <span class="price-tag">£95 per treatment · £250 course of 3</span>
+          <a class="btn btn--primary btn-sm" href="/book.html#photorej">Book Tight&nbsp;&amp;&nbsp;Bright</a>
+        </div>
+      </div>
+
+      <div class="treatment-img centre tall">
+        <img src="/assets/images/tight-bright.avif" alt="Tight & Bright photorejuvenation results">
+      </div>
+
+    </section>
+
+
+    <section id="threeDeep" class="treatment-grid single">
+
+      <figure class="treatment-media centre">
+        <video class="loopVid" src="/assets/videos/3deep.mp4" autoplay muted loop playsinline>
+          <img src="/assets/images/3deep.avif" alt="EndyMed 3DEEP in-clinic treatment">
+        </video>
+      </figure>
+
+      <div class="treatment-info">
+        <h2>EndyMed&nbsp;3DEEP™ Tighten</h2>
+
+        <p><strong>What is EndyMed 3DEEP?</strong><br>
+          A state of the art radio frequency device that uses the latest technology to provide non-surgical skin
+          treatments that are safe and effective to provide younger and clearer looking skin.
+
+
+        <p>RF energy is delivered deep into the layers of the skin, stimulating the collagen fibres for an effect that
+          is firmer, tighter and more elevated - with zero downtime!
+        </p>
+
+        <h3 class="mini-hdg">Best for</h3>
+        <ul class="bullet-list">
+          <li>Cheeks &amp; jowls</li>
+          <li>Under-chin / neck</li>
+          <li>Eye contour (see EyeLift below)</li>
+        </ul>
+
+        <p class="note">A course of <strong>6 weekly</strong> sessions recommended.</p>
+
+        <div class="price-row">
+          <span class="price-tag">£85 per treatment · £460 per course of 6&nbsp;of&nbsp;6</span>
+          <a class="btn btn--primary btn-sm" href="/book.html#3deep">Book 3DEEP</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="eyelift" class="treatment-grid single reverse">
+      <div class="treatment-media centre">
+        <img src="/assets/images/endymed-eyelift.avif" alt="Before and after EndyMed EyeLift">
+      </div>
+
+      <div class="treatment-info">
+        <h2>EndyMed EyeLift</h2>
+        <p><strong>The complete non-invasive eye solution.</strong><br>
+        <p>Redefines periorbital rejuvenation. The skin around the eyes is one of the first areas to show age, as
+          laughter lines, crows feet and drooping eyelids start to develop. It is a complete, safe and effective
+          non-surgical solution to you eye concerns, no down time, just beautiful results.</p>
+        <div class="price-row">
+          <span class="price-tag">£50 per treatment · £250 per course of 6&nbsp;of&nbsp;3</span>
+          <a class="btn btn--primary btn-sm" href="/book.html#eyelift">Book EyeLift</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="fsr" class="treatment-grid single">
+      <div class="treatment-media centre tall">
+        <img src="/assets/images/endymed-fsr.avif" alt="EndyMed FSR before &amp; after">
+      </div>
+
+      <div class="treatment-info">
+        <h2>Fractional Skin Resurfacing (FSR)</h2>
+        <p>Works deeper in the skin’s layers, triggering a healing response that works to improve the appearance of
+          lines and wrinkles, uneven skin texture, minor scaring and stretch marks. The device uses dermal heating and
+          micro-surfacing to increase levels of collagen and produce firmer, smoother skin!</p>
+
+        <p class="note">Course of <strong>3 monthly</strong> treatments advised.</p>
+
+        <div class="price-row">
+          <span class="price-tag">£230 per treatment · £650 per course of 3</span>
+          <a class="btn btn--primary btn-sm" href="/book.html#fsr">Book&nbsp;FSR</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="bleph" class="treatment-grid single reverse">
+      <div class="treatment-media centre">
+        <img src="/assets/images/endymed-endybleph.avif" alt="ENDYBleph results">
+      </div>
+
+      <div class="treatment-info">
+        <h2>ENDYMED ENDYBLEPH</h2>
+        <p>The area around the eyes is one of the first areas to show the signs of ageing, making this area particularly
+          popular for treatment.
+          3DEEP ENDYBleph non-surgical eye lifts provide the safest, most effective option for treating this delicate
+          area. This specialist FSR treatment which ‘open ups’ and rejuvenates the eye area, by tightening and
+          retracting eyelid hoods, tightening and lifting lax skin below the eye, smoothing crow’s feet, fine lines and
+          wrinkles and enhancing peri-orbital skin luminosity</p>
+
+        <div class="price-row">
+          <span class="price-tag">£200 per treatment · £540 course of 3 (save £60)</span>
+          <a class="btn btn--primary btn-sm" href="/book.html#bleph">Book&nbsp;ENDYBleph</a>
+        </div>
+      </div>
+    </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <small>© The Retreat Whickham 2025 · All rights reserved</small>
+  </footer>
+
+  <script type="module" src="/scripts/main.js"></script>
+</body>
 
 </html>

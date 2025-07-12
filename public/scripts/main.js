@@ -1,28 +1,15 @@
-// disable browser “remembered” scroll position
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 document.addEventListener('DOMContentLoaded', () => {
-    // jump to top
     window.scrollTo(0, 0);
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.side-nav a');
-    // clear every highlight
-    navLinks.forEach(link => link.classList.remove('is-active'));
-    // only look at links that start with “/”
-    navLinks.forEach(link => {
-        const raw = link.getAttribute('href') || '';
-        if (!raw.startsWith('/'))
-            return;
-        try {
-            const linkPath = new URL(link.href, location.origin).pathname;
-            if (linkPath === currentPath) {
-                link.classList.add('is-active');
-            }
-        }
-        catch {
-            // skip invalid URLs
-        }
-    });
+    /* ─── Laser price-list modal ─── */
+    const dlg = document.getElementById('priceModal');
+    const openBtn = document.querySelector('[data-open-prices]');
+    if (dlg && openBtn) {
+        openBtn.addEventListener('click', () => dlg.showModal());
+        dlg.querySelector('.close')
+            ?.addEventListener('click', () => dlg.close());
+    }
 });
 export {};
