@@ -4,27 +4,29 @@ if ('scrollRestoration' in history) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // jump to top
+  // 1) Snap to top on every page‐nav click
   window.scrollTo(0, 0);
 
-  const currentPath = window.location.pathname;
+  // 2) Normalize paths (strip trailing slash + .html)
+  const normalize = (p: string) =>
+    p.replace(/\/?$/, '').replace(/\.html$/, '');
+
+  const currentPath = normalize(window.location.pathname);
+  // Tell TS these really are anchors
   const navLinks = document.querySelectorAll<HTMLAnchorElement>('.side-nav a');
 
-  // clear every highlight
-  navLinks.forEach(link => link.classList.remove('is-active'));
-
-  // only look at links that start with “/”
   navLinks.forEach(link => {
-    const raw = link.getAttribute('href') || '';
-    if (!raw.startsWith('/')) return;
+    link.classList.remove('is-active');
 
-    try {
-      const linkPath = new URL(link.href, location.origin).pathname;
-      if (linkPath === currentPath) {
-        link.classList.add('is-active');
-      }
-    } catch {
-      // skip invalid URLs
+    const rawHref = link.getAttribute('href') || '';
+    // only internal links
+    if (!rawHref.startsWith('/')) return;
+
+    // Build a URL from the raw href (so we don’t pick up hashes or queries)
+    const linkPath = normalize(new URL(rawHref, location.origin).pathname);
+
+    if (linkPath === currentPath) {
+      link.classList.add('is-active');
     }
   });
 });

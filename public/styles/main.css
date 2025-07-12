@@ -11,8 +11,7 @@
     --font-sans: 'Poppins', sans-serif;
 }
 
-.container,
-.hero__overlay {
+.container {
     margin-left: calc(var(--nav-width) + var(--gutter));
     margin-right: var(--gutter);
 }
@@ -105,7 +104,8 @@ h3 {
 /* ----------  HERO BANNER  --------------------------------------------- */
 .hero {
     background: url('/assets/images/hero.jpg') center/cover no-repeat;
-    min-height: 500px;
+    /* shrink the forced height (or remove it entirely) */
+    min-height: 200px;
     display: grid;
     place-items: center;
     text-align: center;
@@ -123,15 +123,17 @@ h3 {
 .hero__overlay {
     position: relative;
     max-width: 680px;
-    padding: 2.5rem 1rem;
-
-    /* ← Add these two lines: */
+    /* top/right padding stays, bottom trimmed way down */
+    padding: 2.5rem 1rem 1rem;
     padding-right: var(--gutter);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    /* add a separator line at the bottom of the overlay */
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .logo-img {
@@ -336,123 +338,200 @@ main.container.laser-page {
 }
 
 .pricing-list {
-  list-style: none;    /* remove bullets */
-  margin: 0;           /* remove default margins */
-  padding: 0;          /* remove default indent */
+    list-style: none;
+    /* remove bullets */
+    margin: 0;
+    /* remove default margins */
+    padding: 0;
+    /* remove default indent */
 }
 
 /* optional: add a little breathing room between items */
 .pricing-list li {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 main.container.contact-page {
-  max-width: 1000px;                             /* pick your desired width */
-  margin: 0 auto;                                /* centre in the viewport */
-  padding-left: calc(var(--nav-width) + var(--gutter)); /* keep it clear of the side-nav */
-  padding-right: var(--gutter);
+    max-width: 1000px;
+    /* pick your desired width */
+    margin: 0 auto;
+    /* centre in the viewport */
+    padding-left: calc(var(--nav-width) + var(--gutter));
+    /* keep it clear of the side-nav */
+    padding-right: var(--gutter);
 }
 
 /* ─── Contact Form Section ───────────────────────────────────── */
 .contact-form-section {
-  text-align: center;
-  padding: 3rem var(--gutter);
+    text-align: center;
+    padding: 0 var(--gutter);
 }
+
 .contact-form-section h2 {
-  font-size: 2rem;
-  margin-bottom: .5rem;
+    font-size: 2rem;
+    margin-bottom: .5rem;
 }
+
 .contact-form-section .form-tagline {
-  color: #555;
-  margin-bottom: 2rem;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
 /* form layout */
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--gutter);
-  max-width: 700px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gutter);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* two inputs side by side */
 .contact-form__row {
-  display: flex;
-  width: 100%;
-  gap: var(--gutter);
+    display: flex;
+    width: 100%;
+    gap: var(--gutter);
 }
+
 .contact-form__row .form-group {
-  flex: 1;
+    flex: 1;
 }
 
 /* bubble style inputs */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: .75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-family: var(--font-sans);
-  line-height: 1.4;
+    width: 100%;
+    padding: .75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    line-height: 1.4;
 }
 
 /* textarea box a bit taller */
 .contact-form textarea {
-  border-radius: 8px;
-  min-height: 150px;
-  resize: vertical;
+    border-radius: 8px;
+    min-height: 150px;
+    resize: vertical;
 }
 
 /* submit spans full width */
 .contact-form__submit {
-  width: 100%;
-  max-width: 300px;
-  padding: .75rem;
-  border-radius: 50px;
-  font-size: 1.125rem;
+    width: 100%;
+    max-width: 300px;
+    padding: .75rem;
+    border-radius: 50px;
+    font-size: 1.125rem;
 }
 
-/* ─── Contact Details Row ───────────────────────────────────── */
+/* remove the hard max-width so the grid can fill your container */
 .contact-details-row {
-  display: flex;
-  justify-content: center;    /* centre the whole row */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--gutter);
-  flex-wrap: wrap;
-  padding: 3rem var(--gutter) 2rem;
   background: #f9f9f9;
+
+  /* make it 75% wide… */
+  width: 75%;
+  /* …and centre it horizontally with auto side margins: */
+  margin: 3rem auto;    /* 3rem top & bottom, auto left & right */
+
+  padding: 2rem var(--gutter) 3rem;
 }
+/* style each card as before (no width constraints) */
 .detail-card {
-  flex: 1 1 220px;
-  max-width: 280px;
-  text-align: center;         /* centre content in each card */
-  padding: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
 }
+
+/* Mobile: stack them */
+@media (max-width: 600px) {
+  .contact-details-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 .detail-card h3 {
-  margin-bottom: .5rem;
-  font-size: 1.125rem;
+    margin-bottom: .5rem;
+    font-size: 1.125rem;
 }
+
 .detail-card p {
-  line-height: 1.6;
-  color: #333;
+    line-height: 1.6;
+    color: #333;
 }
+
 .contact-map {
-  max-width: 1000px;
-  margin: 0 auto var(--gutter);
-  padding: 0 var(--gutter);
+    max-width: 1000px;
+    margin: 0 auto var(--gutter);
+    padding: 0 var(--gutter);
 }
 
 .contact-map iframe {
-  width: 100%;
-  height: 320px;
-  border-radius: 8px;
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
 }
 
 /* ─── Responsive tweaks ─────────────────────────────────────── */
 @media (max-width: 600px) {
-  .contact-form__row {
-    flex-direction: column;
-  }
+    .contact-form__row {
+        flex-direction: column;
+    }
+}
+
+.detail-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--nav-active);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary {
+  list-style: none;
+}
+
+/* 2) Button styling */
+details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;           
+  margin: var(--gutter) auto; 
+  padding: .75rem 1.5rem;
+  background: var(--nav-active);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s;
+}
+details summary:hover {
+  background: #6439d2;
+}
+
+/* 3) Custom chevron */
+details summary::after {
+  content: '▼';
+  font-size: 1rem;
+  transition: transform .2s;
+  margin-left: 1rem;
+}
+
+/* 4) Rotate when closed */
+details:not([open]) summary::after {
+  transform: rotate(-90deg);
+}
+
+/* 5) Spacing for the revealed content */
+details > .service-body {
+  margin-top: 1rem;
 }
