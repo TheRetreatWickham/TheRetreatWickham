@@ -22,7 +22,6 @@
   margin: 0 auto;
 }
 
-/* two inputs side by side */
 .contact-form__row {
   display: flex;
   width: 100%;
@@ -32,7 +31,6 @@
   flex: 1;
 }
 
-/* bubble style inputs */
 .contact-form input,
 .contact-form textarea {
   width: 100%;

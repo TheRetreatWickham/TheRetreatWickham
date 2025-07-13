@@ -1,0 +1,475 @@
+.hero.hero--bodystim {
+    background: rgba(0, 82, 143, .20);
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-inline: 0;
+    width: 100%;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero--bodystim .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.hero-title {
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+}
+
+.hero--bodystim .hero-bg {
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.hero--bodystim .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform-origin: center;
+}
+
+.hero--bodystim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .35));
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width:48em) {
+    .hero.hero--bodystim {
+        height: 60vh;
+    }
+}
+
+@media (min-width:70em) {
+    .hero.hero--bodystim {
+        height: 75vh;
+    }
+
+    .hero--bodystim .hero-bg img {
+        height: 115%;
+        width: auto;
+    }
+}
+
+/* “glow” highlight */
+.glow {
+    position: relative;
+}
+
+.glow::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: var(--light-blue);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+/* media wrapper */
+.treatment-media {
+    max-width: 460px;
+    place-self: center;
+}
+
+.loopVid {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+
+.package-section {
+    margin-top: 1rem !important;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem !important;
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+
+.package-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.1rem !important;
+}
+
+.package-card .price-lg {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem !important;
+}
+
+.package-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.package-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.recommendation {
+    margin-top: .75rem;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.faq details {
+    border-bottom: 1px solid #ddd;
+    padding: .8rem 0;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.price-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* ← keep one line */
+}
+
+.price-tag {
+    white-space: nowrap;
+}
+
+/* mobile fallback */
+@media(max-width:540px) {
+
+    /* phone fallback  */
+    .price-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.key-band {
+    background: var(--cream);
+    padding: 3rem var(--gutter);
+    margin-bottom: 1rem;
+}
+
+.key-band .key-list {
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.key-benefits {
+    background: var(--cream);
+    /* subtle band */
+}
+
+.key-benefits .benefit-grid {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 2.5rem var(--gutter);
+}
+
+#bodystim.treatment-grid.single {
+    /* media column from 320 px up to 460 px, then copy */
+    grid-template-columns: minmax(320px, 460px) 1fr;
+    align-items: center;
+    /* vertical align */
+}
+
+#bodystim .treatment-media {
+    justify-self: center;
+}
+
+.bstim-wrapper {
+    max-width: var(--max);
+    margin: 0 auto 4rem;
+    padding: 0 var(--gutter);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+@media(max-width:840px) {
+    .bstim-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 1-A ▸ video / hero visual */
+.bstim-media {
+    justify-self: center;
+}
+
+.bstim-media video,
+.bstim-media img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+
+/* 1-B ▸ headline + copy column */
+.bstim-info h2 {
+    margin-top: 0;
+}
+
+.bstim-info p {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.key-list {
+    display: grid;
+    gap: 1.5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    list-style: none;
+    padding: 0;
+}
+
+.key-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: .65rem;
+}
+
+.key-icon {
+    font-size: 1.35rem;
+    color: var(--blue);
+    margin-right: .6rem;
+}
+
+.key-label {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: .02em;
+}
+
+/* pill + button */
+.bstim-price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+}
+
+@media(max-width:520px) {
+    .bstim-price {
+        justify-content: center;
+    }
+}
+
+.gallery-row{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(320px,1fr));  /* enlarge or shrink 320 */
+  gap:2rem;
+  margin-top:0rem !important;
+  justify-content:center;
+}
+
+/* 2 ▸ Tablet and mobile breakpoints */
+@media(max-width:960px){
+  .gallery-row{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:540px){
+  .gallery-row{grid-template-columns:1fr;}
+}
+
+.gallery-row figure{
+  width:100%;                
+  aspect-ratio:4/3;           
+  background:#fff;           
+  display:flex;             
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  overflow:hidden;           
+}
+
+.gallery-row img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;         
+  display:block;
+}
+.results-header {
+    grid-column: 1 / -1;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--blue);
+    font-weight: 1000;
+    margin-bottom: 0.5rem;
+}
+
+.results-wrapper {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.hero-vid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero--bodystim {
+    padding: 0;
+}
+
+.hero.hero--bodystim::before {
+    display: none !important;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 82, 143, .55);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .hero-vid {
+        display: none;
+    }
+}
+
+.benefits-section {
+    max-width: var(--max);
+    margin: 3rem auto;
+    padding: 0 var(--gutter);
+}
+
+.benefits-section .mini-hdg {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.75rem;
+    padding-left: 0;
+    margin: 1rem 0 0;
+}
+
+.benefits-list li {
+    padding-left: 1.2em;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.benefits-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+/* at tablet-up, split into two columns */
+@media (min-width: 48em) {
+    .benefits-list {
+        columns: 2;
+    }
+}
+
+/* optional: three columns on very wide screens */
+@media (min-width: 64em) {
+    .benefits-list {
+        columns: 3;
+    }
+}
+
+/* ─ Bodystim two-col magazine layout ─────────────────────────────────── */
+.treatment-grid.two-col {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 60em) {
+    .treatment-grid.two-col {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+
+    /* place each of the four children into a 2×2 matrix */
+    .treatment-grid.two-col> :nth-child(1) {
+        /* 1st child → top-left */
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .treatment-grid.two-col> :nth-child(2) {
+        /* 2nd → top-right */
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .treatment-grid.two-col> :nth-child(3) {
+        /* 3rd → bottom-left */
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .treatment-grid.two-col> :nth-child(4) {
+        /* 4th → bottom-right */
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+.hero--bodystim.container,
+.hero--bodystim {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: none !important;   /* remove 1200 px cap           */
+  margin: 0 !important;         /* cancel the auto-centering    */
+}
+.hero--bodystim.container {
+  max-width: none;          /* no 1200 px cap          */
+  width: 100%;              /* full width inside body  */
+  margin: 0;                /* cancel auto-centering   */
+  padding-left: 0;          /* kill the side gutters   */
+  padding-right: 0;
+}
