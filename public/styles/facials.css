@@ -1,0 +1,328 @@
+.sticky-tabs {
+    position: sticky;
+    top: 80px;
+    z-index: 950;
+    background: var(--cream);
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    padding: 1rem 1rem 1.5rem;
+}
+
+/* Heading above the nav buttons */
+.sticky-tabs__heading {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Flex row of buttons */
+.sticky-tabs__inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Button-style links */
+.sticky-tabs__inner a {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sticky-tabs__inner a:hover,
+.sticky-tabs__inner a.active {
+    background: var(--blue);
+    color: white;
+}
+
+:target::before {
+    content: '';
+    display: block;
+    height: 100px;
+    /* matches sticky header + spacing */
+    margin-top: -100px;
+}
+
+.tab-panel {
+    display: none;
+    padding: 0 var(--gutter) 4rem;
+}
+
+.tab-panel.is-active {
+    display: block;
+}
+
+.intro {
+    max-width: 60ch;
+    margin: 2rem auto 3rem;
+    font-size: 1.05rem;
+}
+
+.centred {
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: var(--cream);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .desc {
+    flex-grow: 1;
+    font-size: .95rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1.25rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-lg {
+    font-size: 1.1rem;
+}
+
+.btn--primary {
+    background: var(--blue);
+    color: #fff;
+    border: 2px solid var(--blue);
+    text-align: center;
+}
+
+.btn--primary:hover {
+    background: #003366;
+    border-color: #003366;
+}
+
+.btn--outline {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+.btn-sm {
+    font-size: .88rem;
+    padding: .4rem 1rem;
+}
+
+.price-tag {
+    background: var(--light-blue);
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2.5rem;
+}
+
+.pricing-list li {
+    margin-bottom: .75rem;
+    font-size: 1rem;
+}
+
+@media(max-width:680px) {
+    .hero--facials {
+        min-height: 50vh;
+    }
+}
+
+.card-grid--four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.card-grid--three {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .card-grid--three {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card-grid--four {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+/* Remove bullet markers inside facials page only */
+.facials-page ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slightly tighter card grid so the LED / Aveda sections sit neatly */
+.card-grid--three {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* General vertical spacing tidy-ups */
+.treatment-section {
+    margin-block: 4rem;
+}
+
+.section-title {
+    margin-bottom: .5rem;
+}
+
+.section-intro {
+    margin-bottom: 1.5rem;
+}
+
+/* Style for nav label */
+.sticky-tabs__label {
+    font-weight: 600;
+    margin-right: 1rem;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+/* Center everything in card */
+.card {
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin: 0 0 1rem;
+}
+
+.card .price-row {
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.price-row .btn {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+}
+
+.hero--facials .hero-content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.treatment-section {
+    scroll-margin-top: 120px;
+    /* Adjust based on header/nav height */
+}
+
+.card-grid-wrapper {
+    padding-inline: 2rem;
+    /* or padding-left/right if you prefer */
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.facials-page .section-intro {
+    padding-inline: 10rem;
+}
+
+.info-modal {
+    max-width: 600px;
+    width: 90%;
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    font-family: var(--sans);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.info-modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.info-modal h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.info-modal p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.info-modal .warning {
+    font-weight: 600;
+    color: darkred;
+    text-transform: uppercase;
+}
+
+.btn--info {
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-family: var(--sans);
+    transition: all 0.2s ease;
+}
+
+.btn--primary {
+    background: var(--blue);
+    color: #fff;
+    text-align: center;
+    border: 2px solid var(--blue);
+}
+
+.btn--lg {
+    font-size: 1.05rem;
+    padding: 0.75rem 1.75rem;
+}
+
+.important-info {
+    margin-top: 1.5rem;
+}
+
+.card-grid--two {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}

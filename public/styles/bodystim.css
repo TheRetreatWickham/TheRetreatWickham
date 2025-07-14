@@ -1,7 +1,7 @@
 .hero.hero--bodystim {
     background: rgba(0, 82, 143, .20);
     position: relative;
-    height: 75vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,7 @@
 
 @media (min-width:70em) {
     .hero.hero--bodystim {
-        height: 75vh;
+        height: 65vh;
     }
 
     .hero--bodystim .hero-bg img {
@@ -473,3 +473,12 @@
   padding-left: 0;          /* kill the side gutters   */
   padding-right: 0;
 }
+
+.anchor-offset {
+  display: block;
+  position: relative;
+  top: -100px;
+  height: 0;
+  visibility: hidden;
+}
+

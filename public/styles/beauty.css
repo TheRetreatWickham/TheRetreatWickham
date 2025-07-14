@@ -1,0 +1,106 @@
+.hero--beauty .hero-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:7rem 1rem 5rem;
+}
+.hero--beauty h1{
+    margin:0 0 1.25rem;
+    font-size:clamp(2rem,5vw,3rem);
+    color:#fff;
+}
+
+/* ---------- Grid of service cards ---------- */
+.service-grid{
+    --gap:2rem;
+    display:grid;
+    gap:var(--gap);
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    max-width:var(--max);
+    margin:0 auto 4rem;
+    padding:0 var(--gutter);
+}
+
+/* Individual card */
+.service-card{
+    background:var(--cream);
+    border-radius:6px;
+    padding:1.75rem 1.5rem 2rem;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.service-card h2{
+    margin-top:0;
+    font-family:var(--serif);
+    font-size:1.45rem;
+}
+
+/* Optional intro paragraph above list */
+.service-intro{
+    font-size:1rem;
+    margin:.25rem 0 1rem;
+}
+
+/* Standard list styling reused across pages */
+.pricing-list{
+    list-style:none;
+    margin:0 0 1.5rem;
+    padding:0;
+    font-size:.98rem;
+}
+.pricing-list li{
+    display:flex;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:.5rem;
+    line-height:1.4;
+}
+
+/* Pill price badge reused from other pages */
+.price-tag{
+    background:var(--light-blue);
+    border-radius:999px;
+    padding:.3rem 0.9rem;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+/* Descriptive labels such as upgrade notes */
+.upgrade{
+    font-style:italic;
+    font-size:.9rem;
+}
+
+/* Media (optional) */
+.service-media{
+    margin-top:auto;                /* pushes image to bottom */
+}
+.service-media img{
+    width:100%;
+    border-radius:6px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    object-fit:cover;
+}
+
+/* Small print, notes, etc. */
+.small{
+    font-size:.85rem;
+    line-height:1.45;
+}
+
+.note{
+    margin-top:.75rem;
+    color:#555;
+}
+
+.centred{
+    text-align:center;
+}
+
+@media(max-width:680px){
+    .hero--beauty{min-height:50vh;}
+}

@@ -6,32 +6,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Beauty | Rituals of Wellness & Beauty</title>
 
-    <!--  Google fonts  -->
+    <!-- Google fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
 
-    <!--  Icon font (Font Awesome 6)  -->
+    <!-- Icon font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!--  Site stylesheet  -->
+    <!-- Shared site styles -->
     <link rel="stylesheet" href="/styles/main.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="/styles/beauty.css" />
 
     <link rel="icon" href="/assets/favicon.ico" />
 </head>
 
-<body>
-    <!-- ===== Side Navigation ===== -->
-     <header class="site-header">
+<body class="beauty-page">
+    <header class="site-header">
         <div class="header-inner">
-            <!-- main nav -->
             <nav class="main-nav" aria-label="Primary">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li class="has-sub">
                         <a href="#treatments">Treatments</a>
-
-                        <!-- Sub-menu -->
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
@@ -49,119 +47,108 @@
                 </ul>
             </nav>
 
-            <!-- centred logo -->
             <a class="logo" href="/">
                 <img src="/assets/images/logo.PNG" alt="The Retreat Whickham">
             </a>
-
         </div>
     </header>
 
-
     <!-- ===== Hero ===== -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__overlay">
-                <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img">
-                <h1>Beauty Treatments</h1>
-            </div>
+    <section class="hero hero--beauty">
+        <div class="hero-content">
+            <h1>Beauty&nbsp;Treatments</h1>
+            <a class="btn btn--primary btn-lg" href="/book.html">Book now</a>
+        </div>
     </section>
 
-    <!-- ===== Main Content ===== -->
+    <!-- ===== Main ===== -->
     <main class="container">
-        <section id="beauty">
-            <!-- Eye Treatments -->
-            <article class="service-vertical">
-                <hr class="service-separator">
-                <h2>Eye Treatments</h2>
-                <ul>
-                    <li>Eye Brow Tinting — £17 (hot wax &amp; tweeze)</li>
-                    <li>Brow Design — £26 (brow tint &amp; shape)</li>
-                    <li>Eye Lash Tinting — £22 (open &amp; define the eye)</li>
-                    <li>Brow Tint — £17 (define the brow)</li>
-                    <li>Perfect Eyes Package — £36 (eyelash tint &amp; brow design)</li>
-                    <li>Full Set of Lash Extensions — £70 (single lash application, 2–3 weeks wear)</li>
-                    <li>Rebalance / Audrey Sweep — £48 (60 mins; maintenance every 2–3 weeks)</li>
-                    <li>Eyelash Lifting &amp; Tint — £45 (8–12 weeks curl &amp; lift)</li>
-                    <li>Hybrid Brows — £28 (long-lasting tint for up to 5 days)</li>
+        <section id="beauty" class="service-grid">
+
+            <!-- ▸ EYE TREATMENTS ----------------------------------------------------- -->
+            <article class="service-card">
+                <h2>Eye&nbsp;Treatments</h2>
+                <ul class="pricing-list">
+                    <li><span>Eye Brow Tinting</span><span class="price-tag">£17</span></li>
+                    <li><span>Brow Design</span><span class="price-tag">£26</span></li>
+                    <li><span>Eye Lash Tinting</span><span class="price-tag">£22</span></li>
+                    <li><span>Brow Tint</span><span class="price-tag">£17</span></li>
+                    <li><span>Perfect Eyes Package</span><span class="price-tag">£36</span></li>
+                    <li><span>Full Set Lash Extensions</span><span class="price-tag">£70</span></li>
+                    <li><span>Rebalance / Audrey Sweep</span><span class="price-tag">£48</span></li>
+                    <li><span>Eyelash Lifting &amp; Tint</span><span class="price-tag">£45</span></li>
+                    <li><span>Hybrid Brows</span><span class="price-tag">£28</span></li>
                 </ul>
             </article>
 
-            <!-- Tanning -->
-            <article class="service-vertical">
-                <hr class="service-separator">
+            <!-- ▸ TANNING ------------------------------------------------------------- -->
+            <article class="service-card">
                 <h2>Tanning</h2>
-                <p>
-                    With our wide range of products, you are spoiled for choice when it comes to
-                    creating a natural golden glow:
+                <p class="service-intro">
+                    Choose from our curated collection for a flawless, golden glow:
                 </p>
-                <ul>
-                    <li>St Tropez Spray Tan — £18 (experience 3 tans for only £75!)</li>
-                    <li>St Tropez Luxe Oil Mist — ask in-salon for shades &amp; wardrobes</li>
-                    <li>Xen Tan Luxury Tan — £55 (facial, body exfoliation &amp; hands)</li>
+                <ul class="pricing-list">
+                    <li><span>St Tropez Spray Tan</span><span class="price-tag">£18</span></li>
+                    <li><span>St Tropez Luxe Oil Mist</span><span class="price-tag">Ask&nbsp;in&nbsp;salon</span></li>
+                    <li><span>Xen Tan Luxury Tan</span><span class="price-tag">£55</span></li>
                 </ul>
-                <figure class="promo-card">
-                    <img src="/assets/images/tan-sttropez.jpg" alt="St Tropez spray tan">
-                    <figcaption class="sr-only">St Tropez spray tan</figcaption>
+                <figure class="service-media">
+                    <img src="/assets/images/tan-sttropez.jpg" alt="St Tropez spray tan results">
                 </figure>
             </article>
 
-            <!-- Relaxing Waxing -->
-            <article class="service-vertical">
-                <hr class="service-separator">
-                <h2>Relaxing Waxing</h2>
-                <p>
-                    A wax service like no other, customised with essential oils and soothing
-                    hot towels:
+            <!-- ▸ RELAXING WAXING ---------------------------------------------------- -->
+            <article class="service-card">
+                <h2>Relaxing&nbsp;Waxing</h2>
+                <p class="service-intro">
+                    A bespoke wax ritual with essential oils and soothing hot towels.
                 </p>
-                <ul>
-                    <li>Strip Waxing (PhD hygienic wax) for quicker larger areas</li>
-                    <li>Full Leg Wax — £38</li>
-                    <li>Half Leg Wax — £30</li>
-                    <li>Full Arm Wax — £27</li>
-                    <li>Half Arm Wax — £20</li>
-                    <li>Back or Chest Wax — £30</li>
-                    <li>Back &amp; Chest Wax — £40</li>
+                <ul class="pricing-list">
+                    <li><span>Full Leg</span><span class="price-tag">£38</span></li>
+                    <li><span>Half Leg</span><span class="price-tag">£30</span></li>
+                    <li><span>Full Arm</span><span class="price-tag">£27</span></li>
+                    <li><span>Half Arm</span><span class="price-tag">£20</span></li>
+                    <li><span>Back or Chest</span><span class="price-tag">£30</span></li>
+                    <li><span>Back &amp; Chest</span><span class="price-tag">£40</span></li>
                 </ul>
-                <p class="small">*Please let your therapist know if you are on medication which may sensitivise your
-                    skin</p>
+                <p class="note small">
+                    *Please advise your therapist if you are taking any medication that may sensitise your skin.
+                </p>
             </article>
 
-            <!-- Lycon Precision Waxing -->
-            <article class="service-vertical">
-                <hr class="service-separator">
+            <!-- ▸ LYCON PRECISION WAXING ------------------------------------------- -->
+            <article class="service-card">
                 <h2>Lycon Precision Waxing</h2>
-                <p>
-                    We use hot wax for delicate areas, a low-sting treatment with super-smooth
-                    finish. Lycon removes hair as short as 1 mm—no other wax comes close:
+                <p class="service-intro">
+                    Low-sting hot-wax treatment, removing hairs as short as&nbsp;1 mm.
                 </p>
-                <ul>
-                    <li>Lip Wax — £16</li>
-                    <li>Lip &amp; Chin — £18</li>
-                    <li>Nostril — £15</li>
-                    <li>Underarm — £17</li>
-                    <li>Basic Bikini — £24 (G-string ready)</li>
-                    <li>Hollywood Bikini — £40</li>
+                <ul class="pricing-list">
+                    <li><span>Lip Wax</span><span class="price-tag">£16</span></li>
+                    <li><span>Lip &amp; Chin</span><span class="price-tag">£18</span></li>
+                    <li><span>Nostril</span><span class="price-tag">£15</span></li>
+                    <li><span>Underarm</span><span class="price-tag">£17</span></li>
+                    <li><span>Basic Bikini</span><span class="price-tag">£24</span></li>
+                    <li><span>Hollywood Bikini</span><span class="price-tag">£40</span></li>
                 </ul>
-                <figure class="promo-card">
-                    <img src="/assets/images/lycon.jpg" alt="Lycon precision waxing">
-                    <figcaption class="sr-only">Lycon precision waxing</figcaption>
+                <figure class="service-media">
+                    <img src="/assets/images/lycon.jpg" alt="Lycon waxing treatment">
                 </figure>
             </article>
 
-            <!-- Waxing Packages -->
-            <article class="service-vertical">
-                <hr class="service-separator">
-                <h2>Waxing Packages</h2>
-                <ul>
-                    <li>Half Leg &amp; Bikini — £50</li>
-                    <li>Full Leg &amp; Bikini — £56</li>
-                    <li>Half Leg &amp; Brazilian — £60</li>
-                    <li>Full Leg &amp; Brazilian — £65</li>
-                    <li>Ready for Anything (leg, bikini, underarm &amp; eyebrow) — £69</li>
-                    <li>Upgrade to Brazilian — +£10</li>
+            <!-- ▸ WAXING PACKAGES ---------------------------------------------------- -->
+            <article class="service-card">
+                <h2>Waxing&nbsp;Packages</h2>
+                <ul class="pricing-list">
+                    <li><span>Half Leg &amp; Bikini</span><span class="price-tag">£50</span></li>
+                    <li><span>Full Leg &amp; Bikini</span><span class="price-tag">£56</span></li>
+                    <li><span>Half Leg &amp; Brazilian</span><span class="price-tag">£60</span></li>
+                    <li><span>Full Leg &amp; Brazilian</span><span class="price-tag">£65</span></li>
+                    <li><span>Ready for Anything*</span><span class="price-tag">£69</span></li>
+                    <li class="small upgrade">Upgrade to Brazilian — add £10</li>
                 </ul>
+                <p class="small centred">*Half leg, bikini, underarm &amp; eyebrow wax.</p>
             </article>
+
         </section>
     </main>
 
