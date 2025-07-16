@@ -1,7 +1,7 @@
 .hero.hero--bodystim {
     background: rgba(0, 82, 143, .20);
     position: relative;
-    height: 65vh;
+    height: 55vh !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,42 +104,6 @@
     object-fit: cover;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
-}
-
-.package-section {
-    margin-top: 1rem !important;
-}
-
-.package-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.2rem !important;
-    justify-items: center;
-    text-align: center;
-    margin-bottom: 0rem;
-}
-
-
-.package-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.1rem !important;
-}
-
-.package-card .price-lg {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem !important;
-}
-
-.package-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.package-footer {
-    text-align: center;
-    margin-top: 2.5rem;
 }
 
 .recommendation {
@@ -296,39 +260,46 @@
     }
 }
 
-.gallery-row{
-  display:grid;
-  grid-template-columns:repeat(4, minmax(320px,1fr));  /* enlarge or shrink 320 */
-  gap:2rem;
-  margin-top:0rem !important;
-  justify-content:center;
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(320px, 1fr));
+    /* enlarge or shrink 320 */
+    gap: 2rem;
+    margin-top: 0rem !important;
+    justify-content: center;
 }
 
 /* 2 ▸ Tablet and mobile breakpoints */
-@media(max-width:960px){
-  .gallery-row{grid-template-columns:repeat(2,1fr);}
-}
-@media(max-width:540px){
-  .gallery-row{grid-template-columns:1fr;}
-}
-
-.gallery-row figure{
-  width:100%;                
-  aspect-ratio:4/3;           
-  background:#fff;           
-  display:flex;             
-  align-items:center;
-  justify-content:center;
-  border-radius:8px;
-  overflow:hidden;           
+@media(max-width:960px) {
+    .gallery-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.gallery-row img{
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;         
-  display:block;
+@media(max-width:540px) {
+    .gallery-row {
+        grid-template-columns: 1fr;
+    }
 }
+
+.gallery-row figure {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-row img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 .results-header {
     grid-column: 1 / -1;
     font-size: 3rem;
@@ -461,24 +432,84 @@
 
 .hero--bodystim.container,
 .hero--bodystim {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  max-width: none !important;   /* remove 1200 px cap           */
-  margin: 0 !important;         /* cancel the auto-centering    */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    /* remove 1200 px cap           */
+    margin: 0 !important;
+    /* cancel the auto-centering    */
 }
+
 .hero--bodystim.container {
-  max-width: none;          /* no 1200 px cap          */
-  width: 100%;              /* full width inside body  */
-  margin: 0;                /* cancel auto-centering   */
-  padding-left: 0;          /* kill the side gutters   */
-  padding-right: 0;
+    max-width: none;
+    width: 100%;
+    /* full width inside body  */
+    margin: 0;
+    /* cancel auto-centering   */
+    padding-left: 0;
+    /* kill the side gutters   */
+    padding-right: 0;
 }
 
-.anchor-offset {
-  display: block;
-  position: relative;
-  top: -100px;
-  height: 0;
-  visibility: hidden;
+/* bodystim.css — Page‑specific overrides */
+
+/* Results Banner */
+.results-banner {
+    margin: 4rem 0;
 }
 
+.results-banner .gallery-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.results-banner .gallery-row figure {
+    overflow: hidden;
+    border-radius: var(--radius-large);
+}
+
+/* Key Icon List */
+.key-list.centred {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.key-icon {
+    font-size: 2rem;
+}
+
+/* Benefits List (override if needed) */
+.benefits-list.centred {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: disc outside none;
+    padding-left: 1.5rem;
+}
+
+
+
+/* Utility overrides */
+.centre {
+    text-align: center;
+}
+
+#overview ul,
+#overview ul li,
+.benefits-section ul,
+.benefits-section ul li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* in case your benefits-list injects bullets via ::before */
+.benefits-list li::before {
+  content: none !important;
+}

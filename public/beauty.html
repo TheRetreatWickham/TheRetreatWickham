@@ -34,7 +34,7 @@
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
                             <li><a href="/facials.html#facials">Facials</a></li>
-                            <li><a href="/wellness.html#wellness">Wellness</a></li>
+                            <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
                             <li><a href="/beauty.html#beauty">Beauty</a></li>
                             <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
                             <li><a href="/makeup.html#makeup">Make-up</a></li>
@@ -57,6 +57,7 @@
     <section class="hero hero--beauty">
         <div class="hero-content">
             <h1>Beauty&nbsp;Treatments</h1>
+            <p class="strapline">Glow up. Feel your absolute best</p>
             <a class="btn btn--primary btn-lg" href="/book.html">Book now</a>
         </div>
     </section>
@@ -64,10 +65,11 @@
     <!-- ===== Main ===== -->
     <main class="container">
         <section id="beauty" class="service-grid">
-
-            <!-- ▸ EYE TREATMENTS ----------------------------------------------------- -->
             <article class="service-card">
-                <h2>Eye&nbsp;Treatments</h2>
+                <div class="service-header">
+                    <h2>Eye&nbsp;Treatments</h2>
+                    <a href="/book.html#eye" class="btn btn--primary btn-sm">Book Eye Treatment</a>
+                </div>
                 <ul class="pricing-list">
                     <li><span>Eye Brow Tinting</span><span class="price-tag">£17</span></li>
                     <li><span>Brow Design</span><span class="price-tag">£26</span></li>
@@ -79,27 +81,53 @@
                     <li><span>Eyelash Lifting &amp; Tint</span><span class="price-tag">£45</span></li>
                     <li><span>Hybrid Brows</span><span class="price-tag">£28</span></li>
                 </ul>
+                <p class="note small">
+                    *A patch test must be carried out 24 hours prior to tinting, lash exensions, lifting.
+                </p>
+                <button id="openEyeModal" class="btn btn--secondary btn-sm" data-open-eye-treatment>
+                    More info on Eye Treatments
+                </button>
             </article>
 
             <!-- ▸ TANNING ------------------------------------------------------------- -->
             <article class="service-card">
-                <h2>Tanning</h2>
+                <div class="service-header">
+                    <h2>Tanning</h2>
+                    <a href="/book.html#tanning" class="btn btn--primary btn-sm">Book Tanning</a>
+                </div>
                 <p class="service-intro">
                     Choose from our curated collection for a flawless, golden glow:
                 </p>
                 <ul class="pricing-list">
-                    <li><span>St Tropez Spray Tan</span><span class="price-tag">£18</span></li>
-                    <li><span>St Tropez Luxe Oil Mist</span><span class="price-tag">Ask&nbsp;in&nbsp;salon</span></li>
-                    <li><span>Xen Tan Luxury Tan</span><span class="price-tag">£55</span></li>
+                    <li>
+                        <span>
+                            <strong>St Tropez Spray Tan</strong><br>
+                            Quick-drying mist for an even, sun-kissed glow. 3 for £75!
+                            We have a wardrobe of choice including St Tropez's new Luxe Oil Mist!
+                        </span>
+                        <span class="price-tag">£28</span>
+                    </li>
+                    <li>
+                        <span>
+                            <strong>Xen Tan Luxury Tan</strong><br>
+                            A perfect hands on application, including facial cleanse and body exfoliation.
+                            In a choice of shades, this is perfect for brides on special occasions!
+                        </span>
+                        <span class="price-tag">£55</span>
+                    </li>
                 </ul>
                 <figure class="service-media">
                     <img src="/assets/images/tan-sttropez.jpg" alt="St Tropez spray tan results">
                 </figure>
             </article>
 
+
             <!-- ▸ RELAXING WAXING ---------------------------------------------------- -->
             <article class="service-card">
-                <h2>Relaxing&nbsp;Waxing</h2>
+                <div class="service-header">
+                    <h2>Relaxing&nbsp;Waxing</h2>
+                    <a href="/book.html#waxing" class="btn btn--primary btn-sm">Book Waxing</a>
+                </div>
                 <p class="service-intro">
                     A bespoke wax ritual with essential oils and soothing hot towels.
                 </p>
@@ -118,9 +146,14 @@
 
             <!-- ▸ LYCON PRECISION WAXING ------------------------------------------- -->
             <article class="service-card">
-                <h2>Lycon Precision Waxing</h2>
+                <div class="service-header">
+                    <h2>Lycon Precision Waxing</h2>
+                    <a href="/book.html#lycon" class="btn btn--primary btn-sm">Book Lycon Wax</a>
+                </div>
+
                 <p class="service-intro">
-                    Low-sting hot-wax treatment, removing hairs as short as&nbsp;1 mm.
+                    We only use hot wax for your delicate areas, a low-string treatment with a
+                    super smooth finish, removing hair as short as 1 mm.
                 </p>
                 <ul class="pricing-list">
                     <li><span>Lip Wax</span><span class="price-tag">£16</span></li>
@@ -131,13 +164,17 @@
                     <li><span>Hollywood Bikini</span><span class="price-tag">£40</span></li>
                 </ul>
                 <figure class="service-media">
-                    <img src="/assets/images/lycon.jpg" alt="Lycon waxing treatment">
+                    <img src="/assets/images/lycon.avif" alt="Lycon waxing treatment">
                 </figure>
             </article>
 
             <!-- ▸ WAXING PACKAGES ---------------------------------------------------- -->
-            <article class="service-card">
-                <h2>Waxing&nbsp;Packages</h2>
+            <article class="service-card centered-card">
+
+                <div class="service-header">
+                    <h2>Waxing&nbsp;Packages</h2>
+                    <a href="/book.html#packages" class="btn btn--primary btn-sm">Book Waxing Package</a>
+                </div>
                 <ul class="pricing-list">
                     <li><span>Half Leg &amp; Bikini</span><span class="price-tag">£50</span></li>
                     <li><span>Full Leg &amp; Bikini</span><span class="price-tag">£56</span></li>
@@ -147,6 +184,9 @@
                     <li class="small upgrade">Upgrade to Brazilian — add £10</li>
                 </ul>
                 <p class="small centred">*Half leg, bikini, underarm &amp; eyebrow wax.</p>
+                <figure class="service-media">
+                    <img src="/assets/images/waxing.avif" alt="Lycon waxing treatment">
+                </figure>
             </article>
 
         </section>
@@ -157,6 +197,25 @@
         <small>© The Retreat Whickham 2025 · All rights reserved</small>
     </footer>
 
+    <dialog id="eyeModal" class="eye-modal">
+        <button class="close" aria-label="Close">&times;</button>
+        <h2 id="eyeModalTitle">Eye Treatments Details</h2>
+        <ul>
+            <li><strong>Eye Brow Tidy — </strong>Hot wax and tweeze</li>
+            <li><strong>Brow Design — </strong>Brow tint and shape</li>
+            <li><strong>Eye Lash Tinting — </strong>Open and define the eye</li>
+            <li><strong>Brow Tint — </strong>Define the brow</li>
+            <li><strong>Perfect Eyes Package — </strong>Eyelash tint &amp; brow design</li>
+            <li><strong>Full Set of Lash Extensions — </strong>1 hr 30 mins single lash application for a natural
+                elegant look that legnthens and adds fullness, lasting 2–3 weeks</li>
+            <li><strong>Rebalance / Audrey Sweep — </strong>60 mins; we recommend a rebalance to maintain lashes every
+                2-3 weeks</li>
+            <li><strong>Eyelash Lifting &amp; Tint — </strong>Curl and lift the lashes to give the effect of longer
+                thicker lashes that lasts 8-12 weeks.
+            </li>
+            <li><strong>Hybrid Brows — </strong>Long‑lasting tint up to 5 days to give a fuller, beutiful brow! Covers greys</li>
+        </ul>
+    </dialog>
     <script type="module" src="/scripts/main.js"></script>
 </body>
 

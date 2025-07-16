@@ -1,106 +1,207 @@
-.hero--beauty .hero-content{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:7rem 1rem 5rem;
-}
-.hero--beauty h1{
-    margin:0 0 1.25rem;
-    font-size:clamp(2rem,5vw,3rem);
-    color:#fff;
+.hero--beauty .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 7rem 1rem 5rem;
+    margin-bottom: 1rem;
 }
 
-/* ---------- Grid of service cards ---------- */
-.service-grid{
-    --gap:2rem;
-    display:grid;
-    gap:var(--gap);
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    max-width:var(--max);
-    margin:0 auto 4rem;
-    padding:0 var(--gutter);
+
+.hero--beauty {
+    margin-bottom: 1rem;
 }
 
-/* Individual card */
-.service-card{
-    background:var(--cream);
-    border-radius:6px;
-    padding:1.75rem 1.5rem 2rem;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 2px 8px rgba(0,0,0,.05);
+.hero--beauty h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
 }
 
-.service-card h2{
-    margin-top:0;
-    font-family:var(--serif);
-    font-size:1.45rem;
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 var(--gutter);
+    align-items: stretch;
 }
 
-/* Optional intro paragraph above list */
-.service-intro{
-    font-size:1rem;
-    margin:.25rem 0 1rem;
+.centered-card {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 500px; 
 }
 
-/* Standard list styling reused across pages */
-.pricing-list{
-    list-style:none;
-    margin:0 0 1.5rem;
-    padding:0;
-    font-size:.98rem;
-}
-.pricing-list li{
-    display:flex;
-    justify-content:space-between;
-    gap:1rem;
-    margin-bottom:.5rem;
-    line-height:1.4;
+/* Card */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--cream);
+    border-radius: 6px;
+    padding: 1.75rem 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+    height: 100%;
 }
 
-/* Pill price badge reused from other pages */
-.price-tag{
-    background:var(--light-blue);
-    border-radius:999px;
-    padding:.3rem 0.9rem;
-    font-weight:600;
-    white-space:nowrap;
+.service-card:nth-of-type(1) {
+  grid-column-start: 1 !important;
+}
+/* Typography & lists */
+.service-card h2 {
+    margin-top: 0;
+    font-family: var(--serif);
+    font-size: 1.45rem;
 }
 
-/* Descriptive labels such as upgrade notes */
-.upgrade{
-    font-style:italic;
-    font-size:.9rem;
+.service-intro {
+    font-size: 1rem;
+    margin: .25rem 0 1rem;
+}
+
+/* Responsive fallback to 1-column */
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card:last-child {
+        grid-column: auto;
+    }
+}
+
+.pricing-list {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    font-size: .98rem;
+}
+
+.pricing-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 1rem;
+  margin-bottom: .75rem; 
+  line-height: 1.4;
+}
+
+.price-tag {
+  background: var(--light-blue);
+  border-radius: 999px;
+  padding: .3rem 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+.upgrade {
+    font-style: italic;
+    font-size: .9rem;
 }
 
 /* Media (optional) */
-.service-media{
-    margin-top:auto;                /* pushes image to bottom */
+.service-media {
+    margin-top: auto;
+     display: flex;
+  justify-content: center;
 }
-.service-media img{
-    width:100%;
-    border-radius:6px;
-    box-shadow:0 4px 10px rgba(0,0,0,.1);
-    object-fit:cover;
+
+.service-media img {
+  width: 80%;
+  max-width: 80%;  /* no larger than 80% of its container */
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
 
 /* Small print, notes, etc. */
-.small{
-    font-size:.85rem;
-    line-height:1.45;
+.small {
+    font-size: .85rem;
+    line-height: 1.45;
 }
 
-.note{
-    margin-top:.75rem;
-    color:#555;
+.note {
+    margin-top: .75rem;
+    color: #555;
 }
 
-.centred{
-    text-align:center;
+.centred {
+    text-align: center;
 }
 
-@media(max-width:680px){
-    .hero--beauty{min-height:50vh;}
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:680px) {
+    .hero--beauty {
+        min-height: 50vh;
+    }
+}
+
+.eye-modal {
+    max-width: 740px;
+    width: 90%;
+    padding: 2.5rem 2rem 2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .35);
+    font-size: 1rem;
+}
+
+.eye-modal::backdrop {
+    background: rgba(0, 0, 0, .55);
+}
+
+.eye-modal h2 {
+    margin-top: 0;
+}
+
+.eye-modal .close {
+    position: absolute;
+    top: .5rem;
+    right: .75rem;
+    border: none;
+    background: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text);
+    line-height: 1;
+}
+
+.eye-modal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.eye-modal ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service-header h2 {
+  margin: 0;
+}
+
+.pricing-list li span:first-child {
+  display: inline-block;
+  max-width: 70%;
 }

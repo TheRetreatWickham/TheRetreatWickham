@@ -16,6 +16,7 @@
 
   <!-- Shared site stylesheet -->
   <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/laser.css">
 
   <link rel="icon" href="/assets/favicon.ico">
 </head>
@@ -25,19 +26,17 @@
   <!-- ===== Header (same as home) ===== -->
   <header class="site-header">
     <div class="header-inner">
-      <!-- main nav -->
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="/index.html">Home</a></li>
           <li class="has-sub">
             <a href="#treatments">Treatments</a>
 
-            <!-- Sub-menu -->
             <ul class="submenu">
               <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
               <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
               <li><a href="/facials.html#facials">Facials</a></li>
-              <li><a href="/wellness.html#wellness">Wellness</a></li>
+              <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
               <li><a href="/beauty.html#beauty">Beauty</a></li>
               <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
               <li><a href="/makeup.html#makeup">Make-up</a></li>
@@ -71,6 +70,19 @@
     </div>
   </section>
 
+  <section class="sticky-tabs" aria-label="Treatment categories">
+    <h2 class="sticky-tabs__heading">What are you interested in?</h2>
+    <div class="sticky-tabs__inner">
+      <a href="#laser">Laser Hair Removal</a>
+      <a href="#ipl">IPL Skin Rejuvenation</a>
+      <a href="#photorej">Tight&nbsp;&amp;&nbsp;Bright Photorejuvenation</a>
+      <a href="#threeDeep">EndyMed 3DEEP™ Tighten</a>
+      <a href="#eyelift">EndyMed EyeLift</a>
+      <a href="#fsr">Fractional Skin Resurfacing (FSR)</a>
+      <a href="#bleph">ENDYBleph</a>
+    </div>
+  </section>
+
   <!-- ===== Intro ===== -->
   <section class="intro container">
     <p class="intro">
@@ -83,33 +95,35 @@
 
   <main class="treatments">
 
-    <!-- Laser Hair Removal -->
-    <section id="laser" class="treatment-grid">
 
-      <!-- info column -->
-      <div class="treatment-info">
-        <h2>Laser Hair Removal</h2>
-        <p>
-          Our Alpha system offers Laser Diode 808nm – this is considered the Gold standard in hair removal.
-          Safe and effective treatments for all skin types, includes a “Fast & Painless” mode which provides unrivalled
-          safety, effectiveness and comfort.
+    <section class="treatment-holder">
+      <div id="laser" class="anchor-offset"></div>
+
+      <div class="treatment-grid">
+        <div class="treatment-info">
+          <h2>Laser Hair Removal</h2>
+          <p>
+            Our Alpha system offers Laser Diode 808nm – this is considered the Gold standard in hair removal.
+            Safe and effective treatments for all skin types, includes a “Fast & Painless” mode which provides
+            unrivalled
+            safety, effectiveness and comfort.
 
 
-        </p>
+          </p>
 
-        <!-- button opens modal -->
-        <div class="btn-row">
-          <button class="btn btn--outline btn-sm" data-open-prices>
-            View complete price list
-          </button>
+          <div class="btn-row">
+            <button class="btn btn--outline btn-sm" data-open-prices>
+              View complete price list
+            </button>
 
-          <a href="/book.html#laser" class="btn btn--primary btn-sm">Book Laser Hair Removal</a>
+            <a href="/book.html#laser" class="btn btn--primary btn-sm">Book Laser Hair Removal</a>
+          </div>
         </div>
-      </div>
-      <!-- 2-image banner (cross-fades on desktop) -->
-      <div class="treatment-img duo">
-        <img src="/assets/images/alpha-laser-1.avif" alt="Laser handset close-up">
-        <img src="/assets/images/alpha-laser-2.avif" alt="Laser treatment before & after">
+        <!-- 2-image banner (cross-fades on desktop) -->
+        <div class="treatment-img duo">
+          <img src="/assets/images/alpha-laser-1.avif" alt="Laser handset close-up">
+          <img src="/assets/images/alpha-laser-2.avif" alt="Laser treatment before & after">
+        </div>
       </div>
     </section>
 
@@ -143,158 +157,144 @@
 
       <p class="small centred">Save 20 % on a course of 6–8 sessions.</p>
     </dialog>
+
     <!-- IPL Skin Rejuvenation -->
-    <section id="ipl" class="treatment-grid single">
-      <div class="treatment-img centre">
-        <img src="/assets/images/ipl-skin-treatment.avif" alt="IPL skin treatment results">
-      </div>
-      <div class="treatment-info">
-        <h2>IPL Skin Rejuvenation</h2>
-        <p>
-          We also offer professional grade IPL solution featuring the most advanced 3D IPL technology that offers
-          precision in every pulse. IPL addresses issues such as pigmentation, pigmented lesions, skin rejuvenation,
-          acne, Rosacea, and also hair removal (IPL hair removal is designed for more vellus hair or skin type 6).
-        </p>
-        <div class="price-row">
-          <span class="price-tag">£45 per area</span>
-          <a href="/book.html#ipl" class="btn btn--primary btn-sm">Book IPL Session</a>
+    <section class="treatment-holder">
+      <div id="ipl" class="anchor-offset"></div>
+      <div class="treatment-grid single">
+        <div class="treatment-img centre">
+          <img src="/assets/images/ipl-skin-treatment.avif" alt="IPL skin treatment results">
         </div>
-      </div>
-
-    </section>
-
-    <section id="photorej" class="treatment-grid single">
-
-      <div class="treatment-info">
-
-        <h2>Tight&nbsp;&amp;&nbsp;Bright Photorejuvenation</h2>
-
-        <p>
-          Cutting-edge fractional laser and IPL combine to tighten laxity, brighten
-          sun-damage and pigmentation and stimulate fresh collagen for a
-          luminous, even complexion.
-        </p>
-
-        <h3 class="mini-hdg">Treatment areas</h3>
-        <ul class="bullet-list">
-          <li>Face</li>
-          <li>Neck</li>
-          <li>Décolleté</li>
-          <li>Hands</li>
-        </ul>
-
-        <p class="note">
-          For optimal results we recommend&nbsp;3–4 treatments, spaced&nbsp;4–6
-          weeks apart&nbsp;for progressive collagen rebuilding.
-        </p>
-
-        <div class="price-row">
-          <span class="price-tag">£95 per treatment · £250 course of 3</span>
-          <a class="btn btn--primary btn-sm" href="/book.html#photorej">Book Tight&nbsp;&amp;&nbsp;Bright</a>
-        </div>
-      </div>
-
-      <div class="treatment-img centre tall">
-        <img src="/assets/images/tight-bright.avif" alt="Tight & Bright photorejuvenation results">
-      </div>
-
-    </section>
-
-
-    <section id="threeDeep" class="treatment-grid single">
-
-      <figure class="treatment-media centre">
-        <video class="loopVid" src="/assets/videos/3deep.mp4" autoplay muted loop playsinline>
-          <img src="/assets/images/3deep.avif" alt="EndyMed 3DEEP in-clinic treatment">
-        </video>
-      </figure>
-
-      <div class="treatment-info">
-        <h2>EndyMed&nbsp;3DEEP™ Tighten</h2>
-
-        <p><strong>What is EndyMed 3DEEP?</strong><br>
-          A state of the art radio frequency device that uses the latest technology to provide non-surgical skin
-          treatments that are safe and effective to provide younger and clearer looking skin.
-
-
-        <p>RF energy is delivered deep into the layers of the skin, stimulating the collagen fibres for an effect that
-          is firmer, tighter and more elevated - with zero downtime!
-        </p>
-
-        <h3 class="mini-hdg">Best for</h3>
-        <ul class="bullet-list">
-          <li>Cheeks &amp; jowls</li>
-          <li>Under-chin / neck</li>
-          <li>Eye contour (see EyeLift below)</li>
-        </ul>
-
-        <p class="note">A course of <strong>6 weekly</strong> sessions recommended.</p>
-
-        <div class="price-row">
-          <span class="price-tag">£85 per treatment · £460 per course of 6&nbsp;of&nbsp;6</span>
-          <a class="btn btn--primary btn-sm" href="/book.html#3deep">Book 3DEEP</a>
+        <div class="treatment-info">
+          <h2>IPL Skin Rejuvenation</h2>
+          <p>We also offer professional grade IPL solution featuring the most advanced 3D IPL technology that offers
+            precision in every pulse. IPL addresses issues such as pigmentation, pigmented lesions, skin rejuvenation,
+            acne, Rosacea, and also hair removal (IPL hair removal is designed for more vellus hair or skin type 6).</p>
+          <div class="price-row">
+            <span class="price-tag">£45 per area</span>
+            <a href="/book.html#ipl" class="btn btn--primary btn-sm">Book IPL Session</a>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <section id="eyelift" class="treatment-grid single reverse">
-      <div class="treatment-media centre">
-        <img src="/assets/images/endymed-eyelift.avif" alt="Before and after EndyMed EyeLift">
-      </div>
-
-      <div class="treatment-info">
-        <h2>EndyMed EyeLift</h2>
-        <p><strong>The complete non-invasive eye solution.</strong><br>
-        <p>Redefines periorbital rejuvenation. The skin around the eyes is one of the first areas to show age, as
-          laughter lines, crows feet and drooping eyelids start to develop. It is a complete, safe and effective
-          non-surgical solution to you eye concerns, no down time, just beautiful results.</p>
-        <div class="price-row">
-          <span class="price-tag">£50 per treatment · £250 per course of 6&nbsp;of&nbsp;3</span>
-          <a class="btn btn--primary btn-sm" href="/book.html#eyelift">Book EyeLift</a>
+    <!-- Tight & Bright Photorejuvenation -->
+    <section class="treatment-holder">
+      <div id="photorej" class="anchor-offset"></div>
+      <div class="treatment-grid single">
+        <div class="treatment-info">
+          <h2>Tight&nbsp;&amp;&nbsp;Bright Photorejuvenation</h2>
+          <p>Cutting-edge fractional laser and IPL combine to tighten laxity, brighten sun-damage and pigmentation and
+            stimulate fresh collagen for a luminous, even complexion.</p>
+          <h3 class="mini-hdg">Treatment areas</h3>
+          <ul class="bullet-list">
+            <li>Face</li>
+            <li>Neck</li>
+            <li>Décolleté</li>
+            <li>Hands</li>
+          </ul>
+          <p class="note">For optimal results we recommend 3–4 treatments, spaced 4–6 weeks apart for progressive
+            collagen rebuilding.</p>
+          <div class="price-row">
+            <span class="price-tag">£95 per treatment · £250 course of 3</span>
+            <a class="btn btn--primary btn-sm" href="/book.html#photorej">Book Tight&nbsp;&amp;&nbsp;Bright</a>
+          </div>
+        </div>
+        <div class="treatment-img centre tall">
+          <img src="/assets/images/tight-bright.avif" alt="Tight & Bright photorejuvenation results">
         </div>
       </div>
     </section>
 
-
-    <section id="fsr" class="treatment-grid single">
-      <div class="treatment-media centre tall">
-        <img src="/assets/images/endymed-fsr.avif" alt="EndyMed FSR before &amp; after">
-      </div>
-
-      <div class="treatment-info">
-        <h2>Fractional Skin Resurfacing (FSR)</h2>
-        <p>Works deeper in the skin’s layers, triggering a healing response that works to improve the appearance of
-          lines and wrinkles, uneven skin texture, minor scaring and stretch marks. The device uses dermal heating and
-          micro-surfacing to increase levels of collagen and produce firmer, smoother skin!</p>
-
-        <p class="note">Course of <strong>3 monthly</strong> treatments advised.</p>
-
-        <div class="price-row">
-          <span class="price-tag">£230 per treatment · £650 per course of 3</span>
-          <a class="btn btn--primary btn-sm" href="/book.html#fsr">Book&nbsp;FSR</a>
+    <!-- EndyMed 3DEEP™ Tighten -->
+    <section class="treatment-holder">
+      <div id="threeDeep" class="anchor-offset"></div>
+      <div class="treatment-grid single">
+        <figure class="treatment-media centre">
+          <video class="loopVid" src="/assets/videos/3deep.mp4" autoplay muted loop playsinline>
+            <img src="/assets/images/3deep.avif" alt="EndyMed 3DEEP in‑clinic treatment">
+          </video>
+        </figure>
+        <div class="treatment-info">
+          <h2>EndyMed&nbsp;3DEEP™ Tighten</h2>
+          <p><strong>What is EndyMed 3DEEP?</strong><br>A state of the art radio frequency device that uses the latest
+            technology to provide non‑surgical skin treatments that are safe and effective to provide younger and
+            clearer looking skin.</p>
+          <p>RF energy is delivered deep into the layers of the skin, stimulating the collagen fibres for an effect that
+            is firmer, tighter and more elevated – with zero downtime!</p>
+          <h3 class="mini-hdg">Best for</h3>
+          <ul class="bullet-list">
+            <li>Cheeks &amp; jowls</li>
+            <li>Under-chin / neck</li>
+            <li>Eye contour (see EyeLift below)</li>
+          </ul>
+          <p class="note">A course of <strong>6 weekly</strong> sessions recommended.</p>
+          <div class="price-row">
+            <span class="price-tag">£85 per treatment · £460 per course of 6 of 6</span>
+            <a class="btn btn--primary btn-sm" href="/book.html#threeDeep">Book 3DEEP</a>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <section id="bleph" class="treatment-grid single reverse">
-      <div class="treatment-media centre">
-        <img src="/assets/images/endymed-endybleph.avif" alt="ENDYBleph results">
+    <!-- EndyMed EyeLift -->
+    <section class="treatment-holder">
+      <div id="eyelift" class="anchor-offset"></div>
+      <div class="treatment-grid single reverse">
+        <div class="treatment-media centre">
+          <img src="/assets/images/endymed-eyelift.avif" alt="Before and after EndyMed EyeLift">
+        </div>
+        <div class="treatment-info">
+          <h2>EndyMed EyeLift</h2>
+          <p><strong>The complete non‑invasive eye solution.</strong><br>Redefines periorbital rejuvenation. The skin
+            around the eyes is one of the first areas to show age, with laughter lines, crow’s feet and drooping
+            eyelids. It’s a complete, safe and effective non‑surgical solution to your eye concerns—no downtime, just
+            beautiful results.</p>
+          <div class="price-row">
+            <span class="price-tag">£50 per treatment · £250 per course of 6 of 3</span>
+            <a class="btn btn--primary btn-sm" href="/book.html#eyelift">Book EyeLift</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="treatment-info">
-        <h2>ENDYMED ENDYBLEPH</h2>
-        <p>The area around the eyes is one of the first areas to show the signs of ageing, making this area particularly
-          popular for treatment.
-          3DEEP ENDYBleph non-surgical eye lifts provide the safest, most effective option for treating this delicate
-          area. This specialist FSR treatment which ‘open ups’ and rejuvenates the eye area, by tightening and
-          retracting eyelid hoods, tightening and lifting lax skin below the eye, smoothing crow’s feet, fine lines and
-          wrinkles and enhancing peri-orbital skin luminosity</p>
+    <!-- Fractional Skin Resurfacing (FSR) -->
+    <section class="treatment-holder">
+      <div id="fsr" class="anchor-offset"></div>
+      <div class="treatment-grid single">
+        <div class="treatment-media centre">
+          <img src="/assets/images/endymed-fsr.avif" alt="EndyMed FSR before &amp; after">
+        </div>
+        <div class="treatment-info">
+          <h2>Fractional Skin Resurfacing (FSR)</h2>
+          <p>Works deeper in the skin’s layers, triggering a healing response that improves the appearance of lines and
+            wrinkles, uneven texture, minor scarring and stretch marks. Uses dermal heating and micro‑surfacing to boost
+            collagen and produce firmer, smoother skin!</p>
+          <p class="note">Course of <strong>3 monthly</strong> treatments advised.</p>
+          <div class="price-row">
+            <span class="price-tag">£230 per treatment · £650 per course of 3</span>
+            <a class="btn btn--primary btn-sm" href="/book.html#fsr">Book FSR</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="price-row">
-          <span class="price-tag">£200 per treatment · £540 course of 3 (save £60)</span>
-          <a class="btn btn--primary btn-sm" href="/book.html#bleph">Book&nbsp;ENDYBleph</a>
+    <!-- ENDYMED ENDYBleph -->
+    <section class="treatment-holder">
+      <div id="bleph" class="anchor-offset"></div>
+      <div class="treatment-grid single reverse">
+        <div class="treatment-media centre">
+          <img src="/assets/images/endymed-endybleph.avif" alt="ENDYBleph results">
+        </div>
+        <div class="treatment-info">
+          <h2>ENDYMED ENDYBleph</h2>
+          <p>The area around the eyes is one of the first to show ageing, making it a popular treatment. 3DEEP ENDYBleph
+            non‑surgical eye lifts provide the safest, most effective option—tightening eyelid hoods, lifting lax skin
+            below the eye, smoothing crow’s feet and fine lines, and enhancing peri‑orbital luminosity.</p>
+          <div class="price-row">
+            <span class="price-tag">£200 per treatment · £540 course of 3 (save £60)</span>
+            <a class="btn btn--primary btn-sm" href="/book.html#bleph">Book ENDYBleph</a>
+          </div>
         </div>
       </div>
     </section>
