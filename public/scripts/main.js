@@ -4,12 +4,19 @@ if ('scrollRestoration' in history) {
 document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
     /* ─── Laser price-list modal ─── */
-    const dlg = document.getElementById('priceModal');
-    const openBtn = document.querySelector('[data-open-prices]');
-    if (dlg && openBtn) {
-        openBtn.addEventListener('click', () => dlg.showModal());
-        dlg.querySelector('.close')
-            ?.addEventListener('click', () => dlg.close());
+    const priceDlg = document.getElementById('priceModal');
+    const priceBtn = document.querySelector('[data-open-prices]');
+    if (priceDlg && priceBtn) {
+        priceBtn.addEventListener('click', () => priceDlg.showModal());
+        priceDlg.querySelector('.close')
+            ?.addEventListener('click', () => priceDlg.close());
+    }
+    const eyeDlg = document.getElementById('eyeModal');
+    const eyeBtn = document.querySelector('[data-open-eye-treatment]');
+    if (eyeDlg && eyeBtn) {
+        eyeBtn.addEventListener('click', () => eyeDlg.showModal());
+        eyeDlg.querySelector('.close')
+            ?.addEventListener('click', () => eyeDlg.close());
     }
 });
 export {};

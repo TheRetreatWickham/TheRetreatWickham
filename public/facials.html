@@ -5,41 +5,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Facials | Rituals of Wellness & Beauty</title>
-
-    <!--  Google fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
-
-    <!--  Icon font (Font Awesome 6)  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!--  Site stylesheet  -->
-    <link rel="stylesheet" href="/styles/main.css" />
-
-    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/facials.css">
 </head>
 
-<body>
-    <!-- ===== Side Navigation ===== -->
-
-    <body>
-        <!-- ========== FIXED SIDE-NAV ===================================== -->
-         <header class="site-header">
+<body class="facials-page">
+    <header class="site-header">
         <div class="header-inner">
-            <!-- main nav -->
             <nav class="main-nav" aria-label="Primary">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li class="has-sub">
                         <a href="#treatments">Treatments</a>
-
-                        <!-- Sub-menu -->
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
-                            <li><a href="/facials.html#facials">Facials</a></li>
-                            <li><a href="/wellness.html#wellness">Wellness</a></li>
+                            <li><a href="/facials.html#peels">Facials</a></li>
+                            <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
                             <li><a href="/beauty.html#beauty">Beauty</a></li>
                             <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
                             <li><a href="/makeup.html#makeup">Make-up</a></li>
@@ -52,165 +40,348 @@
                 </ul>
             </nav>
 
-            <!-- centred logo -->
             <a class="logo" href="/">
                 <img src="/assets/images/logo.PNG" alt="The Retreat Whickham">
             </a>
-
         </div>
     </header>
 
-        <!-- ===== Hero ===== -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero__overlay">
-                    <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img">
-                    <h1>Facials</h1>
+    <section class="hero hero--facials">
+        <div class="hero-content">
+            <h1>Facials</h1>
+            <p class="strapline">Reveal your Radiance</p>
+            <a class="btn btn--primary" href="/book.html">Book now</a>
+        </div>
+    </section>
+
+    <section class="sticky-tabs" aria-label="Facial categories">
+        <h2 class="sticky-tabs__heading">What are you interested in?</h2>
+        <div class="sticky-tabs__inner">
+            <a href="#peels">Chemical Peels</a>
+            <a href="#led">LED Phototherapy</a>
+            <a href="#edermastamp">eDermastamp</a>
+            <a href="#aveda">Aveda High Touch</a>
+        </div>
+    </section>
+
+
+    <main class="container">
+        <section class="treatment-holder">
+            <div id="peels" class="anchor-offset"></div>
+            <section class="treatment-section">
+                <h2 class="section-title centred">Medik8® Chemical Peels</h2>
+                <p class="section-intro centred">
+                    The Retreat offers a wide range of Medik8® medical grade peel treatments to suit everyone. From
+                    those
+                    who are new to chemical peels, to experienced clients looking for deeper level of epidermal peeling
+                    with
+                    intensive results.
+
+                    Ranging from superficial to medium-strength, there is a peel for every skin type and concern. Peels
+                    can
+                    be combined with Medik8® home care, to combat concerns such as acne, pigmentation, ageing and
+                    dullness.
+                    All peels are provided by an accredited Medik8® skin therapist.
+                </p>
+
+                <div class="card-grid-wrapper">
+                    <div class="card-grid card-grid--four">
+                        <article class="card">
+                            <h3>Superfacial™</h3>
+                            <p>Combining natural fruit enzymes for professional exfoliation. Perfect for first timers.
+                                Taking 45 minutes, the Superfacial™ is known as the 'lunchtime' peel.</p>
+                            <div class="price-row">
+                                <span class="price-tag">£55</span>
+                                <a class="btn btn--sm btn--primary" href="/book.html#superfacial">Book</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Universal AHA™</h3>
+                            <p>A mild, light peel suitable for all, ideal for those looking to start their peel journey
+                                or
+                                looking for maintenance after a course.</p>
+                            <div class="price-row">
+                                <span class="price-tag">£65</span>
+                                <a class="btn btn--sm btn--primary" href="/book.html#universala">Book</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Sensitive PHA™</h3>
+                            <p>A light PHA based peel for sensitive, redness prone skins to help manage texture.</p>
+                            <div class="price-row">
+                                <span class="price-tag">£65</span>
+                                <a class="btn btn--sm btn--primary" href="/book.html#sensitive">Book</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Eye Reveal™</h3>
+                            <p>An ultra gentle yet effective solution to treat laughter lines through enhanced cell
+                                turnover
+                                and regeneration.</p>
+                            <div class="price-row">
+                                <span class="price-tag">£65</span>
+                                <a class="btn btn--sm btn--primary" href="/book.html#eye">Book</a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
+
+                <div class="card-grid-wrapper">
+                    <div class="card-grid card-grid--three">
+                        <article class="card">
+                            <h3>Medik8® Signature Rewind Peel™</h3>
+                            <p>Light–medium peel for aged skin, sun damage, fine lines and wrinkles. Boosts collagen,
+                                smooths texture, reduces wrinkles and plumps the skin.</p>
+                            <div class="price-row">
+                                <span class="price-tag">£75</span>
+                                <a class="btn btn--sm btn--primary" href="/book.html#rewind">Book</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Medik8® Signature Even Peel™</h3>
+                            <p>"Light-medium peel for pigmentation, age spots and post-inflammatory hyperpigmentation.
+                                Minimises melanin production, fades existing marks and helps prevent further
+                                pigmentation.
+                            </p>
+                            <div class="price-row">
+                                <span class="price-tag">£75</span>
+                                <a class="btn btn--sm btn--primary" href="/book.html#even">Book</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Medik8® Signature Clarity Peel™</h3>
+                            <p>Medium peel for blemish-prone skin and enlarged pores. Unblocks pores, minimises blemish
+                                formation, normalises skin turnover and promotes a clear complexion.</p>
+                            <div class="price-row">
+                                <span class="price-tag">£75</span>
+                                <a class="btn btn--sm btn--primary" href="/book.html#clarity">Book</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="highlight centred">
+                    <strong>12 Weeks to WOW:</strong> course of six peels + free home-care kit <span
+                        class="price-tag">£385</span>
+                </div>
+                <div class="important-info centred">
+                    <button class="btn btn--primary btn--lg" onclick="document.getElementById('infoModal').showModal()">
+                        Important Info
+                    </button>
+                </div>
+
+                <dialog id="infoModal" class="info-modal">
+                    <h3>Important Information</h3>
+                    <p>
+                        A consultation is required for all chemical peel treatments. Exact prices will be confirmed
+                        during
+                        your consultation.
+                        There is no cost for a consultation or any obligation to go ahead with treatment, however, there
+                        is
+                        a requirement to prep the skin with vitamin C and retinol 2 weeks prior to chemical peel
+                        treatments.
+                    </p>
+                    <p class="warning">
+                        REDNESS AND MILD PEELING MAY OCCUR post treatment UP TO 1–3 DAYS FOR LIGHT PEELS AND UP TO 7–10
+                        DAYS
+                        FOR MEDIUM STRENGTH PEELS.
+                        Strict adherence to aftercare is required.
+                    </p>
+                    <form method="dialog">
+                        <button class="btn btn--sm btn--outline">Close</button>
+                    </form>
+                </dialog>
+            </section>
         </section>
 
-        <!-- ===== Main Content ===== -->
-        <main class="container">
-            <!-- Medik8® Chemical Peels -->
-            <section id="facials">
-                <article class="service-vertical">
-                    <hr class="service-separator">
-                    <h2>Medik8® Chemical Peels</h2>
-                    <p>
-                        The Retreat offers a wide range of Medik8® medical-grade peel treatments to suit everyone.
-                        From those new to chemical peels, to experienced clients looking for deeper epidermal
-                        peeling with intensive results.
-                    </p>
-                    <p>
-                        Ranging from superficial to medium-strength, there is a peel for every skin type and
-                        concern. Peels can be combined with Medik8® home care to combat acne, pigmentation,
-                        ageing and dullness. All peels are provided by an accredited Medik8® skin therapist.
-                    </p>
+        <section class="treatment-holder">
+            <div id="led" class="anchor-offset"></div>
+            <section class="treatment-section">
+                <h2 class="section-title centred">Dermalux® Triwave MD LED Phototherapy</h2>
+                <p class="section-intro centred">
+                    Multi-Award winning Dermalux® LED Phototherapy is the leading, non-invasive treatment that harnesses
+                    the
+                    power of natural light for visibly radiant, rejuvenated and refined skin. Beautiful skin is
+                    achievable
+                    for every body with Dermalux®.
 
-                    <ul class="peel-list">
-                        <li><strong>Superfacial™</strong> — £55
-                            <br>A gentle fruit-enzyme exfoliation, the “lunchtime” peel. (45 min)
-                        </li>
+                    One treatment instantly energises skin cells to revitalise a dull and tired complexion. A course of
+                    treatment offers long lasting visible results, stimulating the skin’s natural rejuvenation and
+                    repair
+                    processes to speed up cell renewal, resolve problem skin conditions and promote vibrant
+                    healthy-looking
+                    skin.
+                </p>
 
-                        <li><strong>Universal AHA™</strong> — £65
-                            <br>Mild maintenance peel for all skin types.
-                        </li>
+                <div class="card-grid card-grid--three card-grid-wrapper">
+                    <article class="card">
+                        <h3>Single Session</h3>
+                        <p>20 minutes of targeted LED therapy.</p>
+                        <div class="price-row">
+                            <span class="price-tag">£40</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#led-single">Book</a>
+                        </div>
+                    </article>
 
-                        <li><strong>Sensitive PHA™</strong> — £65
-                            <br>PHA-based for redness-prone, sensitive skin.
-                        </li>
+                    <article class="card">
+                        <h3>Course of 6</h3>
+                        <p>Three weeks of regular LED sessions for enhanced results.</p>
+                        <div class="price-row">
+                            <span class="price-tag">£200</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#led-6">Book</a>
+                        </div>
+                    </article>
 
-                        <li><strong>Eye Reveal™</strong> — £65
-                            <br>Targets laughter lines with gentle cell turnover.
-                        </li>
-
-                        <li><strong>Signature Rewind Peel™</strong> — £75
-                            <br>Light–medium peel for sun damage, fine lines &amp; wrinkles.
-                        </li>
-
-                        <li><strong>Signature Even Peel™</strong> — £75
-                            <br>Light–medium peel for pigmentation &amp; dark spots.
-                        </li>
-
-                        <li><strong>Signature Clarity Peel™</strong> — £75
-                            <br>Medium peel for blemish-prone skin &amp; enlarged pores.
-                        </li>
-                    </ul>
-
-                    <p>
-                        <strong>12 Weeks to WOW</strong><br>
-                        Course of 6 peels + free home-care kit: <strong>£385</strong>
-                    </p>
-
-                    <p>
-                        <em>
-                            A consultation is required for all chemical peels. No consultation fee or obligation;
-                            however, prep with vitamin C &amp; retinol is needed 2 weeks prior.
-                            Redness &amp; mild peeling may occur: 1–3 days for light peels, 7–10 days for medium peels.
-                        </em>
-                    </p>
-                </article>
-
-                <!-- Dermalux Triwave MD LED Phototherapy -->
-                <article class="service-vertical">
-                    <hr class="service-separator">
-                    <h2>Dermalux® Triwave MD LED Phototherapy</h2>
-                    <p>
-                        Award-winning, non-invasive LED phototherapy that energises skin cells to reveal a
-                        radiant, rejuvenated complexion. Speeds cell renewal up to 200% and boosts hydration
-                        by up to 600%.
-                    </p>
-                    <ul class="pricing-list">
-                        <li><strong>Single (20 mins)</strong> — £40</li>
-                        <li><strong>Course of 6 (3 weeks)</strong> — £200</li>
-                        <li><strong>Course of 12 (6 weeks)</strong> — £380</li>
-                    </ul>
-                </article>
-
-                <!-- eDermastamp -->
-                <article class="service-vertical">
-                    <hr class="service-separator">
-                    <h2>eDermastamp</h2>
-                    <p>
-                        Advanced electronic skin-needling that stimulates natural regeneration for smoother,
-                        brighter, younger-looking skin. Needle depth &amp; speed are precisely controlled
-                        per area, and includes LED light therapy.
-                    </p>
-                    <p><em>Benefits:</em> Collagen induction, tissue regeneration, wrinkle reduction, pore
-                        minimisation, scar treatment, skin tightening.</p>
-                    <ul class="pricing-list">
-                        <li><strong>Single treatment</strong> — £165</li>
-                        <li><strong>Course of 3</strong> — £415</li>
-                    </ul>
-                </article>
-
-                <!-- Aveda High Touch Facials -->
-                <article class="service-vertical">
-                    <hr class="service-separator">
-                    <h2>Aveda High Touch Facials</h2>
-                    <ul class="pricing-list">
-                        <li><strong>90 minutes</strong> — £73</li>
-                        <li><strong>60 minutes</strong> — £58</li>
-                        <li><strong>30 minutes</strong> — £40</li>
-                    </ul>
-
-                    <h3>Dual Exfoliation Power Facial</h3>
-                    <p>
-                        Deep botanical &amp; mineral resurfacing. Ideal for acne scarring &amp; premature
-                        ageing.
-                    </p>
-
-                    <h3>Perfecting Plant Peel</h3>
-                    <p>
-                        30% glycolic effect—naturally—without redness. Stand-alone 30-min peel or add-on.
-                    </p>
-
-                    <h3>tulasāra® Custom Facial</h3>
-                    <p>
-                        Fully personalised to dry, oily, ageing, uneven or sensitive skin, using
-                        Aveda aromas &amp; techniques for holistic balance.
-                    </p>
-
-                    <h3>Botanical Skin Resurfacing</h3>
-                    <p>
-                        Tourmaline microdermabrasion alternative for a redness-free, radiant finish.
-                    </p>
-
-                    <h3>Restorative Eye Therapy</h3>
-                    <p>
-                        Enhances collagen, minimises lines &amp; puffiness with Ayurvedic Marma
-                        massage. Add to any facial (£20) or stand-alone (£28).
-                    </p>
-                </article>
+                    <article class="card">
+                        <h3>Course of 12</h3>
+                        <p>Ultimate 6-week LED plan for deep rejuvenation.<br><small><em>Recommended for a medical skin
+                                    indication or dermatological outcome.</em></small></p>
+                        <div class="price-row">
+                            <span class="price-tag">£380</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#led-12">Book</a>
+                        </div>
+                    </article>
+                </div>
             </section>
-        </main>
+        </section>
 
-        <!-- ===== Footer ===== -->
-        <footer class="footer">
-            <small>© The Retreat Whickham 2025 · All rights reserved</small>
-        </footer>
+        <section class="treatment-holder">
+            <div id="edermastamp" class="anchor-offset"></div>
+            <section class="treatment-section">
+                <h2 class="section-title centred">eDermastamp</h2>
+                <p class="section-intro centred">
+                    Advanced, electronic, medical skin-needling. It is a procedure that stimulates the skin to
+                    regenerate
+                    and repair itself naturally and safely, creating smoother, brighter, younger and healthier looking
+                    skin.
 
-        <script type="module" src="/scripts/main.js"></script>
-    </body>
+                    The precision engineering of the device, enables the practitioner to accurately control the
+                    intensity of
+                    the procedure by adjusting the needle depth and needle speed depending on the area being treated and
+                    the
+                    clinical condition of the skin. Includes LED light therapy treatment
+                </p>
+
+                <p class="note centred">
+                    <strong>Benefits:</strong> Skin rejuvenation, collagen induction, tissue regeneration, reduced
+                    pigmentation,
+                    smaller pores, scar reduction & fine line smoothing.
+                    <br>
+                    <strong>Recommended:</strong> 3–4 treatments, 4 weeks apart.
+                </p>
+
+                <div class="card-grid card-grid--two card-grid-wrapper">
+                    <article class="card">
+                        <h3>Single Treatment</h3>
+                        <p>One session of precision micro-needling + LED.</p>
+                        <div class="price-row">
+                            <span class="price-tag">£165</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#edermastamp-single">Book</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3>Course of 3</h3>
+                        <p>Skin renewal series spaced 4 weeks apart.</p>
+                        <div class="price-row">
+                            <span class="price-tag">£415</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#edermastamp-3">Book</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section class="treatment-holder">
+            <div id="aveda" class="anchor-offset"></div>
+            <section class="treatment-section">
+                <h2 class="section-title centred">Aveda High Touch Facials</h2>
+
+                <p class="section-intro centred">
+                    Luxurious, personalised botanical facials tailored to your unique skin concerns.
+                </p>
+
+                <div class="card-grid card-grid--three card-grid-wrapper">
+                    <article class="card">
+                        <h3>90-Minute Facial</h3>
+                        <p>Extended time for a full personalised ritual using Aveda’s high-touch techniques.</p>
+                        <div class="price-row">
+                            <span class="price-tag">£73 · 90 min</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#aveda90">Book</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3>60-Minute Facial</h3>
+                        <p>A complete treatment to rebalance and renew using aromas, touch and targeted care.</p>
+                        <div class="price-row">
+                            <span class="price-tag">£58 · 60 min</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#aveda60">Book</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3>30-Minute Facial</h3>
+                        <p>Targeted refresh focused on a single concern – ideal for top-ups or special occasions.</p>
+                        <div class="price-row">
+                            <span class="price-tag">£40 · 30 min</span>
+                            <a class="btn btn--sm btn--primary" href="/book.html#aveda30">Book</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="important-info card-grid-wrapper">
+                    <h3 class="section-title centred">Treatment Options:</h3>
+                    <div class="filigree-grid">
+                        <article class="filigree-card">
+                            <h4>tulasāra Facial Treatment</h4>
+                            <p>Customised treatment for dry, oily, ageing, uneven, sensitive or blemish‑prone skin. Your
+                                therapist
+                                will select the best combination of products, personalised Aveda aromas and techniques
+                                to move your
+                                skin towards balance and reveal its natural beauty.</p>
+                        </article>
+                        <article class="filigree-card">
+                            <h4>Botanical Skin Resurfacing</h4>
+                            <p>A gentle, radiant botanical alternative to microdermabrasion using Tourmaline.</p>
+                        </article>
+                        <article class="filigree-card">
+                            <h4>Dual Exfoliation Power Facial</h4>
+                            <p>Deep exfoliation combining plant‑based techniques to target scarring, lines &amp;
+                                dullness.
+                                Immediate results can be seen after one treatment.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- → REPLACED: Add‑Ons as filigree cards ← -->
+                <div class="important-info card-grid-wrapper add‑ons">
+                    <h3 class="section-title centred">Add‑Ons:</h3>
+                    <div class="filigree-grid">
+                        <article class="filigree-card">
+                            <h4>Perfecting Plant Peel</h4>
+                            <p>Powered by plants, Aveda’s Perfecting Peel performs like a 30% glycolic peel, naturally
+                                and
+                                without redness or irritation. As a 30‑minute stand‑alone treatment or add‑on to any
+                                signature facial.</p>
+                        </article>
+                        <article class="filigree-card">
+                            <h4>Restorative Eye Therapy</h4>
+                            <p>Ayurvedic eye ritual to reduce puffiness, dark circles, and fine lines. Marma massage
+                                included.</p>
+                            <div class="price-bubble">£20 add‑on · £28 stand‑alone</div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <footer class="footer">
+        <small>© The Retreat Whickham 2025 · All rights reserved</small>
+    </footer>
+
+    <script type="module" src="/scripts/main.js"></script>
+</body>
 
 </html>

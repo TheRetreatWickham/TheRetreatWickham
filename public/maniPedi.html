@@ -4,39 +4,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>AVEDA MANICURES & PEDICURES | Rituals of Wellness & Beauty</title>
+    <title>Manicures &amp; Pedicures | Rituals of Wellness &amp; Beauty</title>
 
-    <!--  Google fonts  -->
+    <!-- Google fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
 
-    <!--  Icon font (Font Awesome 6)  -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!--  Site stylesheet  -->
+    <!-- Global and Page-specific CSS -->
     <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/maniPedi.css" />
 
     <link rel="icon" href="/assets/favicon.ico" />
 </head>
 
 <body>
-    <!-- ===== Side Navigation ===== -->
-     <header class="site-header">
+
+    <!-- Header (unchanged) -->
+    <header class="site-header">
         <div class="header-inner">
-            <!-- main nav -->
             <nav class="main-nav" aria-label="Primary">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li class="has-sub">
                         <a href="#treatments">Treatments</a>
-
-                        <!-- Sub-menu -->
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
                             <li><a href="/facials.html#facials">Facials</a></li>
-                            <li><a href="/wellness.html#wellness">Wellness</a></li>
+                            <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
                             <li><a href="/beauty.html#beauty">Beauty</a></li>
                             <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
                             <li><a href="/makeup.html#makeup">Make-up</a></li>
@@ -48,76 +47,96 @@
                     <li><a href="/book.html">Book online</a></li>
                 </ul>
             </nav>
-
-            <!-- centred logo -->
-            <a class="logo" href="/">
-                <img src="/assets/images/logo.PNG" alt="The Retreat Whickham">
-            </a>
-
+            <a class="logo" href="/"><img src="/assets/images/logo.PNG" alt="The Retreat Whickham"></a>
         </div>
     </header>
 
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__overlay">
-                <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img">
-                <h1>Manicures &amp; Pedicures</h1>
-            </div>
+    <!-- Hero -->
+    <section class="hero hero--manipedi">
+        <div class="hero-content">
+            <h1>Manicures &amp; Pedicures</h1>
+            <p class="strapline">Treat your hands and feet to a rejuvenating experience</p>
+            <a href="/book.html#mani" class="btn btn--primary btn-lg">Book now</a>
+        </div>
     </section>
 
-    <!-- ===== Main Content ===== -->
-    <main class="container" id="mani">
+    <main class="container">
         <article class="service-vertical">
-            <hr class="service-separator">
+            <div class="intro-text">
+                <p>Select the treatment that best pampers your hands or feet!</p>
+            </div>
 
-            <h2>AVEDA Manicures &amp; Pedicures</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Mini Mani / Pedi</h3>
+                    <div class="price-bubble">£30</div>
+                    <p class="desc">When time is of the essence… soak, shape, cuticle work and paint (30 mins).</p>
+                    <a href="/book.html#mini-mani-pedi" class="btn btn--primary btn-sm">Book now</a>
+                </article>
 
-            <div class="manipedi-grid">
-                <!-- Left column -->
-                <div class="manipedi-column">
-                    <h3>Mini Mani / Pedi — £30</h3>
-                    <p>When time is of the essence… soak, shape, cuticle work and paint (30 mins).</p>
+                <article class="card">
+                    <h3>Stress Fix Manicure</h3>
+                    <div class="price-bubble">£48</div>
+                    <p class="desc">Clinically proven Stress Fix blend with lavender, clary sage and lavandin. Includes
+                        exfoliation, hand masque and stress-relieving shoulder &amp; hand massage (1 hr).</p>
+                    <a href="/book.html#stress-fix-manicure" class="btn btn--primary btn-sm">Book now</a>
+                </article>
 
-                    <h3>Stress Fix Manicure — £48</h3>
-                    <p>The Stress Fix blend of French lavender, clary sage and lavandin is clinically proven to reduce
-                        feelings of stress and will rejuvenate hands. Includes exfoliation, hand masque and
-                        stress-relieving shoulder &amp; hand massage (1 hr).</p>
+                <article class="card">
+                    <h3>Stress Fix Pedicure</h3>
+                    <div class="price-bubble">£48</div>
+                    <p class="desc">Calming acupressure &amp; reflexology techniques with exfoliation, hard skin
+                        removal, stress-relieving shoulder &amp; foot massage (1 hr).</p>
+                    <a href="/book.html#stress-fix-pedicure" class="btn btn--primary btn-sm">Book now</a>
+                </article>
 
-                    <h3>Stress Fix Pedicure — £48</h3>
-                    <p>Let the calming aroma soothe you as you experience a combination of acupressure and reflexology
-                        techniques. Includes exfoliation, hard skin removal, stress-relieving shoulder &amp; foot
-                        massage (1 hr).</p>
-
-                    <h3>Add Gel Application — £5</h3>
-                </div>
-
-                <!-- Right column -->
-                <div class="manipedi-column">
+                <article class="card">
                     <h3>Jessica GELeration Soak-Off Gel Polish</h3>
-                    <p>Perfect nails for 2–3 weeks with long-lasting high gloss shine. Durable yet flexible, non-chip
-                        finish. Super-fast drying times. Protects the natural nail; simple removal in 10–15 mins. No
-                        odour, no formaldehyde, phthalates or DEP.</p>
+                    <p class="desc">Perfect nails for 2–3 weeks: non-chip finish, super-fast drying, no odour, no
+                        formaldehyde, phthalates or DEP.</p>
+                    <a href="/book.html#geleration-polish" class="btn btn--primary btn-sm">Book now</a>
+                </article>
 
-                    <h3>GELeration Mani / Pedi — £36</h3>
-                    <p>Shape, cuticle work, gel application and a soothing hand or foot massage.</p>
+                <article class="card">
+                    <h3>GELeration Mani / Pedi</h3>
+                    <div class="price-bubble">£36</div>
+                    <p class="desc">Shape, cuticle work, gel application and a soothing hand or foot massage.</p>
+                    <a href="/book.html#geleration-mani-pedi" class="btn btn--primary btn-sm">Book now</a>
+                </article>
 
-                    <h3>Gel Off &amp; On — £43</h3>
-                    <p>Receive a complimentary gel-off removal if you book Gel &amp; On within three weeks of your
+                <article class="card">
+                    <h3>Gel Off &amp; On</h3>
+                    <div class="price-bubble">£43</div>
+                    <p class="desc">Complimentary gel-off removal when you rebook within three weeks of your
                         application.</p>
+                    <a href="/book.html#gel-off-on" class="btn btn--primary btn-sm">Book now</a>
+                </article>
 
-                    <h3>Gel Removal — £22<span class="small"> (French Gel +£5)</span></h3>
+                <article class="card">
+                    <h3>Gel Removal</h3>
+                    <div class="price-bubble">£22 <span class="small">(French Gel +£5)</span></div>
+                    <p class="desc">Safe and gentle gel removal.</p>
+                    <a href="/book.html#gel-removal" class="btn btn--primary btn-sm">Book now</a>
+                </article>
 
-                    <figure class="promo-card">
-                        <img src="/assets/images/gel-polish.jpg" alt="Professional GELeration soak-off gel polish">
-                        <figcaption class="sr-only">Professional GELeration soak-off gel polish</figcaption>
-                    </figure>
-                </div>
+                <article class="card">
+                    <h3>Add Gel Application</h3>
+                    <div class="price-bubble">£5</div>
+                    <p class="desc">Extend your colour with a durable, high-gloss gel finish.</p>
+                    <a href="/book.html#add-gel" class="btn btn--primary btn-sm">Book now</a>
+                </article>
             </div>
         </article>
+        <section class="promo-block">
+            <div class="promo-copy">
+                <p>Experience a professional GELeration soak-off gel polish application.</p>
+            </div>
+            <div class="promo-image">
+                <img src="/assets/images/gel-polish.avif" alt="Professional GELeration soak‑off gel polish">
+            </div>
+        </section>
     </main>
 
-    <!-- ===== Footer ===== -->
     <footer class="footer">
         <small>© The Retreat Whickham 2025 · All rights reserved</small>
     </footer>
