@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Contact | Rituals of Wellness & Beauty</title>
+    <title>Contact | Rituals of Wellness & Beauty</title>
 
-    <!--  Google fonts  -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!--  Icon font (Font Awesome 6)  -->
+    <!-- Font Awesome 6 icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!--  Site stylesheet  -->
+    <!-- Site styles -->
     <link rel="stylesheet" href="/styles/main.css" />
+    <!-- NEW: contact‑page tweaks -->
     <link rel="stylesheet" href="/styles/contact.css" />
 
     <link rel="icon" href="/assets/favicon.ico" />
 </head>
 
 <body>
-   <header class="site-header">
+    <!-- ═══ Header (unchanged) ══════════════════════════════════════ -->
+    <header class="site-header">
         <div class="header-inner">
+
             <!-- main nav -->
             <nav class="main-nav" aria-label="Primary">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li class="has-sub">
                         <a href="#treatments">Treatments</a>
-
-                        <!-- Sub-menu -->
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Tightening</a></li>
@@ -39,12 +37,12 @@
                             <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
                             <li><a href="/beauty.html#beauty">Beauty</a></li>
                             <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
-                            <li><a href="/makeup.html#makeup">Make-up</a></li>
+                            <li><a href="/makeup.html#makeup">Make‑up</a></li>
                         </ul>
                     </li>
                     <li><a href="/gift-cards.html">Gift Cards</a></li>
                     <li><a href="/tour.html">Take a Tour</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a class="active" href="/contact.html">Contact</a></li>
                     <li><a href="/book.html">Book online</a></li>
                 </ul>
             </nav>
@@ -53,91 +51,88 @@
             <a class="logo" href="/">
                 <img src="/assets/images/logo.PNG" alt="The Retreat Whickham">
             </a>
-
         </div>
     </header>
 
-
-
-    <!-- ===== Main ===== -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__overlay">
-                <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img">
-                <h1>Get in touch</h1>
+    <!-- ═══ Hero / page heading ═════════════════════════════════════ -->
+    <section class="hero hero--contact">
+        <div class="hero-content">
+                <!-- <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img" /> -->
+                <h1 class="hero__title">Get in touch</h1>
+                <p class="strapline">Relax · Restore · Reconnect</p>
             </div>
+        </div>
     </section>
 
+    <!-- ═══ Main content ════════════════════════════════════════════ -->
     <main class="container">
-        <section class="contact-form-section">
-            <h2>Contact Us</h2>
-            <p class="form-tagline">Any questions or remarks? Just write us a message!</p>
 
-            <form class="contact-form" id="contact-form" novalidate>
-                <div class="contact-form__row">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="Enter a valid email address" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input id="name" name="name" type="text" placeholder="Enter your name" required>
-                    </div>
-                </div>
+        <!-- ── Key contact cards ───────────────────────────────────── -->
+        <section class="contact-cards">
+            <article class="detail-card">
+                <i class="fa-solid fa-phone detail-icon"></i>
+                <h2>Call&nbsp;or&nbsp;Email</h2>
+                <p>
+                    <a class="contact-link" href="tel:01914881534">Tel: 0191&nbsp;488&nbsp;1534</a><br>
+                    <a class="contact-link" href="mailto:info@theretreatwhickham.com">info@theretreatwhickham.com</a>
+                </p>
+            </article>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Your message…" required></textarea>
-                </div>
+            <article class="detail-card">
+                <i class="fa-solid fa-location-dot detail-icon"></i>
+                <h2>Visit us</h2>
+                <address>
+                    Knowles&nbsp;Cottage<br>
+                    The Knowles, Whickham<br>
+                    Newcastle upon Tyne<br>
+                    NE16&nbsp;4SN
+                </address>
+            </article>
 
-                <button type="submit" class="btn btn--primary contact-form__submit">
-                    Submit
-                </button>
+            <article class="detail-card">
+                <i class="fa-regular fa-clock detail-icon"></i>
+                <h2>Opening hours</h2>
+                <ul class="opening-hours">
+                    <li><strong>Mon, Wed, Thu</strong>  08:00 – 19:00</li>
+                    <li><strong>Tue</strong>  09:00 – 18:00</li>
+                    <li><strong>Fri</strong>  08:00 – 17:00</li>
+                    <li><strong>Sat</strong>  08:00 – 16:00</li>
+                    <li><strong>Sun</strong>  Closed</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ── Newsletter / spa club signup ────────────────────────── -->
+        <section class="newsletter-section">
+            <h2 class="newsletter-heading">Join us!</h2>
+            <p class="newsletter-tagline">Tips, treats &amp; exclusive offers – straight to your inbox.</p>
+
+            <form id="newsletter-form" class="newsletter-form" action="https://example.us10.list-manage.com/subscribe/post" method="post" novalidate>
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input id="newsletter-email" name="EMAIL" type="email" placeholder="Email address" required>
+
+                <label for="newsletter-name" class="sr-only">First name (optional)</label>
+                <input id="newsletter-name" name="FNAME" type="text" placeholder="First name">
+
+                <button type="submit" class="btn btn--primary">Subscribe</button>
+
+                <small class="privacy-note">We’ll never spam you. Unsubscribe any time.</small>
             </form>
         </section>
 
-        <!-- ─── Contact Details ─────────────────────────────────────── -->
-        <section class="contact-details-row">
-            <div class="detail-card">
-                <i class="fa-solid fa-map-marker-alt detail-icon"></i>
-                <h3>Address</h3>
-                <p>
-                    Knowles Cottage<br>
-                    The Knowles, Whickham<br>
-                    Newcastle upon Tyne<br>
-                    NE16 4SN
-                </p>
-            </div>
-            <div class="detail-card">
-                <i class="fa-solid fa-phone detail-icon"></i>
-                <h3>Phone &amp; Email</h3>
-                <p>
-                    Tel: 0191 488 1534<br>
-                    Email: <a href="mailto:info@theretreatwhickham.com">info@theretreatwhickham.com</a>
-                </p>
-            </div>
-            <div class="detail-card">
-                <i class="fa-regular fa-clock detail-icon"></i>
-                <h3>Opening Hours</h3>
-                <p>
-                    Mon, Wed, Thu 08 – 19<br>
-                    Tue 09 – 18 · Fri 08 – 17 · Sat 08 – 16
-                </p>
-            </div>
-        </section>
-
+        <!-- ── Map embed ───────────────────────────────────────────── -->
         <section class="contact-map">
-            <iframe title="Google Map – The Retreat Whickham" loading="lazy"
-                src="https://maps.google.com/maps?q=NE16%204SN&output=embed" frameborder="0"
-                style="border:0;width:100%;height:320px;" allowfullscreen>
-            </iframe>
+            <iframe title="Map – The Retreat Whickham"
+                    src="https://maps.google.com/maps?q=NE16%204SN&amp;output=embed"
+                    loading="lazy" frameborder="0"></iframe>
         </section>
     </main>
+
+    <!-- ═══ Footer (unchanged) ══════════════════════════════════════ -->
     <footer class="footer">
-        <small>© The Retreat Whickham 2025 · All rights reserved</small>
+        <small>© The Retreat Whickham 2025 · All rights reserved</small>
     </footer>
 
     <script type="module" src="/scripts/main.js"></script>
 </body>
-
 </html>
