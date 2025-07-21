@@ -5,7 +5,7 @@
 
 /* ---------- HERO ------------------------------ */
 .hero--contact {
-    background: url('/assets/images/hero-contact.jpg') center / cover no-repeat;
+    /* background: url('/assets/images/hero-contact.jpg') center / cover no-repeat; */
     position: relative;
     min-height: 35rem;
 }

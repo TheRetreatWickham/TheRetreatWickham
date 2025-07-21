@@ -5,7 +5,6 @@ if ('scrollRestoration' in history) {
 document.addEventListener('DOMContentLoaded', () => {
   window.scrollTo(0, 0);
 
-  /* ─── Laser price-list modal ─── */
   const priceDlg = document.getElementById('priceModal') as HTMLDialogElement | null;
   const priceBtn = document.querySelector<HTMLButtonElement>('[data-open-prices]');
   if (priceDlg && priceBtn) {
@@ -22,4 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     eyeDlg.querySelector<HTMLButtonElement>('.close')
       ?.addEventListener('click', () => eyeDlg.close());
   }
+
+  const newsletterForm = document.querySelector('.newsletter-form') as HTMLFormElement | null;
+  newsletterForm?.reset();
+});
+
+window.addEventListener('pageshow', () => {
+  (document.querySelector('.newsletter-form') as HTMLFormElement | null)?.reset();
 });

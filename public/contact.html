@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Contact | Rituals of Wellness & Beauty</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome 6 icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -40,10 +43,10 @@
                             <li><a href="/makeup.html#makeup">Make‑up</a></li>
                         </ul>
                     </li>
-                    
+
                     <li><a href="/tour.html">Take a Tour</a></li>
                     <li><a class="active" href="/contact.html">Contact</a></li>
-                    
+
                 </ul>
             </nav>
 
@@ -57,10 +60,10 @@
     <!-- ═══ Hero / page heading ═════════════════════════════════════ -->
     <section class="hero hero--contact">
         <div class="hero-content">
-                <!-- <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img" /> -->
-                <h1 class="hero__title">Get in touch</h1>
-                <p class="strapline">Relax · Restore · Reconnect</p>
-            </div>
+            <!-- <img src="/assets/images/logo.PNG" alt="The Retreat Whickham logo" class="logo-img" /> -->
+            <h1 class="hero__title">Get in touch</h1>
+            <p class="strapline">Relax · Restore · Reconnect</p>
+        </div>
         </div>
     </section>
 
@@ -102,37 +105,44 @@
             </article>
         </section>
 
-        <!-- ── Newsletter / spa club signup ────────────────────────── -->
         <section class="newsletter-section">
             <h2 class="newsletter-heading">Join us!</h2>
             <p class="newsletter-tagline">Tips, treats &amp; exclusive offers – straight to your inbox.</p>
 
-            <form id="newsletter-form" class="newsletter-form" action="https://example.us10.list-manage.com/subscribe/post" method="post" novalidate>
-                <label for="newsletter-email" class="sr-only">Email address</label>
-                <input id="newsletter-email" name="EMAIL" type="email" placeholder="Email address" required>
+            <form
+                action="https://theretreatwhickham.us14.list-manage.com/subscribe/post?u=07bda07a7e724d85afa12cb9c&amp;id=d970ac3f66"
+                method="post" class="newsletter-form" target="_blank">
+                <label class="sr-only" for="mce-FNAME">Full name</label>
+                <input type="text" id="mce-FNAME" name="FNAME" placeholder="Full name" required pattern=".{2,}"
+                    title="Please enter at least 2 characters.">
 
-                <label for="newsletter-name" class="sr-only">First name (optional)</label>
-                <input id="newsletter-name" name="FNAME" type="text" placeholder="First name">
+                <label class="sr-only" for="mce-EMAIL">Email</label>
+                <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Email address" required>
+
+                <div style="position:absolute; left:-5000px;" aria-hidden="true">
+                    <input type="text" name="b_07bda07a7e724d85afa12cb9c_d970ac3f66" tabindex="-1">
+                </div>
+
+                <!-- <input type="hidden" name="redirect" value="https://www.theretreatwhickham.com/thanks.html"> -->
 
                 <button type="submit" class="btn btn--primary">Subscribe</button>
-
-                <small class="privacy-note">We’ll never spam you. Unsubscribe any time.</small>
             </form>
+
         </section>
 
         <!-- ── Map embed ───────────────────────────────────────────── -->
         <section class="contact-map">
-            <iframe title="Map – The Retreat Whickham"
-                    src="https://maps.google.com/maps?q=NE16%204SN&amp;output=embed"
-                    loading="lazy" frameborder="0"></iframe>
+            <iframe title="Map – The Retreat Whickham" src="https://maps.google.com/maps?q=NE16%204SN&amp;output=embed"
+                loading="lazy" frameborder="0"></iframe>
         </section>
     </main>
 
     <!-- ═══ Footer (unchanged) ══════════════════════════════════════ -->
-    <footer class="footer">
+    <footer class="site-footer">
         <small>© The Retreat Whickham 2025 · All rights reserved</small>
     </footer>
 
     <script type="module" src="/scripts/main.js"></script>
 </body>
+
 </html>
