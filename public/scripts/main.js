@@ -3,7 +3,6 @@ if ('scrollRestoration' in history) {
 }
 document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
-    /* ─── Laser price-list modal ─── */
     const priceDlg = document.getElementById('priceModal');
     const priceBtn = document.querySelector('[data-open-prices]');
     if (priceDlg && priceBtn) {
@@ -18,5 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
         eyeDlg.querySelector('.close')
             ?.addEventListener('click', () => eyeDlg.close());
     }
+    const newsletterForm = document.querySelector('.newsletter-form');
+    newsletterForm?.reset();
+});
+window.addEventListener('pageshow', () => {
+    document.querySelector('.newsletter-form')?.reset();
 });
 export {};
