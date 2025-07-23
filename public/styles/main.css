@@ -1,6 +1,5 @@
-/* ─── Root tokens ─────────────────────────────────────────── */
 :root {
-    --blue: #00528F;
+    --blue: #005782;
     --light-blue: #E6F0F7;
     --cream: #F8F8F8;
     --gold: #C7A450;
@@ -11,7 +10,6 @@
     --font-sans: 'Poppins', sans-serif;
 }
 
-/* ─── Reset & base ─────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -71,7 +69,6 @@ a {
     top: 0;
 }
 
-/* ─── Buttons ─────────────────────────────────────────────── */
 .btn {
     display: inline-block;
     padding: .6rem 1.4rem;
@@ -105,23 +102,17 @@ a {
     font-size: .9rem;
 }
 
-/* --- Intro paragraph ----------------------------------------------- */
 .intro {
     max-width: var(--max);
-    /* same width limit as the grids     */
     margin: 2rem auto 3rem;
-    /* centred, with breathing room      */
     padding: 0 var(--gutter);
-    /* same side-padding as other blocks */
     font-size: 1.05rem;
-    /* optional: slightly larger body    */
 }
 
 .intro.container p.intro {
     text-align: center;
 }
 
-/* ─── Header ──────────────────────────────────────────────── */
 .site-header {
     position: sticky;
     top: 0;
@@ -134,14 +125,13 @@ a {
     max-width: var(--max);
     margin: 0 auto;
     padding: 0 var(--gutter);
-    height: 80px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
 }
 
-/* nav list */
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -154,23 +144,20 @@ a {
     font-weight: 600;
 }
 
-/* centred logo (flex order trick) */
 .logo {
     order: 1;
     margin: auto;
 }
 
 .logo img {
-    height: 56px;
+    height: 90px;
     width: auto;
 }
 
-/* header CTA */
 .header-cta {
     white-space: nowrap;
 }
 
-/* ─── Hero ────────────────────────────────────────────────── */
 .hero {
     background: url('/assets/images/hero.avif') center/cover no-repeat;
     min-height: 55vh;
@@ -191,12 +178,10 @@ a {
 
 .hero__overlay {
     pointer-events: none;
-    /* overlay lets clicks fall through  */
 }
 
 .hero__overlay .btn {
     pointer-events: auto;
-    /* …but we re-enable clicks on the button itself */
 }
 
 .hero-content {
@@ -225,7 +210,6 @@ a {
     text-shadow: 0 2px 4px rgba(0, 0, 0, .35);
 }
 
-/* ─── Icon grid ───────────────────────────────────────────── */
 .icon-grid-wrapper {
     background: var(--cream);
     padding: 3rem var(--gutter);
@@ -262,7 +246,6 @@ a {
     justify-content: center;
 }
 
-/* ─── About strip ─────────────────────────────────────────── */
 .about-strip {
     max-width: var(--max);
     margin: 4rem auto;
@@ -282,13 +265,11 @@ a {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    /* side-by-side on desktop */
 }
 
 .about-images img {
     width: 100%;
     aspect-ratio: 4/3;
-    /* keeps them equal height */
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
@@ -297,11 +278,9 @@ a {
 @media(max-width:680px) {
     .about-images {
         grid-template-columns: 1fr;
-        /* vertical on mobile */
     }
 }
 
-/* ─── Popular cards ───────────────────────────────────────── */
 .popular {
     max-width: var(--max);
     margin: 0 auto;
@@ -336,16 +315,15 @@ a {
     margin: 0;
 }
 
-/* ─── Footer ─────────────────────────────────────────────── */
 .site-footer {
     background: var(--blue);
     color: #fff;
     text-align: center;
     padding: 2rem var(--gutter);
     font-size: .875rem;
+    margin-top: auto;
 }
 
-/* ─── Responsive tweaks ─────────────────────────────────── */
 @media(max-width:880px) {
     .about-strip {
         grid-template-columns: 1fr;
@@ -477,11 +455,9 @@ a {
 }
 
 
-/* 1) Two-column treatment grid, stacks under 680px */
 .treatment-grid {
     display: grid;
     grid-template-columns: 1fr minmax(800px, 75%);
-    /* image up to 58 % width */
     gap: 3rem;
     align-items: start;
     max-width: var(--max);
@@ -498,14 +474,12 @@ a {
 
 .treatment-grid.single {
     grid-template-columns: minmax(450px, 38%) 1fr;
-    /* tweak 35-40 as you like */
 }
 
 .treatment-grid.single .treatment-img {
     max-width: 460px;
 }
 
-/* 2) Two-up image wrapper, caps at 600px, stacks under 680px */
 .treatment-img.duo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -528,7 +502,6 @@ a {
     box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
 }
 
-/* 3) Single-column media variants (centre & tall) */
 .treatment-img.centre,
 .treatment-media {
     place-self: center;
@@ -553,7 +526,6 @@ a {
     box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
 }
 
-/* 4) Button rows */
 .btn-row {
     display: flex;
     gap: 1rem;
@@ -565,7 +537,6 @@ a {
     margin-top: 0;
 }
 
-/* 5) Price rows & tags */
 .price-row {
     display: flex;
     gap: 1.25rem;
@@ -627,7 +598,6 @@ a {
   object-position: center center;
 }
 
-/* ─── Glow highlight utility ──────────────────────────── */
 .glow {
     position: relative;
 }
@@ -643,7 +613,6 @@ a {
     z-index: -1;
 }
 
-/* ─── In‑page anchor offset (for sticky headers) ─────── */
 .anchor-offset {
     display: block;
     position: relative;
@@ -662,14 +631,12 @@ a {
     padding: 1rem 1rem 1.5rem;
 }
 
-/* Heading above the nav buttons */
 .sticky-tabs__heading {
     font-family: var(--serif);
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
-/* Flex row of buttons */
 .sticky-tabs__inner {
     display: flex;
     justify-content: center;
@@ -677,7 +644,6 @@ a {
     gap: 1rem;
 }
 
-/* Button-style links */
 .sticky-tabs__inner a {
     background: white;
     padding: 0.5rem 1rem;
@@ -772,11 +738,11 @@ a {
 
 .price-bubble {
   display: inline-block;
-  background-color: #eaf4fc;      /* pale-blue fill */
-  color: var(--blue);            /* your theme’s blue */
-  border-radius: 999px;          /* pill shape */
+  background-color: #eaf4fc;      
+  color: var(--blue);            
+  border-radius: 999px;        
   padding: 0.25rem 0.75rem;
   font-size: 0.9rem;
   font-weight: 600;
-  margin: 0.5rem 0;              /* space above button */
+  margin: 0.5rem 0;              
 }

@@ -1,7 +1,3 @@
-/* maniPedi.css */
-
-
-/* ─── Intro text ──────────────────────────────────────────── */
 .intro-text {
   text-align: center;
   margin: 2rem 0;
@@ -15,21 +11,17 @@
 .card-grid {
   display: grid;
   gap: 2rem;
-  /* force exactly 4 columns of your 260px‑wide cards */
   grid-template-columns: repeat(4, 260px);
-  /* centre the whole block */
   justify-content: center;
   margin: 0 auto 3rem;
 }
 
-/* Tablet → 2 columns */
 @media (max-width: 900px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile → 1 column */
 @media (max-width: 600px) {
   .card-grid {
     grid-template-columns: 1fr;
@@ -37,7 +29,6 @@
   }
 }
 
-/* ─── Individual service cards ───────────────────────────── */
 .card {
   background: var(--cream);
   padding: 1.5rem;
@@ -50,14 +41,12 @@
   width: 260px;
 }
 
-/* Description inside card */
 .card .desc {
   flex-grow: 1;
   font-size: .95rem;
   margin: 1rem 0;
 }
 
-/* ─── Price bubble ────────────────────────────────────────── */
 .price-bubble {
   display: inline-block;
   background-color: #eaf4fc;
@@ -70,22 +59,20 @@
 }
 
 
-/* ─── Responsive tweaks ──────────────────────────────────── */
 @media (max-width: 600px) {
   .card-grid {
     grid-template-columns: 1fr;
     padding: 0 var(--gutter);
   }
 }
-/* ─── Promo block: stacked, centred ─────────────────────── */
 .promo-block {
   background: var(--cream);
   max-width: var(--max-width);
-  margin: 3rem auto;      /* centres the block under the cards */
+  margin: 3rem auto;      
   padding: 2.5rem 1rem;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-align: center;     /* centre both copy & image */
+  text-align: center;    
 }
 
 .promo-copy p {
@@ -95,14 +82,14 @@
 
 .promo-image img {
   width: 100%;
-  max-width: 360px;       /* caps how big it can grow */
+  max-width: 360px;      
   height: auto;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  margin: 0 auto;         /* centre within its div */
+  margin: 0 auto;        
+
 }
 
-/* If you need extra vertical breathing-room on mobile */
 @media (max-width: 600px) {
   .promo-block {
     padding: 2rem 1rem;

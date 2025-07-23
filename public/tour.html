@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <title>The Retreat Whickham | Take a Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/tour.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+        <div class="header-inner">
+            <nav class="main-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="has-sub">
+                        <a href="#treatments">Treatments</a>
+
+                        <ul class="submenu">
+                            <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
+                            <li><a href="/bodyStim.html#bodystim">Body Stim</a></li>
+                            <li><a href="/facials.html#facials">Facials</a></li>
+                            <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
+                            <li><a href="/beauty.html#beauty">Beauty</a></li>
+                            <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
+                            <li><a href="/makeup.html#makeup">Make-up</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/tour.html">Take a Tour</a></li>
+                    <li><a href="/contact.html">Contact</a>
+                    </li><li><a href="/promotions.html">News &amp; Promotions</a></li>
+                </ul>
+            </nav>
+
+            <a class="logo" href="/">
+                <img src="/assets/images/logo.PNG" alt="The Retreat Whickham">
+            </a>
+
+        </div>
+    </header>
+
+  <section class="hero-tour">
+    <div class="hero-inner">
+      <h1>Take a Tour</h1>
+      <p class="strapline">Step inside our sanctuary of wellness & beauty</p>
+    </div>
+  </section>
+
+  <main class="wrapper">
+    <section class="tour-gallery" aria-label="Photo slideshow of The Retreat">
+      <div class="slideshow">
+        <figure class="slide current"><img src="/assets/images/clinic0.avif" alt="Entrance exterior"></figure>
+        <figure class="slide"><img src="/assets/images/clinic5.avif" alt="Reception desk"></figure>
+        <figure class="slide"><img src="/assets/images/hero.avif"   alt="Treatment room 1"></figure>
+        <figure class="slide"><img src="/assets/images/clinic2.avif" alt="Treatment room 2"></figure>
+        <figure class="slide"><img src="/assets/images/clinic3.avif" alt="Aromatherapy oils"></figure>
+        <figure class="slide"><img src="/assets/images/clinic4.avif" alt="Treatment room 3"></figure>
+        <figure class="slide"><img src="/assets/images/clinic6.avif" alt="Treatment room 4"></figure>
+        <figure class="slide"><img src="/assets/images/clinic7.avif" alt="Relaxation lounge"></figure>
+      </div>
+      <div class="dots" role="tablist" aria-label="Slide selectors"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+        <small>© The Retreat Whickham 2025 · All rights reserved</small>
+    </footer>
+
+  <script>
+    const slides   = [...document.querySelectorAll('.slide')];
+    const dotsWrap = document.querySelector('.dots');
+
+    slides.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.className = 'dot' + (i ? '' : ' current');
+      b.ariaLabel = `Slide ${i + 1}`;
+      dotsWrap.appendChild(b);
+    });
+
+    const dots = [...document.querySelectorAll('.dot')];
+    let index = 0, timer;
+
+    function show(n){
+      slides[index].classList.remove('current');
+      dots[index].classList.remove('current');
+      index = (n + slides.length) % slides.length;
+      slides[index].classList.add('current');
+      dots[index].classList.add('current');
+    }
+    function next(){ show(index + 1); }
+    function start(){ timer = setInterval(next, 4000); }
+    function stop(){ clearInterval(timer); }
+
+    dots.forEach((d,i)=>d.addEventListener('click',()=>{ stop(); show(i); start(); }));
+    document.querySelector('.slideshow').addEventListener('mouseenter', stop);
+    document.querySelector('.slideshow').addEventListener('mouseleave', start);
+    start();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+:root {
+    --brand-gold: #c5a059;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+.hero-tour {
+    min-height: 20vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-tour img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+.hero-tour .hero-inner {
+    background: none;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .55);
+    padding: 4rem 1rem;
+}
+
+.hero-tour h1 {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    letter-spacing: .05em;
+    color: var(--blue, #00528F);
+}
+
+.hero-tour .strapline {
+    margin-top: .5rem;
+    font-size: 1.125rem;
+    color: var(--blue, #00528F);
+}
+
+.slideshow {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease, visibility 0s .8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.current {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.slide img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: .75rem;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.dot {
+    width: .75rem;
+    height: .75rem;
+    border: 2px solid var(--brand-gold);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.dot.current,
+.dot:hover {
+    background: var(--brand-gold);
+}
+
+.tour-gallery {
+    margin-bottom: 3rem;
+}
+
+.hero-tour,
+.tour-gallery {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+.hero-inner {
+    padding: 2.5rem 1rem;
+}
+
+.hero-inner h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-inner .strapline {
+    font-size: 1rem;
+}
+
+.hero-inner h1,
+.hero-inner .strapline {
+    color: var(--blue, #00528F);
+}
+
+.tour-gallery {
+    margin-bottom: 3.5rem;
+}

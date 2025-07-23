@@ -1,10 +1,8 @@
-/* ─── Hero override ───────────────────────────────────────────── */
 .hero--wellness {
   min-height: 50vh;
   margin-bottom: 1rem;
 }
 
-/* ─── Intro + Pricing ────────────────────────────────────────── */
 .intro-text {
   text-align: center;
   margin: 2rem 0;
@@ -28,14 +26,12 @@
   font-size: 1rem;
 }
 
-/* ─── Treatments wrapper ─────────────────────────────────────── */
 .treatment-holder {
   max-width: var(--max);
   margin: 0 auto 4rem;
   padding: 0 var(--gutter);
 }
 
-/* ─── Individual services ───────────────────────────────────── */
 .service-header {
   display: flex;
   justify-content: space-between;
@@ -64,7 +60,6 @@
   font-size: 1rem;
 }
 
-/* ─── Ritual Packages ───────────────────────────────────────── */
 .package-holder {
   max-width: var(--max);
   margin: 0 auto 4rem;
@@ -98,7 +93,6 @@
   line-height: 1.5;
 }
 
-/* ─── Responsive tweaks ──────────────────────────────────────── */
 @media (max-width: 768px) {
   .pricing-table {
     flex-direction: column;
@@ -112,9 +106,6 @@
 }
 
 
-/* Facials-style cards for Wellness & Massage */
-
-/* grid container */
 .card-grid {
   display: grid;
   gap: 2rem;
@@ -122,7 +113,6 @@
   margin-bottom: 3rem;
 }
 
-/* individual card */
 .card {
   background: var(--cream);
   padding: 1.5rem;
@@ -134,14 +124,12 @@
   text-align: center;
 }
 
-/* description inside card */
 .card .desc {
   flex-grow: 1;
   font-size: .95rem;
   margin-bottom: 1rem;
 }
 
-/* button variants */
 .btn {
   display: inline-block;
   padding: .5rem 1.25rem;
@@ -168,36 +156,33 @@
 }
 
 
-/* ─── Centre & fix 4‑across grid ───────────────────────────────── */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* exactly 4 columns */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 2rem;
-  max-width: calc((260px * 4) + (2rem * 3)); /* 4 cards @260px + 3 gaps */
-  margin: 0 auto 3rem;                     /* auto‑centres container */
-  justify-items: center;                   /* centre content inside each cell */
+  max-width: calc((260px * 4) + (2rem * 3)); 
+  margin: 0 auto 3rem;                    
+  justify-items: center;                
 }
 
-/* ─── Responsive breakpoints ──────────────────────────────── */
 @media (max-width: 1024px) {
   .card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-    max-width: calc((260px * 2) + (2rem)); /* adjust container width */
+    grid-template-columns: repeat(2, 1fr); 
+    max-width: calc((260px * 2) + (2rem)); 
   }
 }
 
 @media (max-width: 600px) {
   .card-grid {
-    grid-template-columns: 1fr;            /* 1 column on phones */
-    max-width: 100%;                       /* full width */
+    grid-template-columns: 1fr;           
+    max-width: 100%;                       
     padding: 0 var(--gutter);
   }
 }
 
-/* ─── Ensure each card stays the same width ──────────────── */
 .card {
-  width: 260px; /* matches the 260px in grid-template-columns above */
-  text-align: center; /* double‑check centring */
+  width: 260px; 
+  text-align: center;
 }
 
 .ritual-grid {
@@ -256,9 +241,7 @@
   max-width: 200px;
 }
 
-/* ─── Filigree decoration ────────────────────────────────── */
 .filigree {
-  /* use a SVG border-image for a repeating filigree frame */
   border: 20px solid transparent;
   border-image-source: url('/assets/images/filigree-border.svg');
   border-image-slice: 30 ;
@@ -266,7 +249,6 @@
   border-image-repeat: round;
 }
 
-/* optional: a little flourish over the title */
 .filigree h3 {
   position: relative;
 }
@@ -282,7 +264,6 @@
   background-size: contain;
 }
 
-/* ─── Small‐screen tweak ─────────────────────────────────── */
 @media (max-width: 480px) {
   .ritual-grid {
     grid-template-columns: 1fr;
@@ -297,12 +278,11 @@
   margin: 0 auto 0.5rem;
 }
 
-/* ─── Apply Cinzel Decorative to the title ────────────────── */
 .ritual-holder h2 {
   font-family: 'Cinzel Decorative', serif;
   font-weight: 700;
-  font-size: 2rem;          /* tweak as you like */
-  letter-spacing: 0.05em;   /* adds a little breathing room */
+  font-size: 2rem;         
+  letter-spacing: 0.05em;   
   margin-bottom: 1rem;
 }
 
