@@ -746,3 +746,31 @@ a {
   font-weight: 600;
   margin: 0.5rem 0;              
 }
+
+@media only screen and (max-width: 768px) {
+  .treatments-submenu,
+  .treatment-buttons {
+    display: none !important;
+  }
+
+  header .site-branding,
+  .site-header .logo {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+  }
+
+  .card,
+  .treatment-card,
+  .service-card {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  .card .card-content,
+  .service-card .card-text {
+    text-align: left !important;
+    max-width: none;
+    margin: 0;
+  }
+}
