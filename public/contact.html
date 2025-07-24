@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/contact.css" />
+    <link rel="icon" href="/assets/favicon.ico">
 
 </head>
 
@@ -38,7 +39,8 @@
                     </li>
                     <li><a href="/tour.html">Take a Tour</a></li>
                     <li><a href="/contact.html">Contact</a>
-                    </li><li><a href="/promotions.html">News &amp; Promotions</a></li>
+                    </li>
+                    <li><a href="/promotions.html">News &amp; Promotions</a></li>
                 </ul>
             </nav>
 
@@ -98,22 +100,33 @@
             <p class="newsletter-tagline">Tips, treats &amp; exclusive offers – straight to your inbox.</p>
 
             <form
-                action="https://theretreatwhickham.us14.list-manage.com/subscribe/post?u=07bda07a7e724d85afa12cb9c&amp;id=d970ac3f66"
-                method="post" class="newsletter-form" target="_blank">
-                <label class="sr-only" for="mce-FNAME">Full name</label>
-                <input type="text" id="mce-FNAME" name="FNAME" placeholder="Full name" required pattern=".{2,}"
-                    title="Please enter at least 2 characters.">
+                action="https://theretreatwhickham.us14.list-manage.com/subscribe/post?u=07bda07a7e724d85afa12cb9c&id=e5ff1b0d76&f_id=007a63e5f0"
+                method="post" class="newsletter-form" novalidate> <!-- we’ll handle messages ourselves -->
 
-                <label class="sr-only" for="mce-EMAIL">Email</label>
-                <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Email address" required>
+                <div class="field">
+                    <input type="text" id="mce-FNAME" name="FNAME" placeholder="First name" required minlength="2"
+                        autocomplete="given-name">
+                    <span class="error" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                    <input type="text" id="mce-LNAME" name="LNAME" placeholder="Last name" required minlength="2"
+                        autocomplete="family-name">
+                    <span class="error" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                    <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Email address" required
+                        autocomplete="email">
+                    <span class="error" aria-live="polite"></span>
+                </div>
 
                 <div style="position:absolute; left:-5000px;" aria-hidden="true">
-                    <input type="text" name="b_07bda07a7e724d85afa12cb9c_d970ac3f66" tabindex="-1">
+                    <input type="text" name="b_07bda07a7e724d85afa12cb9c_e5ff1b0d76" tabindex="-1" value="">
                 </div>
 
                 <button type="submit" class="btn btn--primary">Subscribe</button>
             </form>
-
         </section>
 
         <section class="contact-map">
