@@ -153,14 +153,6 @@
     font-size: 1rem;
 }
 
-.eye-modal::backdrop {
-    background: rgba(0, 0, 0, .55);
-}
-
-.eye-modal h2 {
-    margin-top: 0;
-}
-
 .eye-modal .close {
     position: absolute;
     top: .5rem;
@@ -171,6 +163,14 @@
     cursor: pointer;
     color: var(--text);
     line-height: 1;
+}
+
+.eye-modal::backdrop {
+    background: rgba(0, 0, 0, .55);
+}
+
+.eye-modal h2 {
+    margin-top: 0;
 }
 
 .eye-modal ul {
@@ -199,4 +199,13 @@
 .pricing-list li span:first-child {
   display: inline-block;
   max-width: 70%;
+}
+
+#beauty .btn--outline {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+#beauty .btn--outline:hover {
+  background: var(--blue);
+  color: #fff;
 }
