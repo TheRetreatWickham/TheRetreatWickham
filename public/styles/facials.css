@@ -314,3 +314,12 @@
   font-size: 1rem;        
   line-height: 1.5;
 }
+
+/* simplest */
+@media (max-width: 768px) {
+  .facials-page .section-intro {
+    padding-inline: 1.25rem;   /* or just remove it */
+    max-width: 60ch;           /* optional: keep a comfortable line length */
+    margin-inline: auto;
+  }
+}
