@@ -214,7 +214,7 @@
 
 .ritual-card h3 {
   margin: 0 0 0.75rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -286,3 +286,72 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 840px) {
+  .intro-text,
+  .service-vertical,
+  .package-holder,
+  .package-section,
+  .ritual-holder { text-align: center; }
+
+
+  .service-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ 
+  .package-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    padding: 0 var(--gutter);
+  }
+  .package-card { text-align: center; }
+
+
+  .card-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+    padding: 0 var(--gutter);
+    justify-items: center;
+  }
+  .card {
+    width: 100% !important;     
+    max-width: 520px;         
+    text-align: center;
+  }
+
+  .ritual-grid {
+    grid-template-columns: 1fr !important;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    max-width: 100% !important;
+    padding: 0 var(--gutter);
+  }
+  .ritual-card {
+    width: 100% !important;   
+    height: auto !important;    
+  }
+}
+
+img, svg, video, canvas, iframe {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+html, body { overflow-x: hidden; }
