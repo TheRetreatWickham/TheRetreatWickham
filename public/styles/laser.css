@@ -93,3 +93,27 @@
     gap: 2rem; 
   }
 }
+
+@media (max-width: 840px) {
+  .treatments .treatment-grid,
+  .treatments .treatment-grid.single {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .treatment-grid.reverse { direction: ltr; }
+
+  .treatment-info { text-align: center; }
+  .btn-row,
+  .price-row { justify-content: center; }
+
+  .treatment-img.centre,
+  .treatment-media { place-self: center; width: 100%; }
+  .treatment-img.tall img,
+  .treatment-media img,
+  .treatment-media video { width: 100%; height: auto; }
+
+  .treatment-img.duo { grid-template-columns: 1fr; }
+}
+
+html, body { overflow-x: hidden; }

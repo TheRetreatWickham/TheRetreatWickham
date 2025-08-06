@@ -176,3 +176,40 @@
   margin-top: .35rem;
   min-height: 1.1em; 
 }
+
+@media (max-width: 840px) {
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 1rem;
+  }
+  .detail-card {
+    text-align: center !important; 
+    width: 100%;
+    max-width: 520px;
+  }
+  .detail-card .detail-icon {
+    display: block;
+    margin: 0 auto 1rem;
+  }
+
+  .newsletter-section { padding: 3rem 1.25rem; text-align: center; }
+  .newsletter-heading, .newsletter-tagline { text-align: center; }
+  .newsletter-form { max-width: 26rem; width: 100%; margin: 0 auto; }
+
+  .contact-map iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; 
+    border-radius: var(--card-radius, 1rem);
+  }
+
+  img, svg, video, canvas, iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  html, body { overflow-x: hidden; }
+}
