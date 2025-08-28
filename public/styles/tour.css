@@ -130,3 +130,33 @@ img {
 .tour-gallery {
     margin-bottom: 3.5rem;
 }
+
+.slideshow { position: relative; }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow:hover { background: rgba(0,0,0,.5); }
+.arrow:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+.arrow.prev { left: 0.75rem; }
+.arrow.next { right: 0.75rem; }
+
+@media (max-width: 480px) {
+  .arrow { display: none; }
+}
