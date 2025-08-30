@@ -261,18 +261,27 @@ a {
     margin-bottom: 1.5rem;
 }
 
+/* Uncomment the comments below for when using a grid */
 .about-images {
-    display: grid;
+    /* display: grid; */
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.about-images img {
+/* .about-images img {
     width: 100%;
     aspect-ratio: 4/3;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+} */
+
+.about-images img {
+  width: 60%;
+  height: auto;      
+  display: block;    
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
 }
 
 @media(max-width:680px) {
