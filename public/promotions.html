@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Promotions | The Retreat Whickham</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/promotions.css" />
     <link rel="icon" href="/assets/favicon.ico">
@@ -12,6 +13,7 @@
 </head>
 
 <body>
+    <div class="nav-overlay"></div>
     <header class="site-header">
         <div class="header-inner">
             <nav class="main-nav" aria-label="Primary">
@@ -40,6 +42,12 @@
             <a class="logo" href="/">
                 <img src="/assets/images/logo.png" alt="The Retreat Whickham">
             </a>
+
+            <button class="burger" type="button" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </div>
     </header>
@@ -70,8 +78,56 @@
     </main>
 
     <footer class="site-footer">
-        <small>© The Retreat Whickham 2025 · All rights reserved</small>
+        <div class="footer-inner">
+
+            <div class="footer-col footer-about">
+                <img src="/assets/images/logo.png" alt="The Retreat Whickham" class="footer-logo">
+                <p>Rituals of wellness and beauty in the heart of Whickham village since 2016.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/facials.html#facials">Facials</a></li>
+                    <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
+                    <li><a href="/laserAdvancedSkinCare.html#laser">Laser Clinic</a></li>
+                    <li><a href="/beauty.html#beauty">Beauty</a></li>
+                    <li><a href="/tour.html">Take a Tour</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Get in Touch</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:01914881534">0191 488 1534</a></li>
+                    <li><a href="mailto:info@theretreatwhickham.com">info@theretreatwhickham.com</a></li>
+                    <li>Knowles Cottage, The Knowles<br>Whickham, NE16 4SN</li>
+                </ul>
+
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <small>&copy; The Retreat Whickham 2026 · All rights reserved</small>
+        </div>
     </footer>
+    <script type="module" src="/scripts/main.js"></script>
+    <button class="scroll-top" type="button" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
 </body>
 
 </html>

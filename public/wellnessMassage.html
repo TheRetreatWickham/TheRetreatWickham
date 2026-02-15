@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+  <div class="nav-overlay"></div>
   <header class="site-header">
     <div class="header-inner">
       <nav class="main-nav" aria-label="Primary">
@@ -49,6 +49,12 @@
       <a class="logo" href="/">
         <img src="/assets/images/logo.png" alt="The Retreat Whickham">
       </a>
+
+      <button class="burger" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
   </header>
@@ -167,24 +173,24 @@
     </div>
 
     <div class="card-grid card-grid--centre-two">
-        <article class="card">
-          <h3>Reflexology on Hydratherm System</h3>
-          <p class="desc"><em>Ideal for pregnancy.</em></p>
-          <div class="price-bubble">£55</div>
-        </article>
+      <article class="card">
+        <h3>Reflexology on Hydratherm System</h3>
+        <p class="desc"><em>Ideal for pregnancy.</em></p>
+        <div class="price-bubble">£55</div>
+      </article>
 
-        <article class="card">
-          <h3>Lymphatic Drainage Massage</h3>
-          <p class="desc">
-            A specialised, gentle type of massage that aims to encourage the natural draining of lymph, a fluid that
-            carries
-            waste products away from tissue. Thhis technique involves light, rhythmic hand movements and pressure to
-            stimualte
-            lymph flow, helpnig with puffiness and relaxation.
-          </p>
-          <div class="price-bubble">+£5 supplement</div>
-        </article>
-      </div>
+      <article class="card">
+        <h3>Lymphatic Drainage Massage</h3>
+        <p class="desc">
+          A specialised, gentle type of massage that aims to encourage the natural draining of lymph, a fluid that
+          carries
+          waste products away from tissue. Thhis technique involves light, rhythmic hand movements and pressure to
+          stimualte
+          lymph flow, helpnig with puffiness and relaxation.
+        </p>
+        <div class="price-bubble">+£5 supplement</div>
+      </article>
+    </div>
 
     <section class="ritual-holder">
       <h2>Rituals at The Retreat Whickham</h2>
@@ -222,10 +228,54 @@
   </main>
 
   <footer class="site-footer">
-    <small>© The Retreat Whickham 2025 · All rights reserved</small>
+    <div class="footer-inner">
+
+      <div class="footer-col footer-about">
+        <img src="/assets/images/logo.png" alt="The Retreat Whickham" class="footer-logo">
+        <p>Rituals of wellness and beauty in the heart of Whickham village since 2016.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/facials.html#facials">Facials</a></li>
+          <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
+          <li><a href="/laserAdvancedSkinCare.html#laser">Laser Clinic</a></li>
+          <li><a href="/beauty.html#beauty">Beauty</a></li>
+          <li><a href="/tour.html">Take a Tour</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Get in Touch</h3>
+        <ul class="footer-links">
+          <li><a href="tel:01914881534">0191 488 1534</a></li>
+          <li><a href="mailto:info@theretreatwhickham.com">info@theretreatwhickham.com</a></li>
+          <li>Knowles Cottage, The Knowles<br>Whickham, NE16 4SN</li>
+        </ul>
+
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <small>&copy; The Retreat Whickham 2026 · All rights reserved</small>
+    </div>
   </footer>
 
   <script type="module" src="/scripts/main.js"></script>
+  <button class="scroll-top" type="button" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 </body>
 
 </html>
