@@ -252,6 +252,7 @@
 .filigree h3 {
   position: relative;
 }
+
 .filigree h3::before {
   content: "";
   position: absolute;
