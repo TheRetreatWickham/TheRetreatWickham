@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Latest news, special offers and monthly promotions from The Retreat Whickham. Exclusive deals on laser treatments, beauty, facials and more. Sign up for updates.">
-    <title>Promotions | The Retreat Whickham</title>
+    <title>Promotions | The Retreat Whickham</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/main.css">
@@ -58,7 +58,6 @@
                     <li><a href="/index.html">Home</a></li>
                     <li class="has-sub">
                         <a href="#treatments">Treatments</a>
-
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Stim</a></li>
@@ -70,9 +69,8 @@
                         </ul>
                     </li>
                     <li><a href="/tour.html">Take a Tour</a></li>
-                    <li><a href="/contact.html">Contact</a>
-                    </li>
-                    <li><a href="/promotions.html">News &amp; Promotions</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/promotions.html" class="is-active">News &amp; Promotions</a></li>
                 </ul>
             </nav>
 
@@ -85,35 +83,135 @@
                 <span></span>
                 <span></span>
             </button>
-
         </div>
     </header>
 
-
-    <section class="hero hero--laser">
+    <!-- ── Hero ─────────────────────────────────────── -->
+    <!--
+        Replace the background-image in promotions.css (.hero--promotions)
+        with a dedicated promotions hero image once one is available.
+        Currently falls back to the main hero.avif.
+    -->
+    <section class="hero hero--promotions">
         <div class="hero-content">
-            <h1 class="page-title">Current News &amp; Promotions</h1>
+            <p class="strapline">The Retreat Whickham</p>
+            <h1>News &amp; Promotions</h1>
         </div>
     </section>
 
+    <!-- ── Main content ──────────────────────────────── -->
     <main>
-        <section class="news-promos">
-            <div class="news">
-                <h2 class="section-title">News</h2>
-                <article class="card">
-                    <img src="/assets/images/september-price-update.jpg" alt="New pricing announcement">
-                </article>
-            </div>
 
-            <div class="promos">
-                <h2 class="section-title">Promotions</h2>
-                <article class="card">
-                    <img src="/assets/images/april-promo.jpeg" alt="Jan promotions poster">
-                </article>
+        <!-- Two-column layout: Promotions | News
+             On mobile these stack vertically (see promotions.css).
+             Add more cards within each .promo-grid and they will
+             sit side-by-side within that column automatically. -->
+        <div class="np-layout">
+
+        <!-- Current promotions -->
+        <section class="np-col" aria-labelledby="promos-heading">
+                <h2 class="section-heading" id="promos-heading">Current Promotions</h2>
+                <p class="section-intro">Treat yourself — our latest offers are available for a limited time only.</p>
+
+                <div class="promo-grid">
+
+                    <!-- ── Promo card ─────────────────────────────
+                         Update: month label, expiry date, and alt text
+                         each time a new promotion poster is uploaded.
+                    ─────────────────────────────────────────────── -->
+                    <article class="promo-card reveal">
+                        <div class="promo-card__badge">April 2025</div>
+                        <div class="promo-card__img-wrap">
+                            <!-- When you have AVIF/WebP versions, wrap this in a <picture> element -->
+                            <img
+                                src="/assets/images/april-promo.jpeg"
+                                alt="April promotions poster — Spring Ritual of Renewal, Half Price FaceStim, and Underarm Waxing offer at The Retreat Whickham"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="promo-card__body">
+                            <p class="promo-card__expiry">
+                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                Available throughout April 2025
+                            </p>
+                            <a href="/contact.html" class="btn btn--primary btn-sm">Enquire Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Add further promo cards here as new months arrive -->
+
+                </div>
+        </section>
+
+        <!-- News -->
+        <section class="np-col" aria-labelledby="news-heading">
+                <h2 class="section-heading" id="news-heading">Latest News</h2>
+                <p class="section-intro">Important updates and announcements from the salon.</p>
+
+                <div class="promo-grid">
+
+                    <!-- ── News card ─────────────────────────────
+                         Update date, alt text, and description
+                         whenever a new news item is posted.
+                    ─────────────────────────────────────────────── -->
+                    <article class="promo-card promo-card--news reveal">
+                        <div class="promo-card__badge promo-card__badge--news">September 2024</div>
+                        <div class="promo-card__img-wrap">
+                            <!-- When you have AVIF/WebP versions, wrap this in a <picture> element -->
+                            <img
+                                src="/assets/images/september-price-update.jpg"
+                                alt="Price update notice — treatment prices increasing from 1st September, 48-hour cancellation policy reminder"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="promo-card__body">
+                            <p class="promo-card__expiry">
+                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                Posted September 2025
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Add further news cards here -->
+
+                </div>
+        </section>
+
+        </div><!-- /.np-layout -->
+
+        <!-- ── Newsletter sign-up strip ──────────────────
+             Paste your Mailchimp embed code into the
+             .newsletter__form div below, replacing the
+             placeholder paragraph.
+        ─────────────────────────────────────────────── -->
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+            <div class="newsletter__inner">
+                <div class="newsletter__text">
+                    <i class="fa-regular fa-envelope newsletter__icon" aria-hidden="true"></i>
+                    <h2 id="newsletter-heading">Never Miss a Promotion</h2>
+                    <p>Sign up to our newsletter and be the first to hear about exclusive offers, new treatments, and seasonal packages.</p>
+                </div>
+                <div class="newsletter__form">
+                    <!-- ── Mailchimp embed ─────────────────────────
+                         Replace this placeholder with your Mailchimp
+                         embed code. In Mailchimp: Audience → Signup forms
+                         → Embedded forms → Copy/paste the generated HTML.
+                    ─────────────────────────────────────────────── -->
+                    <p class="newsletter__placeholder">
+                        <em>Newsletter sign-up coming soon.</em>
+                        <br>In the meantime, follow us on
+                        <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener">Facebook</a>
+                        and
+                        <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener">Instagram</a>
+                        for the latest updates.
+                    </p>
+                </div>
             </div>
         </section>
+
     </main>
 
+    <!-- ── Footer ────────────────────────────────────── -->
     <footer class="site-footer">
         <div class="footer-inner">
 
@@ -143,12 +241,10 @@
                 </ul>
 
                 <div class="footer-socials">
-                    <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener"
-                        aria-label="Facebook">
+                    <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener" aria-label="Facebook">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener"
-                        aria-label="Instagram">
+                    <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
@@ -157,14 +253,14 @@
         </div>
 
         <div class="footer-bottom">
-            <small>&copy; The Retreat Whickham 2026 · All rights reserved</small>
+            <small>&copy; The Retreat Whickham 2026 &middot; All rights reserved</small>
         </div>
     </footer>
+
     <script type="module" src="/scripts/main.js"></script>
     <button class="scroll-top" type="button" aria-label="Back to top" title="Back to top">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
 
 </body>
-
 </html>

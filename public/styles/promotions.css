@@ -1,106 +1,284 @@
-.hero {
-    background: url("") center/cover no-repeat;
-    min-height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    margin-bottom: 1rem;
-    color: #fff;         
+/* ─────────────────────────────────────────────────────────────
+   promotions.css
+   Page-specific styles for News & Promotions.
+   Relies on main.css for: CSS variables, hero base class,
+   .btn, .reveal, scroll-top, header, footer, nav.
+───────────────────────────────────────────────────────────── */
+
+
+/* ── Hero ───────────────────────────────────────────────── */
+
+/*
+   If you have a dedicated promotions hero image, swap the
+   url() below for /assets/images/promotions-hero.avif
+   (AVIF preferred, WebP fallback).
+   Until then it inherits the main hero.avif from main.css.
+*/
+.hero--promotions {
+    background-image: url('/assets/images/hero.avif');
+    min-height: 42vh;
 }
 
-.page-title {
-    margin: 2rem 0 1.25rem;
-    font-size: clamp(1.8rem, 2.5vw + 1rem, 2.4rem);
-    color: var(--clr-primary);
-    text-align: center;
+.hero--promotions::before {
+    background: rgba(0, 40, 70, 0.45);
 }
 
-.news-promos {
+.hero--promotions h1 {
+    font-size: clamp(2rem, 4vw + 1rem, 3.4rem);
+}
+
+
+/* ── Two-column News | Promotions layout ────────────────── */
+
+.np-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    max-width: 900px;          
-    margin: 0 auto 3rem;
-    padding: 0 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: var(--max);
+    margin: 3rem auto;
+    padding: 0 var(--gutter);
+    align-items: start;
 }
 
-.section-title {
-    font-size: 1.5rem;
-    margin: 0 0 0.75rem;
-    text-align: center;
-    color: var(--clr-primary);
+.np-col {
+    /* Each column is a self-contained section */
 }
 
-.news-promos .card {
-    padding: 0;               
-    background: none;          
-    border-radius: 8px;         
-    overflow: visible;          
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
-}
-
-
-.news-promos .card img {
-    width: 100%;
-    height: auto;               
-    object-fit: contain;        
-    display: block;
-    border-radius: 8px;        
-}
-
-
-@media (max-width: 600px) {
-    .news-promos {
-        grid-template-columns: 1fr;  
+@media (max-width: 760px) {
+    .np-layout {
+        grid-template-columns: 1fr;
+        margin: 2rem auto;
     }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
-
-.section-title {
-    font-family: "Playfair Display", serif; 
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--clr-primary);
+.section-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 2vw + 0.8rem, 2rem);
+    color: var(--blue);
     text-align: center;
+    margin-bottom: 0.4rem;
     position: relative;
-    margin: 0 0 1rem;
+    padding-bottom: 0.9rem;
 }
 
-.section-title::after {
-    content: "";
+.section-heading::after {
+    content: '';
     position: absolute;
-    bottom: -0.4rem;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: var(--clr-accent);
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
     border-radius: 2px;
 }
 
-html, body { height: 100%; }             
+.section-intro {
+    text-align: center;
+    color: #555;
+    font-size: 0.92rem;
+    margin: 0.75rem 0 1.5rem;
+}
 
-body {
+
+/* ── Promo card grid ─────────────────────────────────────── */
+/*
+   auto-fit + justify-content: center means:
+   - 1 card  → centred within the column
+   - 2 cards → sit side by side (each ~260px min)
+   - 3+      → wrap to next row
+*/
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+
+/* ── Individual promo card ───────────────────────────────── */
+
+.promo-card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
     display: flex;
-    flex-direction: column;               
-} 
-.news-promos {
-    max-width: 1100px;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.news-promos .card {
-    border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,.08);
+.promo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
-.news-promos .card img {
+/* Date badge — top-left ribbon */
+.promo-card__badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+}
+
+/* Gold badge variant for news items */
+.promo-card__badge--news {
+    background: var(--gold);
+    color: #fff;
+}
+
+.promo-card__img-wrap {
     width: 100%;
-    height: auto;              
+    overflow: hidden;
+}
+
+.promo-card__img-wrap img {
+    width: 100%;
+    height: auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 0;
+    transition: transform 0.4s ease;
+}
+
+.promo-card:hover .promo-card__img-wrap img {
+    transform: scale(1.02);
+}
+
+.promo-card__body {
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-top: 1px solid #eef2f5;
+}
+
+.promo-card__expiry {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.promo-card__expiry i {
+    color: var(--gold);
+}
+
+
+/* ── Newsletter strip ────────────────────────────────────── */
+
+.newsletter {
+    background: var(--blue);
+    color: #fff;
+    padding: 3.5rem var(--gutter);
+    margin-top: 3.5rem;
+}
+
+.newsletter__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.newsletter__icon {
+    font-size: 2rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.newsletter__text h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+    margin-bottom: 0.65rem;
+    color: #fff;
+}
+
+.newsletter__text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.88;
+    margin: 0;
+}
+
+/* Mailchimp embed overrides — Mailchimp injects its own styles,
+   so these reset the most common conflicts */
+.newsletter__form input[type="email"] {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.newsletter__form input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.newsletter__form input[type="submit"] {
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.newsletter__form input[type="submit"]:hover {
+    background: #b8913e;
+}
+
+/* Placeholder shown until Mailchimp embed is added */
+.newsletter__placeholder {
+    font-size: 0.92rem;
+    opacity: 0.85;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.newsletter__placeholder a {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+.newsletter__placeholder a:hover {
+    opacity: 0.8;
+}
+
+
+/* ── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 680px) {
+    .newsletter__inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .newsletter__icon {
+        margin: 0 auto 0.75rem;
+    }
 }
