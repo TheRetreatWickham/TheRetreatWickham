@@ -251,16 +251,12 @@
 
 .gallery-row {
     display: grid;
-    grid-template-columns: repeat(4, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 0rem !important;
-    justify-content: center;
-}
-
-@media(max-width:960px) {
-    .gallery-row {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 0 !important;
+    max-width: 860px;
+    margin-inline: auto;
+    padding: 0 var(--gutter);
 }
 
 @media(max-width:540px) {
@@ -298,7 +294,7 @@
 
 .results-wrapper {
     max-width: var(--max);
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     padding: 0 var(--gutter);
 }
 

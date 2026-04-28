@@ -169,6 +169,16 @@ a {
     color: #fff;
 }
 
+/* Treatment-page heroes — shorter than the full-bleed homepage hero */
+.hero--laser,
+.hero--facials,
+.hero--wellness,
+.hero--beauty,
+.hero--manipedi,
+.hero--makeup {
+    min-height: 40vh;
+}
+
 .hero::before {
     content: "";
     position: absolute;
