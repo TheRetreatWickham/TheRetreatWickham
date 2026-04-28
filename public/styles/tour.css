@@ -14,37 +14,34 @@ img {
 }
 
 .hero-tour {
-    min-height: 20vh;
+    min-height: unset;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero-tour img {
-    width: 100%;
-    height: 20vh;
-    object-fit: cover;
+    background: none;
 }
 
 .hero-tour .hero-inner {
+    position: relative;
+    z-index: 1;
     background: none;
     text-align: center;
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, .55);
-    padding: 4rem 1rem;
+    padding: 3rem 1rem 1.5rem;
 }
 
 .hero-tour h1 {
     font-size: clamp(2.25rem, 6vw, 3.5rem);
     letter-spacing: .05em;
     color: var(--blue, #00528F);
+    text-shadow: none;
 }
 
 .hero-tour .strapline {
     margin-top: .5rem;
     font-size: 1.125rem;
     color: var(--blue, #00528F);
+    text-shadow: none;
 }
 
 .slideshow {
