@@ -20,7 +20,7 @@
     background: var(--colour-cream, #f8f7f4);
     padding: 2.5rem 3rem;
     border-radius: var(--card-radius, 1rem);
-    text-align: centre;
+    text-align: center;
     box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
 }
 
