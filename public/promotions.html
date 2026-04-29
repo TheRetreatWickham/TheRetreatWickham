@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Latest news, special offers and monthly promotions from The Retreat Whickham. Exclusive deals on laser treatments, beauty, facials and more. Sign up for updates.">
     <title>Promotions | The Retreat Whickham</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/promotions.css" />
@@ -109,7 +110,7 @@
         <div class="np-layout">
 
         <!-- Current promotions -->
-        <section class="np-col" aria-labelledby="promos-heading">
+        <section class="np-col np-col--promo" aria-labelledby="promos-heading">
                 <h2 class="section-heading" id="promos-heading">Current Promotions</h2>
                 <p class="section-intro">Treat yourself — our latest offers are available for a limited time only.</p>
 
@@ -122,10 +123,9 @@
                     <article class="promo-card reveal">
                         <div class="promo-card__badge">May 2026</div>
                         <div class="promo-card__img-wrap">
-                            <!-- When you have AVIF/WebP versions, wrap this in a <picture> element -->
                             <img
                                 src="/assets/images/may-promo.jpeg"
-                                alt="May promotions poster — Spring Ritual of Renewal, Half Price FaceStim, and Underarm Waxing offer at The Retreat Whickham"
+                                alt="May 2026 promotions poster — Spring Ritual of Renewal, Medik8 Retinal offer and Superfacial at The Retreat Whickham"
                                 loading="lazy"
                             >
                         </div>
@@ -144,7 +144,7 @@
         </section>
 
         <!-- News -->
-        <section class="np-col" aria-labelledby="news-heading">
+        <section class="np-col np-col--news" aria-labelledby="news-heading">
                 <h2 class="section-heading" id="news-heading">Latest News</h2>
                 <p class="section-intro">Important updates and announcements from the salon.</p>
 
@@ -154,6 +154,23 @@
                          Update date, alt text, and description
                          whenever a new news item is posted.
                     ─────────────────────────────────────────────── -->
+                    <article class="promo-card promo-card--news reveal">
+                        <div class="promo-card__badge promo-card__badge--news">Booking Info</div>
+                        <div class="promo-card__img-wrap">
+                            <img
+                                src="/assets/images/bookings.jpeg"
+                                alt="Booking information — email to receive a booking link, deposit and cancellation policy"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="promo-card__body">
+                            <p class="promo-card__expiry">
+                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                Booking &amp; cancellation policy
+                            </p>
+                        </div>
+                    </article>
+
                     <article class="promo-card promo-card--news reveal">
                         <div class="promo-card__badge promo-card__badge--news">September 2025</div>
                         <div class="promo-card__img-wrap">
@@ -185,26 +202,18 @@
              placeholder paragraph.
         ─────────────────────────────────────────────── -->
         <section class="newsletter" aria-labelledby="newsletter-heading">
-            <div class="newsletter__inner">
-                <div class="newsletter__text">
-                    <i class="fa-regular fa-envelope newsletter__icon" aria-hidden="true"></i>
-                    <h2 id="newsletter-heading">Never Miss a Promotion</h2>
-                    <p>Sign up to our newsletter and be the first to hear about exclusive offers, new treatments, and seasonal packages.</p>
-                </div>
-                <div class="newsletter__form">
-                    <!-- ── Mailchimp embed ─────────────────────────
-                         Replace this placeholder with your Mailchimp
-                         embed code. In Mailchimp: Audience → Signup forms
-                         → Embedded forms → Copy/paste the generated HTML.
-                    ─────────────────────────────────────────────── -->
-                    <p class="newsletter__placeholder">
-                        <em>Newsletter sign-up coming soon.</em>
-                        <br>In the meantime, follow us on
-                        <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener">Facebook</a>
-                        and
-                        <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener">Instagram</a>
-                        for the latest updates.
-                    </p>
+            <div class="newsletter__inner newsletter__inner--centred">
+                <i class="fa-regular fa-envelope newsletter__icon" aria-hidden="true"></i>
+                <h2 id="newsletter-heading">Stay in the Loop</h2>
+                <p>Be the first to hear about exclusive offers, new treatments and seasonal packages. Follow us on social media or drop us a message directly — we'd love to hear from you.</p>
+                <div class="newsletter__actions">
+                    <a href="/contact.html" class="btn btn--gold">Get in Touch</a>
+                    <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener" class="btn btn--outline-light">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>&nbsp;Facebook
+                    </a>
+                    <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener" class="btn btn--outline-light">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>&nbsp;Instagram
+                    </a>
                 </div>
             </div>
         </section>
