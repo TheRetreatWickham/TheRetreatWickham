@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="The Retreat Whickham — a luxury beauty and wellness salon in Whickham village. Laser clinic, facials, massage, waxing, nails and more. Book your treatment today.">
+    <meta name="description"
+        content="The Retreat Whickham — a luxury beauty and wellness salon in Whickham village. Laser clinic, facials, massage, waxing, nails and more. Book your treatment today.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>The Retreat Whickham | Rituals of wellness and beauty</title>
 
@@ -66,6 +67,7 @@
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Stim</a></li>
+                            <li><a href="/faceStim.html#facestim">Face Stim</a></li>
                             <li><a href="/facials.html#facials">Facials</a></li>
                             <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
                             <li><a href="/beauty.html#beauty">Beauty</a></li>
@@ -116,13 +118,145 @@
                             class="fa-solid fa-wand-magic-sparkles"></i><span>Laser&nbsp;Clinic</span></a></li>
                 <li><a href="/bodyStim.html#bodystim"><i class="fa-solid fa-bolt"></i><span>Body Stim</span></a>
                 </li>
+                <li><a href="/faceStim.html#facestim"><i
+                            class="fa-solid fa-arrow-trend-up"></i><span>Face&nbsp;Stim</span></a></li>
                 <li><a href="/facials.html#facials"><i class="fa-solid fa-spa"></i><span>Facials</span></a></li>
-                <li><a href="/wellnessMassage.html#wellnessMassage"><i class="fa-solid fa-leaf"></i><span>Wellness</span></a></li>
+                <li><a href="/wellnessMassage.html#wellnessMassage"><i
+                            class="fa-solid fa-leaf"></i><span>Wellness</span></a></li>
                 <li><a href="/beauty.html#beauty"><i class="fa-solid fa-star"></i><span>Beauty</span></a></li>
                 <li><a href="/maniPedi.html#maniPedi"><i
                             class="fa-solid fa-hand-sparkles"></i><span>Mani&nbsp;&amp;&nbsp;Pedi</span></a></li>
             </ul>
         </section>
+
+        <!-- ── FaceStim launch announcement ─────────────────────
+         Remove or archive this section once the launch period passes.
+    ──────────────────────────────────────────────────────── -->
+        <style>
+            .facestim-launch {
+                background: #005782;
+                color: #f5ede2;
+                padding: 4rem 2rem;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .facestim-launch::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(ellipse at 60% 50%, rgba(184, 146, 74, .18) 0%, transparent 70%);
+                pointer-events: none;
+            }
+
+            .facestim-launch__inner {
+                position: relative;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            .facestim-launch__eyebrow {
+                display: inline-block;
+                font-family: 'Poppins', sans-serif;
+                font-size: .7rem;
+                font-weight: 600;
+                letter-spacing: .18em;
+                text-transform: uppercase;
+                color: #b8924a;
+                border: 1px solid #b8924a;
+                padding: .3em .9em;
+                border-radius: 2px;
+                margin-bottom: 1.25rem;
+            }
+
+            .facestim-launch h2 {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: clamp(2.2rem, 5vw, 3.5rem);
+                font-weight: 700;
+                color: #f5ede2;
+                margin: 0 0 .75rem;
+                line-height: 1.1;
+            }
+
+            .facestim-launch__sub {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                color: #d4b896;
+                margin-bottom: 2rem;
+                max-width: 560px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .facestim-launch__pills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .6rem;
+                justify-content: center;
+                margin-bottom: 2rem;
+            }
+
+            .facestim-launch__pill {
+                font-family: 'Poppins', sans-serif;
+                font-size: .75rem;
+                font-weight: 600;
+                letter-spacing: .06em;
+                text-transform: uppercase;
+                background: rgba(255, 255, 255, .08);
+                border: 1px solid rgba(255, 255, 255, .25);
+                color: #f5ede2;
+                padding: .35em .9em;
+                border-radius: 20px;
+            }
+
+            .facestim-launch__price {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.3rem;
+                color: #f5ede2;
+                margin-bottom: 1.75rem;
+            }
+
+            .btn--gold {
+                background: #b8924a;
+                color: #fff;
+                padding: .75rem 2rem;
+                font-family: 'Poppins', sans-serif;
+                font-size: .85rem;
+                font-weight: 600;
+                letter-spacing: .06em;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-radius: 3px;
+                display: inline-block;
+                transition: background .2s;
+            }
+
+            .btn--gold:hover {
+                background: #a07a38;
+            }
+        </style>
+
+        <section class="facestim-launch">
+            <div class="facestim-launch__inner">
+                <span class="facestim-launch__eyebrow">New Treatment</span>
+                <h2>The FaceStim Facial</h2>
+                <p class="facestim-launch__sub">
+                    A new, advanced facial innovation is now available at
+                    The Retreat! Combining bipolar radio frequency with deep muscle contraction
+                    for a visibly firmer, more sculpted face.
+                </p>
+                <div class="facestim-launch__pills">
+                    <span class="facestim-launch__pill">Collagen stimulation</span>
+                    <span class="facestim-launch__pill">Non-surgical lift</span>
+                    <span class="facestim-launch__pill">Tones facial muscles</span>
+                    <span class="facestim-launch__pill">Zero downtime</span>
+                </div>
+                <p class="facestim-launch__price">From £160 · Course of 6 from £880</p>
+                <a href="/faceStim.html#facestim" class="btn btn--gold">Discover FaceStim</a>
+            </div>
+        </section>
+
 
         <section class="about-strip reveal">
             <div class="about-text">
@@ -156,6 +290,24 @@
             <h2>Our Signature Rituals</h2>
 
             <div class="card-grid">
+
+                <article class="card reveal">
+                    <!-- TODO: Replace src with a supplied FaceStim image once available -->
+                    <img src="/assets/images/facestim-mid-face.PNG"
+                        alt="FaceStim Facial — non-surgical lifting treatment">
+                    <div class="card-body">
+                        <h3>FaceStim Facial <span
+                                style="font-size:.65em;background:#b8924a;color:#fff;padding:.2em .5em;border-radius:2px;vertical-align:middle;font-family:Poppins,sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;">NEW</span>
+                        </h3>
+                        <p class="desc">
+                            A non-invasive, results-driven treatment designed to lift, tone and sculpt the face while
+                            improving overall skin firmness and structure.
+                        </p>
+                        <a href="/faceStim.html#facestim" class="btn btn--primary btn-sm">
+                            Discover&nbsp;FaceStim
+                        </a>
+                    </div>
+                </article>
 
                 <article class="card reveal">
                     <img src="/assets/images/facials.avif" alt="Relaxing facial treatment">
