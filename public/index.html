@@ -16,6 +16,20 @@
 
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="icon" href="/assets/favicon.ico">
+    <style>
+        /* Force icon grid to single row at desktop widths */
+        .icon-grid {
+            grid-template-columns: repeat(9, 1fr) !important;
+            gap: 1rem !important;
+        }
+        .icon-grid a { font-size: .8rem; gap: .5rem; }
+        .icon-grid i { width: 54px; height: 54px; font-size: 1.25rem; }
+        @media (max-width: 900px) {
+            .icon-grid { grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important; gap: 1.5rem !important; }
+            .icon-grid a { font-size: .75rem; }
+        }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,6 +80,7 @@
 
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
+                            <li><a href="/microneedling.html#microneedling">Microneedling</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Stim</a></li>
                             <li><a href="/faceStim.html#facestim">Face Stim</a></li>
                             <li><a href="/facials.html#facials">Facials</a></li>
@@ -114,18 +129,15 @@
 
         <section id="treatments" class="icon-grid-wrapper">
             <ul class="icon-grid">
-                <li><a href="/laserAdvancedSkinCare.html#laser"><i
-                            class="fa-solid fa-wand-magic-sparkles"></i><span>Laser&nbsp;Clinic</span></a></li>
-                <li><a href="/bodyStim.html#bodystim"><i class="fa-solid fa-bolt"></i><span>Body Stim</span></a>
-                </li>
-                <li><a href="/faceStim.html#facestim"><i
-                            class="fa-solid fa-arrow-trend-up"></i><span>Face&nbsp;Stim</span></a></li>
+                <li><a href="/laserAdvancedSkinCare.html#laser"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Laser&nbsp;Clinic</span></a></li>
+                <li><a href="/microneedling.html#microneedling"><i class="fa-solid fa-circle-dot"></i><span>Microneedling</span></a></li>
+                <li><a href="/bodyStim.html#bodystim"><i class="fa-solid fa-bolt"></i><span>Body&nbsp;Stim</span></a></li>
+                <li><a href="/faceStim.html#facestim"><i class="fa-solid fa-arrow-trend-up"></i><span>Face&nbsp;Stim</span></a></li>
                 <li><a href="/facials.html#facials"><i class="fa-solid fa-spa"></i><span>Facials</span></a></li>
-                <li><a href="/wellnessMassage.html#wellnessMassage"><i
-                            class="fa-solid fa-leaf"></i><span>Wellness</span></a></li>
+                <li><a href="/wellnessMassage.html#wellnessMassage"><i class="fa-solid fa-leaf"></i><span>Wellness</span></a></li>
+                <li><a href="/waxing.html#waxing"><i class="fa-solid fa-feather"></i><span>Waxing</span></a></li>
                 <li><a href="/beauty.html#beauty"><i class="fa-solid fa-star"></i><span>Beauty</span></a></li>
-                <li><a href="/maniPedi.html#maniPedi"><i
-                            class="fa-solid fa-hand-sparkles"></i><span>Mani&nbsp;&amp;&nbsp;Pedi</span></a></li>
+                <li><a href="/maniPedi.html#maniPedi"><i class="fa-solid fa-hand-sparkles"></i><span>Mani&nbsp;&amp;&nbsp;Pedi</span></a></li>
             </ul>
         </section>
 
