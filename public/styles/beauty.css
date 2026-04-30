@@ -1,3 +1,8 @@
+/* ══════════════════════════════════════════════════════════════
+   beauty.css  — Beauty & Make-up page
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Hero ───────────────────────────────────────────────────── */
 .hero--beauty .hero-content {
     display: flex;
     flex-direction: column;
@@ -7,7 +12,6 @@
     padding: 7rem 1rem 5rem;
     margin-bottom: 1rem;
 }
-
 
 .hero--beauty {
     margin-bottom: 1rem;
@@ -19,7 +23,13 @@
     color: #fff;
 }
 
+@media (max-width: 680px) {
+    .hero--beauty {
+        min-height: 50vh;
+    }
+}
 
+/* ── Service grid (Eye Treatments / Tanning) ────────────────── */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -31,10 +41,10 @@
 }
 
 .centered-card {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: 100%;
-  max-width: 500px; 
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 500px;
 }
 
 .service-card {
@@ -47,9 +57,6 @@
     height: 100%;
 }
 
-.service-card:nth-of-type(1) {
-  grid-column-start: 1 !important;
-}
 .service-card h2 {
     margin-top: 0;
     font-family: var(--serif);
@@ -61,16 +68,6 @@
     margin: .25rem 0 1rem;
 }
 
-@media (max-width: 768px) {
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card:last-child {
-        grid-column: auto;
-    }
-}
-
 .pricing-list {
     list-style: none;
     margin: 0 0 1.5rem;
@@ -79,23 +76,27 @@
 }
 
 .pricing-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; 
-  gap: 1rem;
-  margin-bottom: .75rem; 
-  line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: .75rem;
+    line-height: 1.4;
+}
+
+.pricing-list li span:first-child {
+    display: inline-block;
+    max-width: 70%;
 }
 
 .price-tag {
-  background: var(--light-blue);
-  border-radius: 999px;
-  padding: .3rem 0.9rem;
-  font-weight: 600;
-  white-space: nowrap;
-  flex-shrink: 0;
+    background: var(--light-blue);
+    border-radius: 999px;
+    padding: .3rem 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
-
 
 .upgrade {
     font-style: italic;
@@ -104,17 +105,29 @@
 
 .service-media {
     margin-top: auto;
-     display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .service-media img {
-  width: 80%;
-  max-width: 80%; 
-  height: auto;
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.service-header h2 {
+    margin: 0;
 }
 
 .small {
@@ -131,18 +144,27 @@
     text-align: center;
 }
 
+#beauty .btn--outline {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+#beauty .btn--outline:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .service-grid {
         grid-template-columns: 1fr;
     }
-}
 
-@media(max-width:680px) {
-    .hero--beauty {
-        min-height: 50vh;
+    .service-card:last-child {
+        grid-column: auto;
     }
 }
 
+/* ── Eye treatment modal ────────────────────────────────────── */
 .eye-modal {
     max-width: 740px;
     width: 90%;
@@ -174,38 +196,144 @@
 }
 
 .eye-modal ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 .eye-modal ul li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
-.service-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+/* ── Make-up section ────────────────────────────────────────── */
+.makeup-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 var(--gutter);
 }
 
-.service-header h2 {
-  margin: 0;
+.makeup-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 82, 143, .1);
 }
 
-.pricing-list li span:first-child {
-  display: inline-block;
-  max-width: 70%;
+.makeup-intro h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: var(--text);
+    margin-bottom: 1rem;
 }
 
-#beauty .btn--outline {
-  border: 2px solid var(--blue);
-  color: var(--blue);
+.makeup-intro p {
+    margin: .6rem auto;
+    max-width: 680px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
 }
-#beauty .btn--outline:hover {
-  background: var(--blue);
-  color: #fff;
+
+/* Two makeup service cards */
+.makeup-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.makeup-card {
+    background: var(--cream);
+    border-radius: 6px;
+    padding: 1.75rem 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Decorative border — same as the original makeup page */
+    border: 8px solid transparent;
+    border-image-source: url('/assets/images/makeup-border-light.png');
+    border-image-slice: 20 fill;
+    border-image-repeat: round;
+}
+
+.makeup-card h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1.15rem;
+}
+
+.makeup-duration {
+    font-size: .85rem;
+    font-weight: 400;
+    color: var(--dark-grey, #555);
+}
+
+.makeup-card .price-bubble {
+    margin: 0.75rem auto;
+}
+
+.makeup-desc {
+    font-size: .95rem;
+    line-height: 1.55;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Brand logo / kit image row */
+.makeup-brands {
+    background: var(--cream);
+    border-radius: 6px;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+.makeup-brands-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.brand-logo,
+.brand-image {
+    width: 260px;
+    height: 260px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+/* Price bubble (shared between service-card and makeup-card) */
+.price-bubble {
+    display: inline-block;
+    background-color: #eaf4fc;
+    color: var(--blue);
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .makeup-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-logo,
+    .brand-image {
+        width: 200px;
+        height: 200px;
+    }
 }

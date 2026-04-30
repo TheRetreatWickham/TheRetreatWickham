@@ -1,0 +1,179 @@
+/* =========================================================
+   Microneedling page styles
+   Inherits laser.css for .addon-strip, .treatment-grid etc.
+   ========================================================= */
+
+/* ── Hero ─────────────────────────────────────────────────── */
+
+.hero--microneedling .hero-content h1 {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+
+.hero--microneedling .strapline {
+  color: #f0ece8;
+  font-size: 1.05rem;
+  margin-top: .5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+}
+
+
+
+/* ── Key benefits band ────────────────────────────────────── */
+
+.key-band {
+  background: var(--cream, #faf8f5);
+  padding: 2.5rem var(--gutter);
+  border-bottom: 1px solid #e8e5e1;
+}
+
+.key-band .key-list {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style: none;
+  padding: 0;
+}
+
+.key-band .key-list li {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+}
+
+.key-icon {
+  font-size: 1.35rem;
+  color: var(--blue, #005782);
+  flex-shrink: 0;
+}
+
+.key-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: .85rem;
+  letter-spacing: .02em;
+}
+
+/* ── Main content spacing ─────────────────────────────────── */
+
+.treatments#microneedling .treatment-holder {
+  padding: 3rem 0 0;
+}
+
+/* ── Cross-link to laser page ─────────────────────────────── */
+
+.mn-crosslink {
+  max-width: var(--max);
+  margin: 2rem auto 0;
+  padding: 1.25rem var(--gutter);
+  border-top: 1px solid #e8e5e1;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+.mn-crosslink a {
+  color: var(--blue, #005782);
+  text-decoration: underline;
+}
+
+/* ── eDermastamp add-on strip ────────────────────────────── */
+
+.addon-strip {
+  background: #f5f3f0;
+  border-top: 3px solid #b8924a;
+  margin: 0 0 3rem;
+  padding: 2.5rem var(--gutter);
+}
+
+.addon-strip__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.addon-strip__header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.addon-strip__label {
+  font-family: 'Poppins', sans-serif;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #b8924a;
+  border: 1px solid #b8924a;
+  padding: .2em .65em;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.addon-strip__title {
+  font-size: 1.3rem;
+  margin: 0;
+  flex: 1;
+}
+
+.addon-strip__price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #b8924a;
+  flex-shrink: 0;
+}
+
+.addon-strip__intro {
+  max-width: 760px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.addon-strip__ingredients {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.addon-ingredient {
+  border-left: 2px solid #b8924a;
+  padding-left: .9rem;
+}
+
+.addon-ingredient strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+  color: #1a1a1a;
+}
+
+.addon-ingredient p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+/* ── Addon strip refinements ─────────────────────────────── */
+
+.addon-strip__title {
+  font-size: 1.4rem;
+  margin: .5rem 0 0;
+}
+
+.addon-strip__product-line {
+  font-size: 1.05rem;
+  margin: .75rem 0 1rem;
+}
+
+.addon-strip__price {
+  color: #b8924a;
+  font-weight: 600;
+}

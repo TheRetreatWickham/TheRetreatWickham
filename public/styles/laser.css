@@ -111,3 +111,24 @@
 
   html, body { overflow-x: hidden; }
 }
+
+/* ── Tighter section spacing on this page ────────────────────
+   main.css sets margin-bottom: 4rem on .treatment-grid which
+   is too generous across 8 treatments. Override here only.    */
+
+.treatments .treatment-grid,
+.treatments .treatment-grid.single {
+  margin-bottom: 2rem !important;
+}
+
+/* Subtle hairline between each treatment section — gives the
+   eye a clear break without needing large whitespace gaps     */
+.treatment-holder + .treatment-holder {
+  border-top: 1px solid #e8e5e1;
+  padding-top: 2.5rem;
+}
+
+/* Intro paragraph — less space below before first treatment   */
+.intro.container {
+  margin-bottom: 1.5rem !important;
+}
