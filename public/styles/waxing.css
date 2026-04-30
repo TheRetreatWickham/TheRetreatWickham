@@ -1,0 +1,53 @@
+/* ── Waxing page hero ──────────────────────────────────────── */
+
+/*
+ * The waxing hero uses waxing.avif as background.
+ * If you have a dedicated waxing hero image, swap the path below.
+ * waxing.avif is also used as the service-media image in the
+ * Waxing Packages card — you may want separate assets long-term.
+ */
+
+.hero--waxing {
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+     margin-bottom: 1rem;
+}
+
+.hero--waxing .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 7rem 1rem 5rem;
+}
+
+.hero--waxing h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
+}
+
+@media (max-width: 680px) {
+    .hero--waxing {
+        min-height: 50vh;
+    }
+}
+
+.service-header--with-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.service-header--with-image h2 {
+    margin: 0;
+}
+
+.service-header--with-image .service-media img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+}

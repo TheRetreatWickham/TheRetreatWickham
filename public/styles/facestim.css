@@ -322,3 +322,207 @@
   position: relative;
   top: -.1em;
 }
+/* ── Before / After comparison carousel ─────────────────── */
+
+.ba-section {
+  padding: 3rem 0 2.5rem;
+  text-align: center;
+  background: var(--cream, #faf8f5);
+}
+
+.ba-heading {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--fs-gold);
+  margin-bottom: .35rem;
+}
+
+.ba-subheading {
+  font-size: .95rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.ba-carousel {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ba-track {
+  display: flex;
+  transition: transform .4s ease;
+  will-change: transform;
+}
+
+.ba-slide {
+  min-width: 100%;
+  padding: 0 3rem; /* room for nav arrows */
+  box-sizing: border-box;
+}
+
+/* ── The comparison widget itself ── */
+
+.ba-compare {
+  position: relative;
+  width: 100%;
+  user-select: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,.14);
+  cursor: col-resize;
+}
+
+.ba-before,
+.ba-after {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.ba-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  clip-path: inset(0 50% 0 0);
+}
+
+.ba-before img,
+.ba-after img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+/* Labels */
+.ba-label {
+  position: absolute;
+  bottom: .6rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .25em .65em;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.ba-label--before {
+  left: .6rem;
+  background: rgba(0,0,0,.45);
+  color: #fff;
+}
+
+.ba-label--after {
+  right: .6rem;
+  background: var(--fs-gold);
+  color: #fff;
+}
+
+/* Handle */
+.ba-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ba-handle__line {
+  flex: 1;
+  width: 2px;
+  background: #fff;
+}
+
+.ba-handle__circle {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .15rem;
+  font-size: .7rem;
+  color: var(--fs-gold);
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  flex-shrink: 0;
+}
+
+/* Range input — invisible but covers the full widget for interaction */
+.ba-range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: col-resize;
+  margin: 0;
+  z-index: 3;
+  -webkit-appearance: none;
+}
+
+/* ── Carousel nav arrows ── */
+
+.ba-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  color: var(--fs-gold);
+  font-size: .85rem;
+  z-index: 10;
+  transition: background .2s;
+}
+
+.ba-nav:hover { background: var(--fs-gold); color: #fff; }
+.ba-nav--prev { left: 0; }
+.ba-nav--next { right: 0; }
+
+/* ── Dots ── */
+
+.ba-dots {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: 1.25rem;
+}
+
+.ba-dot {
+  width: .55rem;
+  height: .55rem;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s;
+}
+
+.ba-dot--active { background: var(--fs-gold); }
+
+/* ── Disclaimer ── */
+
+.ba-disclaimer {
+  font-size: .8rem;
+  color: #999;
+  margin-top: 1.5rem;
+  padding: 0 var(--gutter);
+}

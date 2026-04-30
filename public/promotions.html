@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Latest news, special offers and monthly promotions from The Retreat Whickham. Exclusive deals on laser treatments, beauty, facials and more. Sign up for updates.">
-    <title>Promotions | The Retreat Whickham</title>
+    <meta name="description"
+        content="FaceStim Facial at The Retreat Whickham — non-surgical lifting, toning and sculpting using bipolar RF and deep muscle contraction. No downtime. £160 per session. Serving Whickham and Gateshead.">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FaceStim Facial | The Retreat Whickham</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/promotions.css" />
+    <link rel="stylesheet" href="/styles/facestim.css">
     <link rel="icon" href="/assets/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -59,23 +64,21 @@
                     <li><a href="/index.html">Home</a></li>
                     <li class="has-sub">
                         <a href="#treatments">Treatments</a>
+
                         <ul class="submenu">
                             <li><a href="/laserAdvancedSkinCare.html#laser">Laser &amp; Skin Clinic</a></li>
                             <li><a href="/bodyStim.html#bodystim">Body Stim</a></li>
                             <li><a href="/faceStim.html#facestim">Face Stim</a></li>
-                            <li><a href="/faceStim.html#facestim">Face Stim</a></li>
                             <li><a href="/facials.html#facials">Facials</a></li>
                             <li><a href="/wellnessMassage.html#wellnessMassage">Wellness &amp; Massage</a></li>
-                            <li><a href="/beauty.html#beauty">Beauty</a></li>
+                            <li><a href="/beauty.html#beauty">Beauty &amp; Make-up</a></li>
+                            <li><a href="/waxing.html#waxing">Waxing</a></li>
                             <li><a href="/maniPedi.html#maniPedi">Mani &amp; Pedi</a></li>
-                            <li><a href="/makeup.html#makeup">Make-up</a></li>
-                            
-
                         </ul>
                     </li>
                     <li><a href="/tour.html">Take a Tour</a></li>
                     <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/promotions.html" class="is-active">News &amp; Promotions</a></li>
+                    <li><a href="/promotions.html">News &amp; Promotions</a></li>
                 </ul>
             </nav>
 
@@ -88,159 +91,279 @@
                 <span></span>
                 <span></span>
             </button>
+
         </div>
     </header>
 
-    <!-- ── Hero ─────────────────────────────────────── -->
-    <!--
-        Replace the background-image in promotions.css (.hero--promotions)
-        with a dedicated promotions hero image once one is available.
-        Currently falls back to the main hero.avif.
-    -->
-    <section class="hero hero--promotions">
+    <!-- ── Hero ─────────────────────────────────────────────
+         Static image shown until video is converted.
+         See ffmpeg instructions in the comment below.
+    ──────────────────────────────────────────────────────── -->
+    <section class="hero hero--facestim">
+        <figure class="hero-bg">
+
+            <video playsinline autoplay muted loop poster="/assets/images/facestim-mid-face.PNG" class="fs-hero-vid">
+                <source src="/assets/videos/facestim.mp4" type="video/mp4">
+                <img src="/assets/images/facestim-mid-face.PNG" alt="FaceStim Facial at The Retreat Whickham">
+            </video>
+
+            <img src="/assets/images/facestim-mid-face.PNG" alt="FaceStim Facial at The Retreat Whickham">
+        </figure>
+
         <div class="hero-content">
-            <p class="strapline">The Retreat Whickham</p>
-            <h1>News &amp; Promotions</h1>
+            <h1 class="hero-title">THE FACESTIM FACIAL</h1>
+            <p class="strapline">Lift, tone and sculpt your face with no surgery or downtime</p>
         </div>
     </section>
 
-    <!-- ── Main content ──────────────────────────────── -->
-    <main>
+    <!-- ── Key benefits band ─────────────────────────────── -->
+    <section class="key-band key-band--facestim">
+        <ul class="key-list">
+            <li>
+                <i class="fa-solid fa-wand-magic-sparkles key-icon"></i>
+                <span class="key-label">Collagen &amp; Elastin Stimulation</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-arrows-up-to-line key-icon"></i>
+                <span class="key-label">Lifts &amp; Sculpts Facial Contours</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-bolt key-icon"></i>
+                <span class="key-label">Bipolar RF + Muscle Contraction</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-circle-check key-icon"></i>
+                <span class="key-label">Zero Downtime</span>
+            </li>
+        </ul>
+    </section>
 
-        <!-- Two-column layout: Promotions | News
-             On mobile these stack vertically (see promotions.css).
-             Add more cards within each .promo-grid and they will
-             sit side-by-side within that column automatically. -->
-        <div class="np-layout">
+    <!-- ── What is FaceStim? ──────────────────────────────── -->
+    <section id="facestim" class="treatment-grid two-col">
+        <div class="treatment-img">
+            <img src="/assets/images/facestim-mid-face.jpg" alt="FaceStim Facial treatment at The Retreat Whickham">
+        </div>
 
-        <!-- Current promotions -->
-        <section class="np-col np-col--promo" aria-labelledby="promos-heading">
-                <h2 class="section-heading" id="promos-heading">Current Promotions</h2>
-                <p class="section-intro">Treat yourself — our latest offers are available for a limited time only.</p>
+        <div class="treatment-info">
+            <h2>What is the FaceStim Facial?</h2>
+            <p>
+                The FaceStim Facial is a non-invasive, results-driven treatment designed to lift, tone and sculpt the
+                face while improving overall skin firmness and structure.
+            </p>
 
-                <div class="promo-grid">
+            <p>
+                With no downtime, the FaceStim Facial is an effective non-surgical alternative for those looking to
+                improve facial definition, lift and overall skin quality.
+            </p>
+        </div>
 
-                    <!-- FaceStim launch card — can be removed once no longer new
-                    <article class="promo-card reveal" style="border-top: 3px solid #b8924a;">
-                        <div class="promo-card__badge" style="background:#b8924a;">NEW TREATMENT</div>
-                        <div class="promo-card__body" style="padding-top:1.5rem;">
-                            <h3 style="font-size:1.6rem;margin-bottom:.5rem;">The FaceStim Facial</h3>
-                            <p style="font-size:1rem;line-height:1.6;margin-bottom:1rem;color:#555;">
-                                Our most exciting new addition — a non-surgical treatment combining bipolar
-                                radio frequency with deep muscle contraction to lift, tone and sculpt the
-                                face. No downtime. Visible results.
-                            </p>
-                            <ul style="font-size:.9rem;line-height:1.8;margin-bottom:1.25rem;padding-left:1.2em;color:#444;">
-                                <li>Stimulates collagen &amp; elastin</li>
-                                <li>Tones and sculpts facial contours</li>
-                                <li>Lifts muscles non-invasively</li>
-                                <li>Zero downtime</li>
-                            </ul>
-                            <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:#b8924a;margin-bottom:1rem;">
-                                From £160 · Course of 6 from £880
-                            </p>
-                            <a href="/faceStim.html#facestim" class="btn btn--primary btn-sm">Find Out More</a>
+        <div class="treatment-info benefits-block">
+            <h2>Benefits</h2>
+            <ul class="benefits-list">
+                <li>Stimulates collagen and elastin production</li>
+                <li>Tones and sculpts facial contours</li>
+                <li>Lifts muscles non-invasively</li>
+                <li>Volumises and tightens the skin</li>
+                <li>Smooths and evens skin tone and texture</li>
+                <li>Reduces the appearance of fine lines</li>
+            </ul>
+        </div>
+
+        <div class="treatment-img second-img">
+            <img src="/assets/images/facestim-mid-face2.jpg"
+                alt="FaceStim Facial results — firmer, more lifted appearance">
+        </div>
+    </section>
+
+    <!-- ── Technology strip ──────────────────────────────── -->
+    <div class="fs-tech-strip">
+        <h2>The Technology</h2>
+        <p>
+            Using FACESTIM® technology, this treatment combines bipolar radio frequency with deep muscle contraction to
+            strengthen facial muscles while stimulating collagen production in the skin. This dual approach helps
+            tighten the skin, improve tone and restore volume for a firmer, more lifted appearance.
+        </p>
+    </div>
+
+    <!-- ── Ideal for ──────────────────────────────────────── -->
+    <section style="padding: 1.5rem 0 2rem;">
+        <h2 style="text-align:center; margin-bottom: 1.5rem;">Ideal For</h2>
+        <div class="ideal-grid">
+            <article>
+                <strong>Sagging or lax skin</strong><br>
+            </article>
+            <article>
+                <strong>Fine lines &amp; early wrinkles</strong><br>
+            </article>
+            <article>
+                <strong>Loss of facial volume</strong><br>
+            </article>
+        </div>
+    </section>
+
+    <!-- ── Before / After comparison slider ─────────────────
+         Drag the handle left/right to reveal before vs after.
+    ──────────────────────────────────────────────────────── -->
+    <section class="ba-section">
+        <h2 class="ba-heading">Results</h2>
+        <p class="ba-subheading">Drag the handle to compare before and after</p>
+
+        <div class="ba-carousel">
+            <div class="ba-track" id="baTrack">
+
+                <div class="ba-slide">
+                    <div class="ba-compare">
+                        <div class="ba-before">
+                            <img src="/assets/images/before-1.PNG" alt="Before FaceStim treatment 1" draggable="false">
+                            <span class="ba-label ba-label--before">Before</span>
                         </div>
-                    </article> -->
-
-                    <!-- ── Promo card ─────────────────────────────
-                         Update: month label, expiry date, and alt text
-                         each time a new promotion poster is uploaded.
-                    ─────────────────────────────────────────────── -->
-                    <article class="promo-card reveal">
-                        <div class="promo-card__badge">May 2026</div>
-                        <div class="promo-card__img-wrap">
-                            <img
-                                src="/assets/images/may-promo.jpeg"
-                                alt="May 2026 promotions poster — Spring Ritual of Renewal, Medik8 Retinal offer and Superfacial at The Retreat Whickham"
-                                loading="lazy"
-                            >
+                        <div class="ba-after">
+                            <img src="/assets/images/after1.PNG" alt="After FaceStim treatment 1" draggable="false">
+                            <span class="ba-label ba-label--after">After</span>
                         </div>
-                        <div class="promo-card__body">
-                            <p class="promo-card__expiry">
-                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-                                Available throughout May 2026
-                            </p>
-                            <a href="/contact.html" class="btn btn--primary btn-sm">Enquire Now</a>
+                        <div class="ba-handle">
+                            <div class="ba-handle__line"></div>
+                            <div class="ba-handle__circle"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></div>
+                            <div class="ba-handle__line"></div>
                         </div>
-                    </article>
-
-                    <!-- Add further promo cards here as new months arrive -->
-
+                        <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Before and after comparison slider">
+                    </div>
                 </div>
-        </section>
 
-        <!-- News -->
-        <section class="np-col np-col--news" aria-labelledby="news-heading">
-                <h2 class="section-heading" id="news-heading">Latest News</h2>
-                <p class="section-intro">Important updates and announcements from the salon.</p>
-
-                <div class="promo-grid">
-
-                    <!-- ── News card ─────────────────────────────
-                         Update date, alt text, and description
-                         whenever a new news item is posted.
-                    ─────────────────────────────────────────────── -->
-                    <article class="promo-card promo-card--news reveal">
-                        <div class="promo-card__badge promo-card__badge--news">Booking Info</div>
-                        <div class="promo-card__img-wrap">
-                            <img
-                                src="/assets/images/bookings.jpeg"
-                                alt="Booking information — email to receive a booking link, deposit and cancellation policy"
-                                loading="lazy"
-                            >
+                <div class="ba-slide">
+                    <div class="ba-compare">
+                        <div class="ba-before">
+                            <img src="/assets/images/before2.PNG" alt="Before FaceStim treatment 2" draggable="false">
+                            <span class="ba-label ba-label--before">Before</span>
                         </div>
-                        <div class="promo-card__body">
-                            <p class="promo-card__expiry">
-                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-                                Booking &amp; cancellation policy
-                            </p>
+                        <div class="ba-after">
+                            <img src="/assets/images/after2.PNG" alt="After FaceStim treatment 2" draggable="false">
+                            <span class="ba-label ba-label--after">After</span>
                         </div>
-                    </article>
-
-                    <article class="promo-card promo-card--news reveal">
-                        <div class="promo-card__badge promo-card__badge--news">May 2026</div>
-                        <div class="promo-card__body" style="padding-top:1.5rem;">
-                            <p style="font-size:1.05rem;line-height:1.6;margin-bottom:1rem;">
-                                <strong>Treatment price update:</strong> Our treatment prices have been updated
-                                from 1st May 2026. If you have any questions, please don't hesitate to get in touch.
-                            </p>
-                            <a href="/contact.html" class="btn btn--primary btn-sm">Get in Touch</a>
+                        <div class="ba-handle">
+                            <div class="ba-handle__line"></div>
+                            <div class="ba-handle__circle"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></div>
+                            <div class="ba-handle__line"></div>
                         </div>
-                    </article>
-
-                    <!-- Add further news cards here -->
-
+                        <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Before and after comparison slider">
+                    </div>
                 </div>
-        </section>
 
-        </div><!-- /.np-layout -->
-
-        <!-- ── Newsletter sign-up strip ──────────────────
-             Paste your Mailchimp embed code into the
-             .newsletter__form div below, replacing the
-             placeholder paragraph.
-        ─────────────────────────────────────────────── -->
-        <section class="newsletter" aria-labelledby="newsletter-heading">
-            <div class="newsletter__inner newsletter__inner--centred">
-                <i class="fa-regular fa-envelope newsletter__icon" aria-hidden="true"></i>
-                <h2 id="newsletter-heading">Stay in the Loop</h2>
-                <p>Be the first to hear about exclusive offers, new treatments and seasonal packages. Follow us on social media or drop us a message directly — we'd love to hear from you.</p>
-                <div class="newsletter__actions">
-                    <a href="/contact.html" class="btn btn--gold">Get in Touch</a>
-                    <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener" class="btn btn--outline-light">
-                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>&nbsp;Facebook
-                    </a>
-                    <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener" class="btn btn--outline-light">
-                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>&nbsp;Instagram
-                    </a>
+                <div class="ba-slide">
+                    <div class="ba-compare">
+                        <div class="ba-before">
+                            <img src="/assets/images/before3.PNG" alt="Before FaceStim treatment 3" draggable="false">
+                            <span class="ba-label ba-label--before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="/assets/images/after3.PNG" alt="After FaceStim treatment 3" draggable="false">
+                            <span class="ba-label ba-label--after">After</span>
+                        </div>
+                        <div class="ba-handle">
+                            <div class="ba-handle__line"></div>
+                            <div class="ba-handle__circle"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></div>
+                            <div class="ba-handle__line"></div>
+                        </div>
+                        <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Before and after comparison slider">
+                    </div>
                 </div>
+
+                <div class="ba-slide">
+                    <div class="ba-compare">
+                        <div class="ba-before">
+                            <img src="/assets/images/before4.PNG" alt="Before FaceStim treatment 4" draggable="false">
+                            <span class="ba-label ba-label--before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="/assets/images/after4.PNG" alt="After FaceStim treatment 4" draggable="false">
+                            <span class="ba-label ba-label--after">After</span>
+                        </div>
+                        <div class="ba-handle">
+                            <div class="ba-handle__line"></div>
+                            <div class="ba-handle__circle"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></div>
+                            <div class="ba-handle__line"></div>
+                        </div>
+                        <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Before and after comparison slider">
+                    </div>
+                </div>
+
+            </div><!-- /.ba-track -->
+
+            <button class="ba-nav ba-nav--prev" aria-label="Previous result" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="ba-nav ba-nav--next" aria-label="Next result" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="ba-dots">
+                <button class="ba-dot ba-dot--active" data-index="0" type="button" aria-label="Result 1"></button>
+                <button class="ba-dot" data-index="1" type="button" aria-label="Result 2"></button>
+                <button class="ba-dot" data-index="2" type="button" aria-label="Result 3"></button>
+                <button class="ba-dot" data-index="3" type="button" aria-label="Result 4"></button>
             </div>
-        </section>
+        </div>
 
-    </main>
+        <p class="ba-disclaimer">Results shown are from clinical studies by the FACESTIM® manufacturer. Individual results may vary.</p>
+    </section>
 
-    <!-- ── Footer ────────────────────────────────────── -->
+    <script>
+    (function () {
+        document.querySelectorAll('.ba-compare').forEach(function (el) {
+            var range  = el.querySelector('.ba-range');
+            var after  = el.querySelector('.ba-after');
+            var handle = el.querySelector('.ba-handle');
+            function update(v) {
+                after.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+                handle.style.left    = v + '%';
+            }
+            update(50);
+            range.addEventListener('input', function () { update(this.value); });
+        });
+
+        var track   = document.getElementById('baTrack');
+        var dots    = document.querySelectorAll('.ba-dot');
+        var current = 0;
+        var total   = 4;
+
+        function goTo(n) {
+            current = (n + total) % total;
+            track.style.transform = 'translateX(-' + (current * 100) + '%)';
+            dots.forEach(function (d, i) { d.classList.toggle('ba-dot--active', i === current); });
+        }
+
+        document.querySelector('.ba-nav--prev').addEventListener('click', function () { goTo(current - 1); });
+        document.querySelector('.ba-nav--next').addEventListener('click', function () { goTo(current + 1); });
+        dots.forEach(function (d) { d.addEventListener('click', function () { goTo(+this.dataset.index); }); });
+    })();
+    </script>
+
+    <!-- ── Pricing ───────────────────────────────────────── -->
+    <section class="package-section facestim-pricing container">
+        <div class="package-grid">
+            <article class="package-card">
+                <h3>Single Session</h3>
+                <p class="price-lg">£160</p>
+            </article>
+            <article class="package-card highlight">
+                <h3>Course of Six*</h3>
+                <p class="price-lg">£880</p>
+            </article>
+        </div>
+
+        <div class="package-footer">
+            <p class="recommendation">*We recommend a course of six sessions for optimum, lasting results.</p>
+        </div>
+    </section>
+
+    <!-- ── Booking strip ─────────────────────────────────── -->
+    <section class="booking-strip">
+        <div class="booking-strip__inner">
+            <p class="booking-strip__text">Ready to book? Drop us a message and we'll send you a link.</p>
+            <div class="booking-strip__actions">
+                <a href="mailto:info@theretreatwhickham.com" class="btn btn--primary">Email to Book</a>
+                <span class="booking-strip__divider">or call</span>
+                <a href="tel:01914881534" class="booking-strip__phone">0191 488 1534</a>
+            </div>
+        </div>
+    </section>
+
     <footer class="site-footer">
         <div class="footer-inner">
 
@@ -270,10 +393,12 @@
                 </ul>
 
                 <div class="footer-socials">
-                    <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <a href="https://www.facebook.com/theretreatwhickham/" target="_blank" rel="noopener"
+                        aria-label="Facebook">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <a href="https://www.instagram.com/theretreatwhickham/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
@@ -282,7 +407,7 @@
         </div>
 
         <div class="footer-bottom">
-            <small>&copy; The Retreat Whickham 2026 &middot; All rights reserved</small>
+            <small>&copy; The Retreat Whickham 2026 · All rights reserved</small>
         </div>
     </footer>
 
@@ -290,6 +415,6 @@
     <button class="scroll-top" type="button" aria-label="Back to top" title="Back to top">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
-
 </body>
+
 </html>
