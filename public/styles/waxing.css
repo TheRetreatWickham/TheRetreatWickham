@@ -7,12 +7,6 @@
  * Waxing Packages card — you may want separate assets long-term.
  */
 
-.hero--waxing {
-    background-size: cover;
-    background-position: center;
-    min-height: 40vh;
-     margin-bottom: 1rem;
-}
 
 .hero--waxing .hero-content {
     display: flex;
