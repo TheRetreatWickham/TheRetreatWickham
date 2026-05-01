@@ -1272,6 +1272,8 @@ html {
 .hero--beauty,
 .hero--manipedi,
 .hero--microneedling,
+.hero--waxing,
 .hero--makeup {
     min-height: 40vh;
+    background-position: center 115%;
 }

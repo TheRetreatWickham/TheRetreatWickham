@@ -11,12 +11,19 @@
 .card-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(4, 260px);
+  grid-template-columns: repeat(3, 260px);
   justify-content: center;
   margin: 0 auto 3rem;
 }
 
+.card-grid .card:last-child {
+  grid-column: 2;
+}
+
 @media (max-width: 900px) {
+  .card-grid .card:last-child {
+    grid-column: auto;
+  }
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
