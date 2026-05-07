@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: visible;
 }
 
 .card .desc {
@@ -103,7 +104,11 @@
 @media (max-width: 768px) {
     .card-grid--three {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+    }
+
+    .card-grid.card-grid--three.card-grid-wrapper {
+        padding-inline: 0;
     }
 }
 
