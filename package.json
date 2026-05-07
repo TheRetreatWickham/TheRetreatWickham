@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "lite-server --baseDir=public",
-    "build": "tsc -p .",
+    "build:html": "node scripts/build-html.mjs",
+    "build:ts": "tsc -p .",
+    "build": "npm run build:html && npm run build:ts",
     "start": "npm run build && npm run dev"
   },
   "devDependencies": {
